@@ -1,6 +1,8 @@
 # STATS401 Final Group Project Proposal
 ## Group 15: What Counts as an Overtake?
 
+Chengzhi Sun, Tianyao Wang, Jietong Zhou
+
 ## 1. Topic, Goals, and Questions
 
 Formula 1 broadcasts treat the overtake count as a score for how good a race was. [OpenF1](https://openf1.org/docs/) publishes an `overtakes` feed that looks like that score, but a row can be an on-track pass, a pit-lane swap, or a post-race penalty, and rows can be missing. A start or restart can dump many position changes into one second.
