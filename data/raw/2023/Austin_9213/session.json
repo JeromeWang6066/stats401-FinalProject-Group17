@@ -1,0 +1,17 @@
+{
+  "session_key": 9213,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2023-10-22T19:00:00+00:00",
+  "date_end": "2023-10-22T21:00:00+00:00",
+  "meeting_key": 1222,
+  "circuit_key": 9,
+  "circuit_short_name": "Austin",
+  "country_key": 19,
+  "country_code": "USA",
+  "country_name": "United States",
+  "location": "Austin",
+  "gmt_offset": "-05:00:00",
+  "year": 2023,
+  "is_cancelled": false
+}

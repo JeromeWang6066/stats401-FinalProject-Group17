@@ -1,0 +1,17 @@
+{
+  "session_key": 7779,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2023-03-19T17:00:00+00:00",
+  "date_end": "2023-03-19T19:00:00+00:00",
+  "meeting_key": 1142,
+  "circuit_key": 149,
+  "circuit_short_name": "Jeddah",
+  "country_key": 153,
+  "country_code": "KSA",
+  "country_name": "Saudi Arabia",
+  "location": "Jeddah",
+  "gmt_offset": "03:00:00",
+  "year": 2023,
+  "is_cancelled": false
+}

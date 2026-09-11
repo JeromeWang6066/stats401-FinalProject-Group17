@@ -1,0 +1,17 @@
+{
+  "session_key": 9523,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2024-05-26T13:00:00+00:00",
+  "date_end": "2024-05-26T15:00:00+00:00",
+  "meeting_key": 1236,
+  "circuit_key": 22,
+  "circuit_short_name": "Monte Carlo",
+  "country_key": 114,
+  "country_code": "MON",
+  "country_name": "Monaco",
+  "location": "Monaco",
+  "gmt_offset": "02:00:00",
+  "year": 2024,
+  "is_cancelled": false
+}

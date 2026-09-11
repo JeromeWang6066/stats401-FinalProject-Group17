@@ -1,0 +1,17 @@
+{
+  "session_key": 9078,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2023-05-07T19:30:00+00:00",
+  "date_end": "2023-05-07T21:30:00+00:00",
+  "meeting_key": 1208,
+  "circuit_key": 151,
+  "circuit_short_name": "Miami",
+  "country_key": 19,
+  "country_code": "USA",
+  "country_name": "United States",
+  "location": "Miami",
+  "gmt_offset": "-04:00:00",
+  "year": 2023,
+  "is_cancelled": false
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2024-11-30T14:18:51.066000+00:00",
+    "session_key": 9654,
+    "lap_number": 10,
+    "meeting_key": 1251,
+    "driver_number": 24,
+    "lane_duration": 28.428,
+    "pit_duration": 28.428,
+    "stop_duration": 2.5
+  },
+  {
+    "date": "2024-11-30T14:24:37.690000+00:00",
+    "session_key": 9654,
+    "lap_number": 14,
+    "meeting_key": 1251,
+    "driver_number": 11,
+    "lane_duration": 38.263,
+    "pit_duration": 38.263,
+    "stop_duration": 11.1
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "session_key": 9912,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2025-09-07T13:00:00+00:00",
+  "date_end": "2025-09-07T15:00:00+00:00",
+  "meeting_key": 1268,
+  "circuit_key": 39,
+  "circuit_short_name": "Monza",
+  "country_key": 13,
+  "country_code": "ITA",
+  "country_name": "Italy",
+  "location": "Monza",
+  "gmt_offset": "02:00:00",
+  "year": 2025,
+  "is_cancelled": false
+}

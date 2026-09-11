@@ -1,0 +1,17 @@
+{
+  "session_key": 10022,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2025-04-20T17:00:00+00:00",
+  "date_end": "2025-04-20T19:00:00+00:00",
+  "meeting_key": 1258,
+  "circuit_key": 149,
+  "circuit_short_name": "Jeddah",
+  "country_key": 153,
+  "country_code": "KSA",
+  "country_name": "Saudi Arabia",
+  "location": "Jeddah",
+  "gmt_offset": "03:00:00",
+  "year": 2025,
+  "is_cancelled": false
+}

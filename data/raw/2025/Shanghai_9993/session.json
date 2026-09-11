@@ -1,0 +1,17 @@
+{
+  "session_key": 9993,
+  "session_type": "Race",
+  "session_name": "Sprint",
+  "date_start": "2025-03-22T03:00:00+00:00",
+  "date_end": "2025-03-22T04:00:00+00:00",
+  "meeting_key": 1255,
+  "circuit_key": 49,
+  "circuit_short_name": "Shanghai",
+  "country_key": 53,
+  "country_code": "CHN",
+  "country_name": "China",
+  "location": "Shanghai",
+  "gmt_offset": "08:00:00",
+  "year": 2025,
+  "is_cancelled": false
+}

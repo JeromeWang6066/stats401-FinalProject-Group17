@@ -1,0 +1,17 @@
+{
+  "session_key": 9069,
+  "session_type": "Race",
+  "session_name": "Sprint",
+  "date_start": "2023-04-29T13:30:00+00:00",
+  "date_end": "2023-04-29T14:00:00+00:00",
+  "meeting_key": 1207,
+  "circuit_key": 144,
+  "circuit_short_name": "Baku",
+  "country_key": 30,
+  "country_code": "AZE",
+  "country_name": "Azerbaijan",
+  "location": "Baku",
+  "gmt_offset": "04:00:00",
+  "year": 2023,
+  "is_cancelled": false
+}

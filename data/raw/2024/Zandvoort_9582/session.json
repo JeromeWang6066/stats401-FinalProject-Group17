@@ -1,0 +1,17 @@
+{
+  "session_key": 9582,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2024-08-25T13:00:00+00:00",
+  "date_end": "2024-08-25T15:00:00+00:00",
+  "meeting_key": 1243,
+  "circuit_key": 55,
+  "circuit_short_name": "Zandvoort",
+  "country_key": 133,
+  "country_code": "NED",
+  "country_name": "Netherlands",
+  "location": "Zandvoort",
+  "gmt_offset": "02:00:00",
+  "year": 2024,
+  "is_cancelled": false
+}

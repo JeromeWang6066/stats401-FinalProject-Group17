@@ -1,0 +1,17 @@
+{
+  "session_key": 9963,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2025-06-15T18:00:00+00:00",
+  "date_end": "2025-06-15T20:00:00+00:00",
+  "meeting_key": 1263,
+  "circuit_key": 23,
+  "circuit_short_name": "Montreal",
+  "country_key": 46,
+  "country_code": "CAN",
+  "country_name": "Canada",
+  "location": "Montréal",
+  "gmt_offset": "-04:00:00",
+  "year": 2025,
+  "is_cancelled": false
+}

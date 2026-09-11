@@ -1,0 +1,17 @@
+{
+  "session_key": 9549,
+  "session_type": "Race",
+  "session_name": "Sprint",
+  "date_start": "2024-06-29T10:00:00+00:00",
+  "date_end": "2024-06-29T11:00:00+00:00",
+  "meeting_key": 1239,
+  "circuit_key": 19,
+  "circuit_short_name": "Spielberg",
+  "country_key": 17,
+  "country_code": "AUT",
+  "country_name": "Austria",
+  "location": "Spielberg",
+  "gmt_offset": "02:00:00",
+  "year": 2024,
+  "is_cancelled": false
+}

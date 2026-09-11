@@ -1,0 +1,17 @@
+{
+  "session_key": 9662,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2024-12-08T13:00:00+00:00",
+  "date_end": "2024-12-08T15:00:00+00:00",
+  "meeting_key": 1252,
+  "circuit_key": 70,
+  "circuit_short_name": "Yas Marina Circuit",
+  "country_key": 21,
+  "country_code": "UAE",
+  "country_name": "United Arab Emirates",
+  "location": "Yas Island",
+  "gmt_offset": "04:00:00",
+  "year": 2024,
+  "is_cancelled": false
+}

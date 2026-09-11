@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2025-03-22T03:22:20.561000+00:00",
+    "session_key": 9993,
+    "meeting_key": 1255,
+    "driver_number": 55,
+    "lap_number": 11,
+    "lane_duration": 22.4,
+    "pit_duration": 22.4,
+    "stop_duration": 2.4
+  }
+]

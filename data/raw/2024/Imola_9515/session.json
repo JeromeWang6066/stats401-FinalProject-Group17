@@ -1,0 +1,17 @@
+{
+  "session_key": 9515,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2024-05-19T13:00:00+00:00",
+  "date_end": "2024-05-19T15:00:00+00:00",
+  "meeting_key": 1235,
+  "circuit_key": 6,
+  "circuit_short_name": "Imola",
+  "country_key": 13,
+  "country_code": "ITA",
+  "country_name": "Italy",
+  "location": "Imola",
+  "gmt_offset": "02:00:00",
+  "year": 2024,
+  "is_cancelled": false
+}

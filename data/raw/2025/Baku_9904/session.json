@@ -1,0 +1,17 @@
+{
+  "session_key": 9904,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2025-09-21T11:00:00+00:00",
+  "date_end": "2025-09-21T13:00:00+00:00",
+  "meeting_key": 1269,
+  "circuit_key": 144,
+  "circuit_short_name": "Baku",
+  "country_key": 30,
+  "country_code": "AZE",
+  "country_name": "Azerbaijan",
+  "location": "Baku",
+  "gmt_offset": "04:00:00",
+  "year": 2025,
+  "is_cancelled": false
+}

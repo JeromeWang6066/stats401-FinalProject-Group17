@@ -1,0 +1,17 @@
+{
+  "session_key": 9133,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2023-07-23T13:00:00+00:00",
+  "date_end": "2023-07-23T15:00:00+00:00",
+  "meeting_key": 1215,
+  "circuit_key": 4,
+  "circuit_short_name": "Hungaroring",
+  "country_key": 14,
+  "country_code": "HUN",
+  "country_name": "Hungary",
+  "location": "Budapest",
+  "gmt_offset": "02:00:00",
+  "year": 2023,
+  "is_cancelled": false
+}

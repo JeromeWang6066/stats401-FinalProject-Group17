@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2025-11-29T14:23:01.416000+00:00",
+    "session_key": 9845,
+    "driver_number": 18,
+    "lane_duration": 30.852,
+    "stop_duration": 4.9,
+    "pit_duration": 30.852,
+    "meeting_key": 1275,
+    "lap_number": 13
+  },
+  {
+    "date": "2025-11-29T14:28:47.409000+00:00",
+    "session_key": 9845,
+    "driver_number": 10,
+    "lane_duration": 28.876,
+    "stop_duration": 2.9,
+    "pit_duration": 28.876,
+    "meeting_key": 1275,
+    "lap_number": 17
+  },
+  {
+    "date": "2025-11-29T14:28:55.585000+00:00",
+    "session_key": 9845,
+    "driver_number": 43,
+    "lane_duration": 31.299,
+    "stop_duration": 4.0,
+    "pit_duration": 31.299,
+    "meeting_key": 1275,
+    "lap_number": 17
+  }
+]

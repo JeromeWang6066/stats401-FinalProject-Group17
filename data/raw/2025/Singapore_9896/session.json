@@ -1,0 +1,17 @@
+{
+  "session_key": 9896,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2025-10-05T12:00:00+00:00",
+  "date_end": "2025-10-05T14:00:00+00:00",
+  "meeting_key": 1270,
+  "circuit_key": 61,
+  "circuit_short_name": "Singapore",
+  "country_key": 157,
+  "country_code": "SGP",
+  "country_name": "Singapore",
+  "location": "Marina Bay",
+  "gmt_offset": "08:00:00",
+  "year": 2025,
+  "is_cancelled": false
+}

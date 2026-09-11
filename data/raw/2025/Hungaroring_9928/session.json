@@ -1,0 +1,17 @@
+{
+  "session_key": 9928,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2025-08-03T13:00:00+00:00",
+  "date_end": "2025-08-03T15:00:00+00:00",
+  "meeting_key": 1266,
+  "circuit_key": 4,
+  "circuit_short_name": "Hungaroring",
+  "country_key": 14,
+  "country_code": "HUN",
+  "country_name": "Hungary",
+  "location": "Budapest",
+  "gmt_offset": "02:00:00",
+  "year": 2025,
+  "is_cancelled": false
+}

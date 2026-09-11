@@ -1,0 +1,17 @@
+{
+  "session_key": 10028,
+  "session_type": "Race",
+  "session_name": "Sprint",
+  "date_start": "2025-05-03T16:00:00+00:00",
+  "date_end": "2025-05-03T16:30:00+00:00",
+  "meeting_key": 1259,
+  "circuit_key": 151,
+  "circuit_short_name": "Miami",
+  "country_key": 19,
+  "country_code": "USA",
+  "country_name": "United States",
+  "location": "Miami Gardens",
+  "gmt_offset": "-04:00:00",
+  "year": 2025,
+  "is_cancelled": false
+}

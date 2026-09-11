@@ -1,0 +1,17 @@
+{
+  "session_key": 10033,
+  "session_type": "Race",
+  "session_name": "Race",
+  "date_start": "2025-05-04T20:00:00+00:00",
+  "date_end": "2025-05-04T22:00:00+00:00",
+  "meeting_key": 1259,
+  "circuit_key": 151,
+  "circuit_short_name": "Miami",
+  "country_key": 19,
+  "country_code": "USA",
+  "country_name": "United States",
+  "location": "Miami Gardens",
+  "gmt_offset": "-04:00:00",
+  "year": 2025,
+  "is_cancelled": false
+}
