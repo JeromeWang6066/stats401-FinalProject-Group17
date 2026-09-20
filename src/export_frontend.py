@@ -19,6 +19,7 @@ from process_overtakes import (
     load_json,
     load_meeting,
 )
+from export_lap_data import main as export_lap_data
 
 LOG = logging.getLogger("export-frontend")
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -506,6 +507,7 @@ def main() -> None:
     JS_OUT.parent.mkdir(parents=True, exist_ok=True)
     body = "window.APP_DATA = " + json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + ";\n"
     JS_OUT.write_text(body, encoding="utf-8")
+    export_lap_data()
     LOG.info(
         "wrote %s (edges=%d, drivers=%d, results=%d, standings=%d, rounds=%d, raceBump=%d)",
         JS_OUT,

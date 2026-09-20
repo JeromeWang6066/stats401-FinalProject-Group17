@@ -84,6 +84,7 @@
   });
 
   state.subscribe(render);
+  if (window.LapChart) window.LapChart.init();
   if (window.RankBump && bumpEl) window.RankBump.render(bumpEl, data);
   window.addEventListener("resize", () => {
     window.OvertakeNetwork.render(networkEl, data, state.get());

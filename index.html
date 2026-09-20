@@ -40,6 +40,17 @@
         <code>data/raw/</code>. <code>src/process_overtakes.py</code> assigns exclusive <code>tag</code> values and writes
         <code>data/processed/overtakes_tagged.csv</code>.
       </p>
+      <p>
+        To build the event-level table, we join each overtake with driver records to add names, abbreviations, teams, and team colours.
+        We also align each event with a lap using lap-start timestamps and flag <code>burst</code> seconds when at least three
+        overtakes occur within the same second of a race.
+      </p>
+      <p>
+        We compare event times with pit stops for both drivers and mark swaps within &plusmn;90 seconds as <code>near_pit</code>.
+        Race-control messages identify safety-car, VSC, and red-flag intervals, while the chequered flag identifies
+        <code>post_race_diagnostic</code> events. The processed table keeps these indicators alongside the combined
+        <code>tag</code>, so overlapping conditions remain visible during analysis.
+      </p>
       <div class="stats">
         <div class="stat"><b>19,303</b><span>tagged swaps</span></div>
         <div class="stat"><b>88</b><span>sessions (70 races, 18 sprints)</span></div>
@@ -61,7 +72,7 @@
     <section id="visualizations">
       <div class="panel lead">
         <h2>Visualizations</h2>
-        <p>View 1 filters by season, grand prix, and swap type inside its card. View 3 switches on its own between the season championship and one race’s lap-by-lap order. The lap-axis chart ships next.</p>
+        <p>View 1 filters by season, grand prix, and swap type inside its card. View 2 compares raw and cleaned swaps in one Race or Sprint. View 3 switches between the season championship and one race’s lap-by-lap order.</p>
       </div>
 
       <article class="chart-card">
@@ -108,12 +119,28 @@
       </article>
 
       <article class="chart-card">
-        <h3>2. Lap-axis swaps</h3>
-        <div class="placeholder-chart">
-          <p class="planned-kicker">View 2 · next</p>
-          <p>X is race lap. Each point is one swap. Bands mark VSC / safety car / red flag. Use it to see whether swaps pile up at the start and lap 1.</p>
-          <p>It will read the same tagged table and the same season / grand prix / tag filters.</p>
+        <h3>2. Raw Position Changes by Lap</h3>
+        <p class="chart-why">Each square is one recorded position swap. Compare all OpenF1 swaps with the events classified as true on-track passes.</p>
+        <div class="filter-row lap-filters" aria-label="Lap chart session filters">
+          <span class="filter-label">Season</span>
+          <div class="seg" id="lap-year">
+            <button type="button" data-year="2023">2023</button>
+            <button type="button" data-year="2024">2024</button>
+            <button type="button" data-year="2025" class="on">2025</button>
+          </div>
+          <label class="lap-pick"><span class="filter-label">Grand Prix</span><select id="lap-gp" aria-label="Choose a Grand Prix"></select></label>
+          <label class="lap-pick"><span class="filter-label">Session</span><select id="lap-session" aria-label="Choose Race or Sprint"></select></label>
         </div>
+        <p class="status-line" id="lap-status"></p>
+        <div class="lap-chart-scroll"><div id="lap-chart" class="lap-chart"></div></div>
+        <p class="legend lap-legend">
+          <span><i class="lap-swatch raw"></i>Raw swaps</span>
+          <span><i class="lap-swatch clean"></i>True on-track passes</span>
+          <span><i class="lap-swatch vsc"></i>VSC</span>
+          <span><i class="lap-swatch sc"></i>Safety Car</span>
+          <span><i class="lap-swatch red"></i>Red Flag</span>
+        </p>
+        <p class="chart-why lap-note">Raw swaps include changes caused by starts, pits, and neutralized periods. Genuine Lap 1 passes remain in the cleaned count.</p>
       </article>
 
       <article class="chart-card">
@@ -185,9 +212,9 @@
           Hover on nodes / edges is details-on-demand and ego highlighting. Goal: under three or more definitions, check whether overtakes stay among a few pairings.
         </li>
         <li>
-          <strong>View 2 lap axis.</strong>
-          Plan: reuse the same filters; click a point to select that event; brush a lap range and link to view 1.
-          Goal: split the start-line pile-up and neutralized windows from true passes.
+          <strong>View 2 lap comparison (implemented).</strong>
+          Select a season, grand prix, and Race or Sprint; hover a square to inspect the drivers, lap, position, and classification.
+          Goal: compare raw swaps with true passes, especially at the start and during neutralized periods.
         </li>
         <li>
           <strong>View 3 bump (implemented).</strong>
@@ -210,21 +237,11 @@
 
     <section class="panel" id="evaluation">
       <h2>Evaluation Plan</h2>
-      <p>We are not scoring whether the charts look good. We are scoring whether a change in definition makes people read a different race.</p>
+      <p>We will evaluate whether the visualization helps viewers distinguish genuine passes from position changes caused by pits or neutralized periods, following <strong>Task &rarr; Encoding &rarr; Interaction &rarr; Performance</strong>.</p>
       <ul>
-        <li>
-          <strong>What:</strong> Do filters change the reading? Do hover details separate true passes from pit edges?
-          Can classmates find one true pass and one fake cluster without the captions.
-        </li>
-        <li>
-          <strong>How:</strong> Ask 3–5 classmates to open this page and do two tasks:
-          (1) find one swap they treat as a true pass; (2) find a cluster they do not treat as overtakes.
-          Record season, grand prix, tags, slider threshold, and whether they counted burst / pit as true passes.
-        </li>
-        <li>
-          <strong>Collect:</strong> Task success, filter combinations used, times they treated bookkeeping as a pass, and verbal notes on missing information.
-          The final Discussion will hold those notes against What–Why–How.
-        </li>
+        <li><strong>What:</strong> Test whether viewers can compare raw and cleaned swaps, retrieve a specific pass, and identify an unusual cluster (Task); read bar heights, colors, and network edge widths correctly (Encoding); and use filters and tooltips to resolve dense or ambiguous events (Interaction). Measure accuracy and speed (Performance).</li>
+        <li><strong>How:</strong> Ask 3-5 classmates to complete the same short tasks without guidance. Observe how they use the charts and controls, check their answers against the tagged data, and ask a brief question after each task.</li>
+        <li><strong>Collect:</strong> Record answers, completion times, wrong selections or interpretations, filter and tooltip use, confidence and difficulty ratings, and comments about confusing visual elements.</li>
       </ul>
     </section>
   </main>
@@ -238,8 +255,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="js/data.js"></script>
+  <script src="js/lap_data.js"></script>
   <script src="js/state.js"></script>
   <script src="js/network.js"></script>
+  <script src="js/lap.js"></script>
   <script src="js/bump.js"></script>
   <script src="js/main.js"></script>
 </body>

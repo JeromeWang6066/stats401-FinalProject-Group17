@@ -318,6 +318,42 @@ code {
 
 .bump-chart svg { display: block; }
 
+.lap-filters { margin: 0 0 10px; }
+.lap-pick { display: flex; align-items: center; gap: 8px; }
+.lap-pick select {
+  font: inherit;
+  font-size: 13px;
+  color: var(--ink);
+  background: #0c0c12;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  min-width: 130px;
+}
+.lap-chart-scroll { width: 100%; overflow-x: auto; }
+.lap-chart svg { display: block; }
+.lap-grid line { stroke: #32323d; stroke-width: 0.5; }
+.lap-square { cursor: pointer; }
+.lap-square.raw { fill: #9295a2; }
+.lap-square.clean { fill: #e14545; }
+.lap-square:hover { stroke: #fff; stroke-width: 1; }
+.lap-axis-title { fill: var(--muted); font-size: 11px; }
+.lap-legend { margin-bottom: 8px; }
+.lap-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+.lap-swatch.raw { background: #9295a2; }
+.lap-swatch.clean { background: #e14545; }
+.lap-swatch.vsc { background: #eab308; }
+.lap-swatch.sc { background: #f97316; }
+.lap-swatch.red { background: #e10600; }
+.lap-note { margin: 8px 0 0; }
+
 .bump-filters { margin: 0 0 8px; }
 
 .bump-race-pick {
