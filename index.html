@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What counts as an overtake? · Group 17</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a href="#dataset">Dataset</a>
+      <a href="#visualizations">Visualizations</a>
+      <a href="#interaction">Interaction Plan</a>
+      <a href="#evaluation">Evaluation Plan</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="kicker">STATS401 Group 17 · <span>OpenF1</span> 2023–2025</p>
+    <h1>What counts as an overtake?</h1>
+    <p class="lede">
+      OpenF1 overtakes are not an on-track passing table. A swap can be a true pass, a pit stop, a retirement, a safety-car shuffle, or post-race bookkeeping.
+      Change the definition first, then look at who passes whom.
+    </p>
+    <p class="meta-line">
+      19,303 swaps · 88 sessions (70 races + 18 sprints) · 24 grands prix ·
+      <a href="https://openf1.org/docs/" target="_blank" rel="noreferrer">OpenF1</a>
+    </p>
+  </header>
+
+  <main>
+    <section class="panel" id="dataset">
+      <h2>Dataset</h2>
+      <p>
+        Source data come from <a href="https://openf1.org/docs/" target="_blank" rel="noreferrer">OpenF1</a>.
+        <code>src/fetch_openf1.py</code> pulls
+        <code>overtakes</code>, <code>drivers</code>, <code>pit</code>, <code>race_control</code>, <code>laps</code>, and <code>position</code>
+        for each 2023–2025 <code>session_type=Race</code> weekend into
+        <code>data/raw/</code>. <code>src/process_overtakes.py</code> assigns exclusive <code>tag</code> values and writes
+        <code>data/processed/overtakes_tagged.csv</code>.
+      </p>
+      <div class="stats">
+        <div class="stat"><b>19,303</b><span>tagged swaps</span></div>
+        <div class="stat"><b>88</b><span>sessions (70 races, 18 sprints)</span></div>
+        <div class="stat accent"><b>41.0%</b><span>true on_track passes</span></div>
+        <div class="stat"><b>44.7%</b><span>pit-caused swaps</span></div>
+      </div>
+      <p>
+        A true pass is both cars swapping on track during a live race. Lap 1, same-second bursts, and 8-second bounce-backs all count.
+        Pits, retirements, formation laps, post-chequered-flag events, and unlapping under a safety car do not. Filters use familiar grand prix names
+        (<code>grand_prix</code>: Shanghai / Monaco / Miami), not Catalunya / Monte Carlo.
+      </p>
+      <p>
+        View 1 uses each race’s first and last positions from <code>position.json</code> (grid / finish), plus Jolpica year-end driver standings.
+        View 3’s season bump uses <strong>after-round</strong> standings from the same API; the single-race bump aligns that session’s <code>position</code> with <code>laps</code>.
+        Fuller field notes are in <a href="processed-overtake-data.html">processed-overtake-data.html</a>.
+      </p>
+    </section>
+
+    <section id="visualizations">
+      <div class="panel lead">
+        <h2>Visualizations</h2>
+        <p>View 1 filters by season, grand prix, and swap type inside its card. View 3 switches on its own between the season championship and one race’s lap-by-lap order. The lap-axis chart ships next.</p>
+      </div>
+
+      <article class="chart-card">
+        <h3>1. Overtake network</h3>
+        <p class="chart-why">
+          Thicker, redder edges are scaled to the min and max counts in the current filter, not the full year.
+          Nodes use team colours; size is net overtakes. Hover a node for the driver; hover an edge for both directions.
+        </p>
+        <div class="filter-bar" aria-label="View 1 filters">
+          <div class="filter-row">
+            <span class="filter-label">Season</span>
+            <div class="seg" id="year-seg">
+              <button type="button" data-year="2023">2023</button>
+              <button type="button" data-year="2024">2024</button>
+              <button type="button" data-year="2025" class="on">2025</button>
+              <button type="button" data-year="all">All</button>
+            </div>
+          </div>
+          <div class="filter-row">
+            <span class="filter-label">Grand Prix</span>
+            <div class="gp-wrap">
+              <button type="button" class="gp-toggle" id="gp-toggle">Grand Prix</button>
+              <div class="gp-menu" id="gp-menu">
+                <div class="gp-actions">
+                  <button type="button" id="gp-all">Select all</button>
+                  <button type="button" id="gp-none">Clear</button>
+                </div>
+                <div class="gp-list" id="gp-list"></div>
+              </div>
+            </div>
+          </div>
+          <div class="filter-row">
+            <span class="filter-label">Swap type</span>
+            <div class="seg" id="tag-chips"></div>
+          </div>
+        </div>
+        <p class="weight-row">
+          Draw pairs with
+          <input type="range" id="min-weight" min="1" max="12" value="2" />
+          ≥ <em id="min-weight-label">2</em> total exchanges
+        </p>
+        <p class="status-line" id="network-status"></p>
+        <div id="network" class="network-chart"></div>
+      </article>
+
+      <article class="chart-card">
+        <h3>2. Lap-axis swaps</h3>
+        <div class="placeholder-chart">
+          <p class="planned-kicker">View 2 · next</p>
+          <p>X is race lap. Each point is one swap. Bands mark VSC / safety car / red flag. Use it to see whether swaps pile up at the start and lap 1.</p>
+          <p>It will read the same tagged table and the same season / grand prix / tag filters.</p>
+        </div>
+      </article>
+
+      <article class="chart-card">
+        <h3>3. Position bump</h3>
+        <p class="chart-why" id="bump-why">
+          Default is the season championship. Switch to one race and the x-axis becomes that session’s laps; lines are race position. Hover for name, current round or lap, and rank then.
+        </p>
+        <div class="filter-row bump-filters" aria-label="Bump season and session">
+          <span class="filter-label">Season</span>
+          <div class="seg" id="bump-year">
+            <button type="button" data-year="2023">2023</button>
+            <button type="button" data-year="2024">2024</button>
+            <button type="button" data-year="2025" class="on">2025</button>
+          </div>
+          <span class="filter-label">Scope</span>
+          <div class="seg" id="bump-scope">
+            <button type="button" data-scope="season" class="on">Season championship</button>
+            <button type="button" data-scope="race">One race</button>
+          </div>
+          <label class="bump-race-pick" id="bump-race-wrap" hidden>
+            <span class="filter-label">Grand Prix</span>
+            <select id="bump-race" aria-label="Choose a Grand Prix"></select>
+          </label>
+        </div>
+        <div class="filter-row bump-filters" aria-label="Bump display range">
+          <span class="filter-label">Show</span>
+          <div class="seg" id="bump-range">
+            <button type="button" data-range="all" class="on">All</button>
+            <button type="button" data-range="points">Points</button>
+            <button type="button" data-range="top5">Top 5</button>
+            <button type="button" data-range="top10">Top 10</button>
+          </div>
+          <div class="gp-wrap">
+            <button type="button" class="gp-toggle" id="bump-team-toggle">Teams</button>
+            <div class="gp-menu" id="bump-team-menu">
+              <div class="gp-actions">
+                <button type="button" id="bump-team-none">Clear</button>
+              </div>
+              <div class="gp-list" id="bump-team-list"></div>
+            </div>
+          </div>
+          <div class="gp-wrap">
+            <button type="button" class="gp-toggle" id="bump-driver-toggle">Drivers</button>
+            <div class="gp-menu" id="bump-driver-menu">
+              <div class="gp-actions">
+                <button type="button" id="bump-driver-none">Clear</button>
+              </div>
+              <div class="gp-list" id="bump-driver-list"></div>
+            </div>
+          </div>
+        </div>
+        <p class="status-line" id="bump-status"></p>
+        <div id="bump" class="bump-chart"></div>
+        <p class="legend" id="bump-legend" hidden>
+          <span class="swatch vsc"></span>VSC
+          <span class="swatch sc-band"></span>Safety car
+          <span class="swatch red"></span>Red flag
+        </p>
+      </article>
+    </section>
+
+    <section class="panel" id="interaction">
+      <h2>Interaction Plan</h2>
+      <p>Interim does not require all five views to be interactive, but each view should say what we add next and why.</p>
+      <ol>
+        <li>
+          <strong>View 1 network (implemented).</strong>
+          Season, multi-select grands prix, swap type, and an edge-weight slider change the definition and test whether the structure still holds.
+          Hover on nodes / edges is details-on-demand and ego highlighting. Goal: under three or more definitions, check whether overtakes stay among a few pairings.
+        </li>
+        <li>
+          <strong>View 2 lap axis.</strong>
+          Plan: reuse the same filters; click a point to select that event; brush a lap range and link to view 1.
+          Goal: split the start-line pile-up and neutralized windows from true passes.
+        </li>
+        <li>
+          <strong>View 3 bump (implemented).</strong>
+          Pick a season in the card and switch between championship rank and one race’s lap positions; hover a line for name, current lap or round, and rank then.
+          Points / top-N / team / driver filters stay local and do not change view 1.
+          Goal: check whether net-overtake hubs also climb race position or the championship.
+        </li>
+        <li>
+          <strong>View 4 track map (wireframe).</strong>
+          Draw the circuit from <code>location</code> x/y and plot overtakes on corners.
+          Goal: are lap-1 clusters all at turn 1.
+        </li>
+        <li>
+          <strong>View 5 session mix (wireframe).</strong>
+          Exclusive-tag donut; click <code>on_track</code> to expand lap1 / burst / bounce.
+          Goal: how much of one session’s OpenF1 overtake count is bookkeeping.
+        </li>
+      </ol>
+    </section>
+
+    <section class="panel" id="evaluation">
+      <h2>Evaluation Plan</h2>
+      <p>We are not scoring whether the charts look good. We are scoring whether a change in definition makes people read a different race.</p>
+      <ul>
+        <li>
+          <strong>What:</strong> Do filters change the reading? Do hover details separate true passes from pit edges?
+          Can classmates find one true pass and one fake cluster without the captions.
+        </li>
+        <li>
+          <strong>How:</strong> Ask 3–5 classmates to open this page and do two tasks:
+          (1) find one swap they treat as a true pass; (2) find a cluster they do not treat as overtakes.
+          Record season, grand prix, tags, slider threshold, and whether they counted burst / pit as true passes.
+        </li>
+        <li>
+          <strong>Collect:</strong> Task success, filter combinations used, times they treated bookkeeping as a pass, and verbal notes on missing information.
+          The final Discussion will hold those notes against What–Why–How.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    STATS401 Group 17 · Chengzhi Sun, Tianyao Wang, Jietong Zhou · D3.js v7 ·
+    Local preview: <code>python3 -m http.server</code>
+  </footer>
+
+  <div class="tip" id="tip" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="js/data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/network.js"></script>
+  <script src="js/bump.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
