@@ -306,10 +306,24 @@ window.RankBump = (function () {
     const isSeason = chart.kind === "season";
     const margin = {
       top: 16,
-      right: 52,
+      right: 36,
       bottom: isSeason ? 64 : 28,
       left: 36,
     };
+    function seriesPoints(row) {
+      if (isSeason || !row.points.length) return row.points;
+      const points = row.points.map((point) => ({
+        ...point,
+        x: Math.min(chart.maxLap, Math.max(1, point.x)),
+      }));
+      const last = points[points.length - 1];
+      if (last.x >= chart.maxLap - 0.01) return points;
+      return points.concat([{
+        x: chart.maxLap,
+        position: last.position,
+        lap: chart.maxLap,
+      }]);
+    }
     el.innerHTML = "";
     const svg = d3.select(el).append("svg").attr("width", width).attr("height", height);
 
@@ -377,15 +391,18 @@ window.RankBump = (function () {
       .attr("stroke-width", 2.2)
       .attr("stroke-linejoin", "round")
       .attr("opacity", 0.72)
-      .attr("d", (d) => (d.points.length > 1 ? line(d.points) : null));
+      .attr("d", (d) => {
+        const points = seriesPoints(d);
+        return points.length > 1 ? line(points) : null;
+      });
 
     svg.append("g")
       .selectAll("circle.bump-dot")
-      .data(visible.filter((d) => d.points.length === 1))
+      .data(visible.filter((d) => seriesPoints(d).length === 1))
       .join("circle")
       .attr("class", "bump-dot")
-      .attr("cx", (d) => x(d.points[0].x))
-      .attr("cy", (d) => y(d.points[0].position))
+      .attr("cx", (d) => x(seriesPoints(d)[0].x))
+      .attr("cy", (d) => y(seriesPoints(d)[0].position))
       .attr("r", 3.5)
       .attr("fill", (d) => d.color)
       .attr("opacity", 0.72);
@@ -395,8 +412,8 @@ window.RankBump = (function () {
       .data(visible)
       .join("text")
       .attr("class", "bump-label")
-      .attr("x", (d) => x(lastOf(d).x) + 6)
-      .attr("y", (d) => y(lastOf(d).position) + 4)
+      .attr("x", (d) => x(seriesPoints(d).at(-1).x) + 4)
+      .attr("y", (d) => y(seriesPoints(d).at(-1).position) + 4)
       .attr("fill", (d) => d.color)
       .attr("font-size", 11)
       .attr("font-weight", 600)
@@ -420,7 +437,7 @@ window.RankBump = (function () {
       if (on && row && event) {
         const [mx] = d3.pointer(event, svg.node());
         const xVal = x.invert(mx);
-        fillTip(tipHtml(row, atX(row.points, xVal), chart));
+        fillTip(tipHtml(row, atX(seriesPoints(row), xVal), chart));
         moveTip(event);
       } else {
         hideTip();
@@ -429,9 +446,9 @@ window.RankBump = (function () {
 
     const hits = svg.append("g");
     hits.selectAll("path")
-      .data(visible.filter((d) => d.points.length > 1))
+      .data(visible.filter((d) => seriesPoints(d).length > 1))
       .join("path")
-      .attr("d", (d) => line(d.points))
+      .attr("d", (d) => line(seriesPoints(d)))
       .attr("fill", "none")
       .attr("stroke", "transparent")
       .attr("stroke-width", 14)
@@ -440,10 +457,10 @@ window.RankBump = (function () {
       .on("mousemove", (event, d) => highlight(d.id, event, d))
       .on("mouseleave", () => highlight(null));
     hits.selectAll("circle")
-      .data(visible.filter((d) => d.points.length === 1))
+      .data(visible.filter((d) => seriesPoints(d).length === 1))
       .join("circle")
-      .attr("cx", (d) => x(d.points[0].x))
-      .attr("cy", (d) => y(d.points[0].position))
+      .attr("cx", (d) => x(seriesPoints(d)[0].x))
+      .attr("cy", (d) => y(seriesPoints(d)[0].position))
       .attr("r", 10)
       .attr("fill", "transparent")
       .style("cursor", "pointer")

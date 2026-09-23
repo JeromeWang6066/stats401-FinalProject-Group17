@@ -194,6 +194,17 @@ code {
   min-width: 72px;
 }
 
+.filter-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 28px;
+}
+
+.filter-pair .filter-label {
+  min-width: 0;
+}
+
 .seg {
   display: flex;
   flex-wrap: wrap;
@@ -384,6 +395,8 @@ code {
   font-size: 12px;
   margin: 8px 0 0;
 }
+
+.legend[hidden] { display: none; }
 
 .swatch.vsc { background: #eab308; }
 .swatch.sc-band { background: #f97316; }

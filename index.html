@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>What counts as an overtake? · Group 17</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
 </head>
 <body>
   <nav class="site-nav">
@@ -155,11 +155,13 @@
             <button type="button" data-year="2024">2024</button>
             <button type="button" data-year="2025" class="on">2025</button>
           </div>
-          <span class="filter-label">Scope</span>
-          <div class="seg" id="bump-scope">
-            <button type="button" data-scope="season" class="on">Season championship</button>
-            <button type="button" data-scope="race">One race</button>
-          </div>
+          <span class="filter-pair">
+            <span class="filter-label">Scope</span>
+            <span class="seg" id="bump-scope">
+              <button type="button" data-scope="season" class="on">Season championship</button>
+              <button type="button" data-scope="race">One race</button>
+            </span>
+          </span>
           <label class="bump-race-pick" id="bump-race-wrap" hidden>
             <span class="filter-label">Grand Prix</span>
             <select id="bump-race" aria-label="Choose a Grand Prix"></select>
@@ -259,7 +261,7 @@
   <script src="js/state.js"></script>
   <script src="js/network.js"></script>
   <script src="js/lap.js"></script>
-  <script src="js/bump.js"></script>
+  <script src="js/bump.js?v=5"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
