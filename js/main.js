@@ -86,9 +86,11 @@
   state.subscribe(render);
   if (window.LapChart) window.LapChart.init();
   if (window.RankBump && bumpEl) window.RankBump.render(bumpEl, data);
+  if (window.TrackMap) window.TrackMap.init();
   window.addEventListener("resize", () => {
     window.OvertakeNetwork.render(networkEl, data, state.get());
     if (window.RankBump && bumpEl) window.RankBump.render(bumpEl, data);
+    if (window.TrackMap) window.TrackMap.draw();
   });
   render();
 })();

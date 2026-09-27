@@ -3,6 +3,7 @@ import argparse
 import json
 import logging
 import re
+import threading
 import time
 from collections import deque
 from pathlib import Path
@@ -15,6 +16,7 @@ DEFAULT_YEARS = [2023, 2024, 2025]
 ENDPOINTS = ["overtakes", "drivers", "pit", "race_control", "laps", "position"]
 MIN_REQUEST_INTERVAL = 2.2
 _last_request_time = 0.0
+_rate_lock = threading.Lock()
 ROOT = Path(__file__).resolve().parents[1]
 RAW_ROOT = ROOT / "data" / "raw"
 MANIFEST_ROOT = ROOT / "data" / "manifests"
@@ -59,23 +61,24 @@ class RateLimiter:
 LIMITER = RateLimiter()
 
 
-def get_json(session, endpoint, params, retries=5):
+def get_json(session, endpoint, params, retries=5, timeout=60):
     global _last_request_time
     url = f"{BASE_URL}/{endpoint}"
     last_error = None
     for attempt in range(retries):
-        # Global rate limiter:
-        # OpenF1 free tier allows up to 30 requests/minute.
-        elapsed = time.monotonic() - _last_request_time
-        if elapsed < MIN_REQUEST_INTERVAL:
-            time.sleep(MIN_REQUEST_INTERVAL - elapsed)
+        # Space request starts. The free tier allows <=3/s and <=30/min.
+        # The lock covers the wait only, so downloads can overlap.
+        with _rate_lock:
+            elapsed = time.monotonic() - _last_request_time
+            if elapsed < MIN_REQUEST_INTERVAL:
+                time.sleep(MIN_REQUEST_INTERVAL - elapsed)
+            _last_request_time = time.monotonic()
         try:
             r = session.get(
                 url,
                 params=params,
-                timeout=60,
+                timeout=timeout,
             )
-            _last_request_time = time.monotonic()
             if r.status_code == 404:
                 print(
                     f"WARNING: {r.url} returned 404; "
@@ -100,7 +103,7 @@ def get_json(session, endpoint, params, retries=5):
             if attempt < retries - 1:
                 wait = min(60, 2 ** attempt)
                 print(
-                    f"WARNING: {r.url} failed ({e}); "
+                    f"WARNING: {endpoint} {params} failed ({e}); "
                     f"retrying in {wait}s"
                 )
                 time.sleep(wait)

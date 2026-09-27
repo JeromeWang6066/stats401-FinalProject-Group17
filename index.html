@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>What counts as an overtake? · Group 17</title>
-  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="stylesheet" href="css/style.css?v=8" />
 </head>
 <body>
   <nav class="site-nav">
@@ -65,6 +65,7 @@
       <p>
         View 1 uses each race’s first and last positions from <code>position.json</code> (grid / finish), plus Jolpica year-end driver standings.
         View 3’s season bump uses <strong>after-round</strong> standings from the same API; the single-race bump aligns that session’s <code>position</code> with <code>laps</code>.
+        View 4 slices OpenF1 <code>location</code> to the overtaking car in that session, keeps one racing lap as the centerline, and loads only the placed points. Corner numbers come from the meeting <code>circuit_info_url</code>.
         Fuller field notes are in <a href="processed-overtake-data.html">processed-overtake-data.html</a>.
       </p>
     </section>
@@ -72,7 +73,7 @@
     <section id="visualizations">
       <div class="panel lead">
         <h2>Visualizations</h2>
-        <p>View 1 filters by season, grand prix, and swap type inside its card. View 2 compares raw and cleaned swaps in one Race or Sprint. View 3 switches between the season championship and one race’s lap-by-lap order.</p>
+        <p>View 1 filters by season, grand prix, and swap type inside its card. View 2 compares raw and cleaned swaps in one Race or Sprint. View 3 switches between the season championship and one race’s lap-by-lap order. View 4 places one session’s swaps on the circuit.</p>
       </div>
 
       <article class="chart-card">
@@ -202,6 +203,30 @@
           <span class="swatch red"></span>Red flag
         </p>
       </article>
+
+      <article class="chart-card">
+        <h3>4. Track map</h3>
+        <p class="chart-why">One racing lap draws the circuit. Each dot is a swap at the overtaking car’s location. Corner numbers show whether a lap-1 cluster is actually turn 1.</p>
+        <div class="filter-row lap-filters" aria-label="Track map session">
+          <span class="filter-label">Season</span>
+          <div class="seg" id="track-year">
+            <button type="button" data-year="2023">2023</button>
+            <button type="button" data-year="2024">2024</button>
+            <button type="button" data-year="2025" class="on">2025</button>
+          </div>
+          <label class="lap-pick"><span class="filter-label">Grand Prix</span><select id="track-gp" aria-label="Choose a Grand Prix"></select></label>
+          <label class="lap-pick"><span class="filter-label">Session</span><select id="track-session" aria-label="Choose Race or Sprint"></select></label>
+        </div>
+        <div class="filter-row" aria-label="Track map swap type">
+          <span class="filter-label">Swap type</span>
+          <div class="seg" id="track-tags"></div>
+          <button type="button" class="chip" id="track-lap1">Lap 1 only</button>
+        </div>
+        <p class="status-line" id="track-status"></p>
+        <div id="track-chart" class="track-chart"></div>
+        <p class="legend" id="track-legend"></p>
+        <p class="chart-why lap-note">Scroll to zoom and drag to pan. A dot with no corner is more than about 30 m off the racing line.</p>
+      </article>
     </section>
 
     <section class="panel" id="interaction">
@@ -225,9 +250,10 @@
           Goal: check whether net-overtake hubs also climb race position or the championship.
         </li>
         <li>
-          <strong>View 4 track map (wireframe).</strong>
-          Draw the circuit from <code>location</code> x/y and plot overtakes on corners.
-          Goal: are lap-1 clusters all at turn 1.
+          <strong>View 4 track map (implemented).</strong>
+          Pick a season, grand prix, and Race or Sprint. Tag chips and the lap-1 switch stay on this card.
+          Hover a dot for the drivers, lap, corner, and classification. Scroll to zoom.
+          Goal: see whether lap-1 swaps sit at turn 1.
         </li>
         <li>
           <strong>View 5 session mix (wireframe).</strong>
@@ -262,6 +288,8 @@
   <script src="js/network.js"></script>
   <script src="js/lap.js"></script>
   <script src="js/bump.js?v=5"></script>
+  <script src="js/track_data.js"></script>
+  <script src="js/track.js?v=13"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

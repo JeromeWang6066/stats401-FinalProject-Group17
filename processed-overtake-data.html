@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>处理后的超车数据</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #111111;
+      --muted: #5a5a5a;
+      --line: #e4e4e4;
+      --red: #e10600;
+      --red-dark: #7a0012;
+      --black: #111111;
+      --gray: #8d8d8d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 28px 72px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    h1::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: #e10600;
+      margin-top: 10px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 36px 0 10px;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 22px 0 8px;
+    }
+    p { margin: 0 0 12px; }
+    .lede { font-size: 16px; max-width: 46em; }
+    .caption { color: var(--muted); font-size: 13px; margin-top: 6px; }
+    code {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: #f5f5f5;
+      padding: 0.08em 0.32em;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .stat {
+      border: 1px solid var(--line);
+      padding: 14px 16px;
+    }
+    .stat b {
+      display: block;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+    .stat span { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
+    .stat.clean b, .stat.pit b { color: #e10600; }
+    .note {
+      border-left: 3px solid #e10600;
+      padding: 10px 14px;
+      margin: 8px 0 20px;
+      background: #fafafa;
+    }
+    .note strong { display: block; margin-bottom: 4px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      margin: 8px 0 16px;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      font-weight: 600;
+      color: #111;
+      border-bottom: 2px solid #111;
+    }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    tbody tr:nth-child(even) { background: #fafafa; }
+    .charts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+      margin: 12px 0 8px;
+    }
+    .chart-title { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 10px 16px; font-size: 13px; color: var(--muted); margin: 8px 0; }
+    .legend i {
+      display: inline-block;
+      width: 9px; height: 9px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .card {
+      border: 1px solid var(--line);
+      padding: 14px 16px;
+    }
+    .card h3 { margin: 0 0 8px; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .pill {
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 1px 8px;
+    }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 28px; color: var(--muted); font-size: 13px; }
+    svg text { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; fill: var(--muted); }
+    .chart-wrap { overflow-x: auto; }
+    @media (max-width: 760px) {
+      .stats, .charts, .cards { grid-template-columns: 1fr; }
+      main { padding: 28px 16px 48px; }
+    }
+    @media print {
+      body { background: white; }
+      .stat, .card, table { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>处理后的超车数据</h1>
+    <p class="lede"><code>data/processed</code> 里有四份 CSV，来自 2023–2025 共 88 场 OpenF1 正赛/冲刺赛。主表一行对应一次 OpenF1 换位。真超车定义为正赛进行中、两车在赛道上换位；第 1 圈、同一秒爆发和 8 秒对倒都算。进站、退赛、暖胎圈、方格旗之后、安全车下解套不算。</p>
+    <p class="caption">来源：data/processed · OpenF1 2023-03-05 至 2025-12-07 · 70 场大奖赛 + 18 场冲刺赛</p>
+
+    <div class="stats">
+      <div class="stat"><b>19,303</b><span>带标签的换位记录</span></div>
+      <div class="stat"><b>88</b><span>场次（70 正赛，18 冲刺）</span></div>
+      <div class="stat clean"><b>41.0%</b><span>真超车（互斥 tag = on_track）</span></div>
+      <div class="stat pit"><b>44.7%</b><span>进站导致的换位</span></div>
+    </div>
+
+    <div class="note">
+      <strong>真超车现在是机制标签，不是残差</strong>
+      互斥 <code>tag = on_track</code> 与 <code>is_true_on_track</code> 均为 7,922 条（41.0%）。旧口径会把 burst 和第 1 圈整段拿掉，只剩约 30%。前端用 <code>tag</code> 做单选，用 <code>tag_all</code> 和布尔列做叠加筛选（例如 <code>on_track|burst|lap1</code>），用 <code>grand_prix</code> 按大奖赛筛选。
+    </div>
+
+    <h2>四份处理后的文件</h2>
+    <table>
+      <thead>
+        <tr><th>文件</th><th>粒度</th><th class="num">行数</th><th>内容</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>overtakes_tagged.csv</code></td><td>一次 OpenF1 超车</td><td class="num">19,303</td><td>事件、车手、圈数和全部标签</td></tr>
+        <tr><td><code>tag_summary_by_year.csv</code></td><td>赛季</td><td class="num">3</td><td>各标签的计数与占比</td></tr>
+        <tr><td><code>tag_summary_by_circuit.csv</code></td><td>年份 × 大奖赛 × 赛道</td><td class="num">70</td><td>按大奖赛 / 赛道汇总的同样标签</td></tr>
+        <tr><td><code>edge_summary.csv</code></td><td>年份 × 大奖赛 × 赛道 × 有向车手对</td><td class="num">12,481</td><td>每条边上的全部事件与干净事件</td></tr>
+      </tbody>
+    </table>
+
+    <h2>overtakes_tagged.csv 的字段</h2>
+    <p>原始 OpenF1 超车只有场次键、双方车号、时间和名次。处理后补上了赛道/大奖赛/年份、双方车手身份、圈数对齐，以及按机制划分的互斥 tag 与可叠加 flag。</p>
+
+    <h3>身份与场次</h3>
+    <table>
+      <thead><tr><th>字段</th><th>含义</th></tr></thead>
+      <tbody>
+        <tr><td><code>year, circuit, grand_prix, session_name</code></td><td>赛季、circuit_short_name、熟悉的大奖赛名（Shanghai / Monaco / Miami，供前端筛选），以及 Race / Sprint</td></tr>
+        <tr><td><code>meeting_key, session_key</code></td><td>周末与场次编号（88 场，70 个比赛周末）</td></tr>
+        <tr><td><code>date, second_bucket</code></td><td>事件时间（UTC），以及用于判断爆发的一秒时间桶</td></tr>
+        <tr><td><code>position</code></td><td>超车完成后超车方的名次（1–19）</td></tr>
+      </tbody>
+    </table>
+
+    <h3>谁超了谁</h3>
+    <table>
+      <thead><tr><th>字段组</th><th>含义</th></tr></thead>
+      <tbody>
+        <tr><td><code>overtaking_ / overtaken_driver_number</code></td><td>OpenF1 车号</td></tr>
+        <tr><td><code>*_acronym, *_full_name</code></td><td>三字母缩写与全名（28 名车手，没有 join 失败）</td></tr>
+        <tr><td><code>*_team, *_team_colour</code></td><td>车队名和十六进制颜色，供网络图使用</td></tr>
+      </tbody>
+    </table>
+
+    <h3>圈数对齐</h3>
+    <table>
+      <thead><tr><th>字段</th><th>含义</th></tr></thead>
+      <tbody>
+        <tr><td><code>lap_number</code></td><td>不晚于该事件的最近一场圈开始（中位数 18；范围 1–78）</td></tr>
+        <tr><td><code>lap_start_global</code></td><td>该圈所有车手里最早的 date_start</td></tr>
+        <tr><td><code>lap_alignment</code></td><td>matched 19,133 条 · unavailable 170 条（主要是 2025 迈阿密、2023 墨尔本、2024 铃鹿/摩纳哥）</td></tr>
+      </tbody>
+    </table>
+
+    <h3>机制标签</h3>
+    <table>
+      <thead><tr><th>字段</th><th>规则</th><th class="num">条数</th></tr></thead>
+      <tbody>
+        <tr><td><code>tag = on_track</code> / <code>is_true_on_track</code></td><td>赛道上换位；含第 1 圈、burst、8 秒对倒</td><td class="num">7,922</td></tr>
+        <tr><td><code>tag = pit</code> / <code>is_pit</code></td><td>90 秒内进站，或当前圈是出站圈（互斥 8,628；叠加 9,681）</td><td class="num">8,628</td></tr>
+        <tr><td><code>tag = under_sc</code></td><td>VSC / 安全车 / 红旗区间，且不是解套</td><td class="num">1,649</td></tr>
+        <tr><td><code>tag = retired</code></td><td>被超者之后不再计圈，而比赛还在继续</td><td class="num">718</td></tr>
+        <tr><td><code>tag = post_race</code></td><td>方格旗当时或之后</td><td class="num">297</td></tr>
+        <tr><td><code>tag = formation</code></td><td>第 1 圈开始之前（暖胎圈）</td><td class="num">65</td></tr>
+        <tr><td><code>tag = unlap_under_sc</code></td><td>中立化区间内双方圈号差 ≥ 1</td><td class="num">24</td></tr>
+        <tr><td><code>is_burst</code></td><td>同一秒 ≥ 3 条；不再把记录踢出真超车</td><td class="num">5,229</td></tr>
+        <tr><td><code>is_lap1</code></td><td>对齐到第 1 圈</td><td class="num">4,016</td></tr>
+        <tr><td><code>is_bounce_8s</code></td><td>同一对 8 秒内方向相反</td><td class="num">3,493</td></tr>
+        <tr><td><code>tag_all</code></td><td>叠加标签用 | 拼接，例如 on_track|burst|lap1</td><td class="num">19,303</td></tr>
+      </tbody>
+    </table>
+    <p class="caption">互斥优先级：formation &gt; post_race &gt; unlap_under_sc &gt; under_sc &gt; pit &gt; retired &gt; on_track。<code>is_candidate_true_on_track</code> 已与 <code>is_true_on_track</code> 对齐。</p>
+
+    <h2>互斥标签构成</h2>
+    <p><code>tag</code> 把每一行分到唯一一类。进站仍是最大类。burst 和第 1 圈不再单独占一块，它们叠在真超车或其他机制上。</p>
+
+    <div class="charts">
+      <div>
+        <div class="chart-title">19,303 条事件的互斥标签占比</div>
+        <svg viewBox="0 0 280 240" width="100%" height="240" role="img" aria-label="互斥标签占比环形图">
+          <circle cx="110" cy="120" r="72" fill="none" stroke="#e10600" stroke-width="28" stroke-dasharray="202.2 250.2" transform="rotate(-90 110 120)" />
+          <circle cx="110" cy="120" r="72" fill="none" stroke="#111111" stroke-width="28" stroke-dasharray="185.7 266.7" stroke-dashoffset="-202.2" transform="rotate(-90 110 120)" />
+          <circle cx="110" cy="120" r="72" fill="none" stroke="#7a0012" stroke-width="28" stroke-dasharray="38.6 413.8" stroke-dashoffset="-387.9" transform="rotate(-90 110 120)" />
+          <circle cx="110" cy="120" r="72" fill="none" stroke="#8d8d8d" stroke-width="28" stroke-dasharray="25.9 426.5" stroke-dashoffset="-426.5" transform="rotate(-90 110 120)" />
+          <text x="110" y="114" text-anchor="middle" font-size="18" fill="#111111">19,303</text>
+          <text x="110" y="134" text-anchor="middle" font-size="11">事件</text>
+          <rect x="200" y="58" width="9" height="9" fill="#e10600" />
+          <text x="214" y="67" font-size="11">进站 44.7%</text>
+          <rect x="200" y="82" width="9" height="9" fill="#111111" />
+          <text x="214" y="91" font-size="11">真超车 41.0%</text>
+          <rect x="200" y="106" width="9" height="9" fill="#7a0012" />
+          <text x="214" y="115" font-size="11">中立化 8.5%</text>
+          <rect x="200" y="130" width="9" height="9" fill="#8d8d8d" />
+          <text x="214" y="139" font-size="11">其他 5.7%</text>
+        </svg>
+        <p class="caption">来源：overtakes_tagged.csv · 互斥 tag · 其他 = 退赛 + 赛后 + 暖胎圈 + 解套</p>
+      </div>
+      <div>
+        <div class="chart-title">各赛季互斥标签（条数）</div>
+        <svg viewBox="0 0 360 240" width="100%" height="240" role="img" aria-label="各赛季互斥标签堆叠柱状图">
+          <line x1="48" y1="20" x2="48" y2="190" stroke="#e4e4e4" />
+          <line x1="48" y1="190" x2="340" y2="190" stroke="#e4e4e4" />
+          <text x="42" y="194" text-anchor="end" font-size="10">0</text>
+          <text x="42" y="24" text-anchor="end" font-size="10">7,000</text>
+          <rect x="78" y="115.6" width="44" height="74.4" fill="#e10600" />
+          <rect x="78" y="46.3" width="44" height="69.2" fill="#111111" />
+          <rect x="78" y="27.8" width="44" height="18.5" fill="#7a0012" />
+          <rect x="78" y="20.9" width="44" height="6.9" fill="#8d8d8d" />
+          <text x="100" y="208" text-anchor="middle" font-size="12" fill="#111111">2023</text>
+          <rect x="168" y="125.1" width="44" height="64.9" fill="#e10600" />
+          <rect x="168" y="67.9" width="44" height="57.2" fill="#111111" />
+          <rect x="168" y="55.4" width="44" height="12.5" fill="#7a0012" />
+          <rect x="168" y="45.1" width="44" height="10.3" fill="#8d8d8d" />
+          <text x="190" y="208" text-anchor="middle" font-size="12" fill="#111111">2024</text>
+          <rect x="258" y="119.8" width="44" height="70.2" fill="#e10600" />
+          <rect x="258" y="53.8" width="44" height="66.0" fill="#111111" />
+          <rect x="258" y="44.8" width="44" height="9.0" fill="#7a0012" />
+          <rect x="258" y="35.2" width="44" height="9.6" fill="#8d8d8d" />
+          <text x="280" y="208" text-anchor="middle" font-size="12" fill="#111111">2025</text>
+        </svg>
+        <div class="legend">
+          <span><i style="background:#e10600"></i>进站</span>
+          <span><i style="background:#111111"></i>真超车</span>
+          <span><i style="background:#7a0012"></i>中立化</span>
+          <span><i style="background:#8d8d8d"></i>其他</span>
+        </div>
+        <p class="caption">来源：overtakes_tagged.csv · 按年的互斥 tag · 柱高比例 170px = 7,000 条</p>
+      </div>
+    </div>
+
+    <h2>可重叠标签按赛季</h2>
+    <p>按年汇总是独立计数各 flag 的，占比加总会超过 100%。真超车三年都在 40% 上下。进站相关（90 秒或出站圈）每个赛季大约一半。burst 仍然常见，但其中 2,986 / 5,229 条现在算真超车。</p>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 720 280" width="100%" height="280" role="img" aria-label="可重叠标签按赛季占比">
+        <line x1="50" y1="24" x2="50" y2="210" stroke="#e4e4e4" />
+        <line x1="50" y1="210" x2="700" y2="210" stroke="#e4e4e4" />
+        <text x="44" y="214" text-anchor="end" font-size="10">0%</text>
+        <text x="44" y="117" text-anchor="end" font-size="10">30%</text>
+        <text x="44" y="28" text-anchor="end" font-size="10">60%</text>
+        <line x1="50" y1="117" x2="700" y2="117" stroke="#f0f0f0" />
+        <rect x="118" y="53.4" width="28" height="156.6" fill="#e10600" />
+        <rect x="152" y="121.6" width="28" height="88.4" fill="#7a0012" />
+        <rect x="186" y="82.9" width="28" height="127.1" fill="#111111" />
+        <rect x="220" y="175.9" width="28" height="34.1" fill="#8d8d8d" />
+        <text x="122" y="49" font-size="10" fill="#111111">50.5%</text>
+        <text x="156" y="117" font-size="10" fill="#111111">28.5%</text>
+        <text x="190" y="78" font-size="10" fill="#111111">41.0%</text>
+        <text x="222" y="171" font-size="10" fill="#111111">11.0%</text>
+        <text x="183" y="232" text-anchor="middle" font-size="12" fill="#111111">2023（6,962）</text>
+        <rect x="318" y="55.0" width="28" height="155.0" fill="#e10600" />
+        <rect x="352" y="133.7" width="28" height="76.3" fill="#7a0012" />
+        <rect x="386" y="87.6" width="28" height="122.4" fill="#111111" />
+        <rect x="420" y="181.5" width="28" height="28.5" fill="#8d8d8d" />
+        <text x="322" y="51" font-size="10" fill="#111111">50.0%</text>
+        <text x="356" y="129" font-size="10" fill="#111111">24.6%</text>
+        <text x="390" y="83" font-size="10" fill="#111111">39.5%</text>
+        <text x="422" y="177" font-size="10" fill="#111111">9.2%</text>
+        <text x="383" y="232" text-anchor="middle" font-size="12" fill="#111111">2024（5,966）</text>
+        <rect x="518" y="55.3" width="28" height="154.7" fill="#e10600" />
+        <rect x="552" y="123.5" width="28" height="86.5" fill="#7a0012" />
+        <rect x="586" y="77.9" width="28" height="132.1" fill="#111111" />
+        <rect x="620" y="191.7" width="28" height="18.3" fill="#8d8d8d" />
+        <text x="522" y="51" font-size="10" fill="#111111">49.9%</text>
+        <text x="556" y="119" font-size="10" fill="#111111">27.9%</text>
+        <text x="590" y="73" font-size="10" fill="#111111">42.6%</text>
+        <text x="622" y="187" font-size="10" fill="#111111">5.9%</text>
+        <text x="583" y="232" text-anchor="middle" font-size="12" fill="#111111">2025（6,375）</text>
+      </svg>
+    </div>
+    <div class="legend">
+      <span><i style="background:#e10600"></i>进站相关</span>
+      <span><i style="background:#7a0012"></i>同一秒爆发</span>
+      <span><i style="background:#111111"></i>真超车</span>
+      <span><i style="background:#8d8d8d"></i>中立化区间</span>
+    </div>
+    <p class="caption">来源：tag_summary_by_year.csv · 可重叠 flag，不是互斥 tag · 纵轴 60%</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>年份</th><th class="num">事件数</th><th class="num">真超车</th><th class="num">进站</th>
+          <th class="num">中立化</th><th class="num">退赛</th><th class="num">赛后</th><th class="num">暖胎/解套</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>2023</td><td class="num">6,962</td><td class="num">2,851</td><td class="num">3,064</td><td class="num">763</td><td class="num">245</td><td class="num">36</td><td class="num">3</td></tr>
+        <tr><td>2024</td><td class="num">5,966</td><td class="num">2,354</td><td class="num">2,673</td><td class="num">515</td><td class="num">197</td><td class="num">144</td><td class="num">83</td></tr>
+        <tr><td>2025</td><td class="num">6,375</td><td class="num">2,717</td><td class="num">2,891</td><td class="num">371</td><td class="num">276</td><td class="num">117</td><td class="num">3</td></tr>
+      </tbody>
+    </table>
+    <p class="caption">表内是互斥 tag 计数。2024 暖胎/解套 = formation 65 + unlap_under_sc 18。</p>
+
+    <h2>事件量集中在哪些赛道</h2>
+    <p>Qatar（Lusail）和 Bahrain（Sakhir）原始记录最多，但在新口径下真超车占比也高（约 60%），因为冲刺周末的发车超车现在算进去了。Suzuka 最低（17.2%），多数换位落在安全车或进站。筛选请用 <code>grand_prix</code>，不要用赛道短名（Monte Carlo → Monaco，Catalunya → Barcelona）。</p>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 720 360" width="100%" height="360" role="img" aria-label="事件数最多的十条赛道">
+        <text x="140" y="18" font-size="10">0</text>
+        <text x="380" y="18" font-size="10">860</text>
+        <text x="600" y="18" font-size="10">1,720</text>
+        <line x1="140" y1="24" x2="140" y2="340" stroke="#e4e4e4" />
+        <text x="132" y="50" text-anchor="end" font-size="12" fill="#111111">Qatar</text>
+        <rect x="140" y="36" width="480" height="11" fill="#111111" />
+        <rect x="140" y="49" width="288.8" height="11" fill="#e10600" />
+        <text x="132" y="80" text-anchor="end" font-size="12" fill="#111111">Bahrain</text>
+        <rect x="140" y="66" width="404.4" height="11" fill="#111111" />
+        <rect x="140" y="79" width="242.5" height="11" fill="#e10600" />
+        <text x="132" y="110" text-anchor="end" font-size="12" fill="#111111">Zandvoort</text>
+        <rect x="140" y="96" width="297.2" height="11" fill="#111111" />
+        <rect x="140" y="109" width="92.7" height="11" fill="#e10600" />
+        <text x="132" y="140" text-anchor="end" font-size="12" fill="#111111">Austria</text>
+        <rect x="140" y="126" width="279.6" height="11" fill="#111111" />
+        <rect x="140" y="139" width="99.9" height="11" fill="#e10600" />
+        <text x="132" y="170" text-anchor="end" font-size="12" fill="#111111">Sao Paulo</text>
+        <rect x="140" y="156" width="276.8" height="11" fill="#111111" />
+        <rect x="140" y="169" width="112.5" height="11" fill="#e10600" />
+        <text x="132" y="200" text-anchor="end" font-size="12" fill="#111111">Barcelona</text>
+        <rect x="140" y="186" width="272.7" height="11" fill="#111111" />
+        <rect x="140" y="199" width="78.1" height="11" fill="#e10600" />
+        <text x="132" y="230" text-anchor="end" font-size="12" fill="#111111">Abu Dhabi</text>
+        <rect x="140" y="216" width="261.8" height="11" fill="#111111" />
+        <rect x="140" y="229" width="97.7" height="11" fill="#e10600" />
+        <text x="132" y="260" text-anchor="end" font-size="12" fill="#111111">Spa</text>
+        <rect x="140" y="246" width="248.7" height="11" fill="#111111" />
+        <rect x="140" y="259" width="84.6" height="11" fill="#e10600" />
+        <text x="132" y="290" text-anchor="end" font-size="12" fill="#111111">Austin</text>
+        <rect x="140" y="276" width="246.7" height="11" fill="#111111" />
+        <rect x="140" y="289" width="116.9" height="11" fill="#e10600" />
+        <text x="132" y="320" text-anchor="end" font-size="12" fill="#111111">Las Vegas</text>
+        <rect x="140" y="306" width="231.9" height="11" fill="#111111" />
+        <rect x="140" y="319" width="93.2" height="11" fill="#e10600" />
+      </svg>
+    </div>
+    <div class="legend">
+      <span><i style="background:#111111"></i>全部事件</span>
+      <span><i style="background:#e10600"></i>真超车</span>
+    </div>
+    <p class="caption">来源：overtakes_tagged.csv · 按事件数最多的 10 条赛道，2023–2025</p>
+
+    <table>
+      <thead>
+        <tr><th>大奖赛</th><th>赛道</th><th class="num">场次</th><th class="num">事件数</th><th class="num">真超车</th><th class="num">占比</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Qatar</td><td>Lusail</td><td class="num">6</td><td class="num">1,720</td><td class="num">1,035</td><td class="num">60.2%</td></tr>
+        <tr><td>Bahrain</td><td>Sakhir</td><td class="num">3</td><td class="num">1,449</td><td class="num">869</td><td class="num">60.0%</td></tr>
+        <tr><td>Zandvoort</td><td>Zandvoort</td><td class="num">3</td><td class="num">1,065</td><td class="num">332</td><td class="num">31.2%</td></tr>
+        <tr><td>Austria</td><td>Spielberg</td><td class="num">5</td><td class="num">1,002</td><td class="num">358</td><td class="num">35.7%</td></tr>
+        <tr><td>Sao Paulo</td><td>Interlagos</td><td class="num">6</td><td class="num">992</td><td class="num">403</td><td class="num">40.6%</td></tr>
+        <tr><td>Miami</td><td>Miami</td><td class="num">5</td><td class="num">781</td><td class="num">402</td><td class="num">51.5%</td></tr>
+        <tr><td>Suzuka</td><td>Suzuka</td><td class="num">3</td><td class="num">639</td><td class="num">110</td><td class="num">17.2%</td></tr>
+        <tr><td>Jeddah</td><td>Jeddah</td><td class="num">3</td><td class="num">431</td><td class="num">202</td><td class="num">46.9%</td></tr>
+        <tr><td>Monaco</td><td>Monte Carlo</td><td class="num">3</td><td class="num">381</td><td class="num">132</td><td class="num">34.6%</td></tr>
+      </tbody>
+    </table>
+
+    <div class="cards">
+      <div class="card">
+        <h3>场次类型 <span class="pill">正赛 vs 冲刺</span></h3>
+        <p>正赛：17,578 条，真超车 38.0%，进站相关 53.6%。冲刺：1,725 条，真超车 72.4%——冲刺很少进站，发车超车现在算真超车。用 <code>session_name</code> 可再滤掉冲刺。</p>
+        <p class="caption">burst 的圈数中位数仍是第 1 圈；真超车中位数是第 3 圈（含发车）。56% 的 burst 落在第 1–2 圈。</p>
+      </div>
+      <div class="card">
+        <h3>有向车手对 <span class="pill">edge_summary.csv</span></h3>
+        <p>12,481 条「年份–大奖赛–车手对」；三个赛季 773 个不同有向对。大多数边只出现一次（均值 1.55 次）。最粗的原始边是 2024 上海 ZHO→MAG（10 次，其中 7 次是真超车）。</p>
+        <p class="caption">during_sc 时的 neutralized_kind：safety_car 783，red_flag 602，vsc 241，残留 sc 65。clean_events 现统计 is_true_on_track。</p>
+      </div>
+    </div>
+
+    <h2>处理后还没有的内容</h2>
+    <p>proposal 里的 <code>location</code> 和 <code>intervals</code>（赛道地图和车距带）尚未抓取。套圈（蓝旗领跑者超过落后一圈的车）几乎不在 overtakes 里，需要以后用 intervals 的 <code>+1 LAP</code> 另开一层。13 场 <code>pit.json</code> 为空，已用出站圈补进站，并打上 <code>pit_feed_missing</code>。</p>
+
+    <div class="pills">
+      <span class="pill">24 条赛道</span>
+      <span class="pill">28 名车手</span>
+      <span class="pill">13 个车队名</span>
+      <span>由 <code>src/process_overtakes.py</code> 从 data/raw 的年份-赛道场次文件夹生成</span>
+    </div>
+  </main>
+</body>
+</html>
