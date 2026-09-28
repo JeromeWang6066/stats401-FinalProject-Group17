@@ -7,6 +7,41 @@
   <link rel="stylesheet" href="css/style.css?v=8" />
   <style>
     #track-lap-row { margin: 10px 0 0; }
+    #mix-picks { display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    #mix-picks[hidden] { display: none; }
+    .mix-layout {
+      display: grid;
+      grid-template-columns: minmax(240px, 340px) minmax(260px, 1fr);
+      gap: 8px 22px;
+      align-items: center;
+    }
+    .mix-chart { min-height: 280px; }
+    .mix-chart svg { display: block; width: 100%; height: auto; }
+    .mix-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .mix-table th {
+      text-align: left;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0 8px 8px;
+    }
+    .mix-table td { padding: 7px 8px; border-top: 1px solid var(--line); }
+    .mix-table tbody tr { cursor: pointer; }
+    .mix-table tbody tr:hover td { background: #16161e; }
+    .mix-table tr.mix-on td { background: var(--accent-soft); }
+    .mix-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .mix-swatch {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    @media (max-width: 800px) {
+      .mix-layout { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -76,7 +111,7 @@
     <section id="visualizations">
       <div class="panel lead">
         <h2>Visualizations</h2>
-        <p>View 1 filters by season, grand prix, and swap type inside its card. View 2 compares raw and cleaned swaps in one Race or Sprint. View 3 switches between the season championship and one race’s lap-by-lap order. View 4 places one session’s swaps on the circuit.</p>
+        <p>View 1 filters by season, grand prix, and swap type inside its card. View 2 compares raw and cleaned swaps in one Race or Sprint. View 3 switches between the season championship and one race’s lap-by-lap order. View 4 places one session’s swaps on the circuit. View 5 splits one session, or a whole season, into true passes and bookkeeping.</p>
       </div>
 
       <article class="chart-card">
@@ -235,6 +270,39 @@
         <p class="legend" id="track-legend"></p>
         <p class="chart-why lap-note">Scroll to zoom and drag to pan. A dot with no corner is more than about 30 m off the racing line.</p>
       </article>
+
+      <article class="chart-card" id="mix-card">
+        <h3>5. Session mix</h3>
+        <p class="chart-why">One race, one sprint, or a whole season. Each slice is an exclusive tag, so the shares add to 100%. The hole shows how many OpenF1 swaps are in the current choice, and what share is a true pass.</p>
+        <div class="filter-row lap-filters" aria-label="Session mix filters">
+          <span class="filter-label">Season</span>
+          <div class="seg" id="mix-year">
+            <button type="button" data-year="2023">2023</button>
+            <button type="button" data-year="2024">2024</button>
+            <button type="button" data-year="2025">2025</button>
+          </div>
+          <div class="seg" id="mix-scope">
+            <button type="button" data-scope="season">Whole season</button>
+            <button type="button" data-scope="session" class="on">One session</button>
+          </div>
+          <span id="mix-picks">
+            <label class="lap-pick"><span class="filter-label">Grand Prix</span><select id="mix-gp" aria-label="Choose a Grand Prix"></select></label>
+            <label class="lap-pick"><span class="filter-label">Session</span><select id="mix-session" aria-label="Choose Race or Sprint"></select></label>
+          </span>
+          <button type="button" class="chip" id="mix-all">All tags</button>
+        </div>
+        <p class="status-line" id="mix-status"></p>
+        <div class="mix-layout">
+          <div id="mix-chart" class="mix-chart"></div>
+          <table class="mix-table" id="mix-table">
+            <thead>
+              <tr><th>Tag</th><th class="num">Swaps</th><th class="num">Share</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="chart-why lap-note" id="mix-note"></p>
+      </article>
     </section>
 
     <section class="panel" id="interaction">
@@ -264,9 +332,9 @@
           Goal: see whether lap-1 swaps sit at turn 1.
         </li>
         <li>
-          <strong>View 5 session mix (wireframe).</strong>
-          Exclusive-tag donut; click <code>on_track</code> to expand lap1 / burst / bounce.
-          Goal: how much of one session’s OpenF1 overtake count is bookkeeping.
+          <strong>View 5 session mix (implemented).</strong>
+          Pick a season, then Whole season or one grand prix and Race or Sprint. The ring and the table count every exclusive tag in that choice, including swaps with no lap number. A zero count stays in the table and is not drawn. Percentages under 8% stay in the table. Click a slice or a row to highlight it and show only that tag on views 1 and 4; click the same slice again, or All tags, to show every tag. Click True pass to replace the ring with lap 1, same-second burst, and 8-second bounce counts among true passes. Those three flags overlap. Click the empty part of the chart to bring the ring back. Changing the session moves views 1–4 onto that race.
+          Goal: see whether one session’s OpenF1 count is mostly on-track passing or bookkeeping.
         </li>
       </ol>
     </section>
@@ -299,5 +367,7 @@
   <script src="js/track_data.js"></script>
   <script src="js/track.js?v=38"></script>
   <script src="js/main.js"></script>
+  <script src="js/donut_data.js"></script>
+  <script src="js/donut.js?v=3"></script>
 </body>
 </html>
