@@ -915,7 +915,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Baku,Baku,1,16,VER,LEC,2,2
 2023,Baku,Baku,1,18,VER,STR,1,0
 2023,Baku,Baku,1,55,VER,SAI,2,1
-2023,Baku,Baku,1,63,VER,RUS,2,0
+2023,Baku,Baku,1,63,VER,RUS,2,1
 2023,Baku,Baku,2,10,SAR,GAS,1,0
 2023,Baku,Baku,2,20,SAR,MAG,1,1
 2023,Baku,Baku,2,21,SAR,DEV,1,0
@@ -925,7 +925,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Baku,Baku,2,77,SAR,BOT,1,1
 2023,Baku,Baku,4,2,NOR,SAR,1,0
 2023,Baku,Baku,4,10,NOR,GAS,1,1
-2023,Baku,Baku,4,18,NOR,STR,2,1
+2023,Baku,Baku,4,18,NOR,STR,2,2
 2023,Baku,Baku,4,20,NOR,MAG,2,1
 2023,Baku,Baku,4,21,NOR,DEV,2,1
 2023,Baku,Baku,4,22,NOR,TSU,1,0
@@ -936,47 +936,47 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Baku,Baku,4,77,NOR,BOT,1,1
 2023,Baku,Baku,4,81,NOR,PIA,1,0
 2023,Baku,Baku,10,2,GAS,SAR,2,1
-2023,Baku,Baku,10,4,GAS,NOR,1,0
+2023,Baku,Baku,10,4,GAS,NOR,1,1
 2023,Baku,Baku,10,20,GAS,MAG,1,0
 2023,Baku,Baku,10,21,GAS,DEV,1,0
 2023,Baku,Baku,10,22,GAS,TSU,1,1
 2023,Baku,Baku,10,24,GAS,ZHO,4,4
-2023,Baku,Baku,10,27,GAS,HUL,2,1
+2023,Baku,Baku,10,27,GAS,HUL,2,2
 2023,Baku,Baku,10,31,GAS,OCO,1,0
-2023,Baku,Baku,10,77,GAS,BOT,4,2
+2023,Baku,Baku,10,77,GAS,BOT,4,3
 2023,Baku,Baku,11,1,PER,VER,1,1
-2023,Baku,Baku,11,16,PER,LEC,2,1
+2023,Baku,Baku,11,16,PER,LEC,2,2
 2023,Baku,Baku,14,1,ALO,VER,1,0
 2023,Baku,Baku,14,23,ALO,ALB,1,1
-2023,Baku,Baku,14,44,ALO,HAM,2,1
+2023,Baku,Baku,14,44,ALO,HAM,2,2
 2023,Baku,Baku,14,55,ALO,SAI,1,1
 2023,Baku,Baku,16,1,LEC,VER,1,1
 2023,Baku,Baku,18,1,STR,VER,1,0
-2023,Baku,Baku,18,4,STR,NOR,2,1
+2023,Baku,Baku,18,4,STR,NOR,2,2
 2023,Baku,Baku,18,22,STR,TSU,1,1
-2023,Baku,Baku,18,23,STR,ALB,1,0
+2023,Baku,Baku,18,23,STR,ALB,1,1
 2023,Baku,Baku,18,44,STR,HAM,1,1
 2023,Baku,Baku,18,63,STR,RUS,1,1
 2023,Baku,Baku,20,2,MAG,SAR,2,2
-2023,Baku,Baku,20,4,MAG,NOR,2,0
+2023,Baku,Baku,20,4,MAG,NOR,2,1
 2023,Baku,Baku,20,10,MAG,GAS,1,1
 2023,Baku,Baku,20,21,MAG,DEV,1,0
 2023,Baku,Baku,20,22,MAG,TSU,1,0
 2023,Baku,Baku,20,23,MAG,ALB,1,1
 2023,Baku,Baku,20,24,MAG,ZHO,3,3
-2023,Baku,Baku,20,27,MAG,HUL,2,1
+2023,Baku,Baku,20,27,MAG,HUL,2,2
 2023,Baku,Baku,20,31,MAG,OCO,1,0
 2023,Baku,Baku,20,44,MAG,HAM,1,0
 2023,Baku,Baku,20,77,MAG,BOT,2,2
 2023,Baku,Baku,21,2,DEV,SAR,1,1
-2023,Baku,Baku,21,4,DEV,NOR,2,0
+2023,Baku,Baku,21,4,DEV,NOR,2,1
 2023,Baku,Baku,21,10,DEV,GAS,1,1
 2023,Baku,Baku,21,20,DEV,MAG,1,1
 2023,Baku,Baku,21,22,DEV,TSU,2,1
 2023,Baku,Baku,21,23,DEV,ALB,1,0
 2023,Baku,Baku,21,24,DEV,ZHO,1,1
 2023,Baku,Baku,21,27,DEV,HUL,1,1
-2023,Baku,Baku,21,31,DEV,OCO,1,0
+2023,Baku,Baku,21,31,DEV,OCO,1,1
 2023,Baku,Baku,21,44,DEV,HAM,1,0
 2023,Baku,Baku,21,77,DEV,BOT,2,2
 2023,Baku,Baku,21,81,DEV,PIA,1,0
@@ -996,18 +996,18 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Baku,Baku,23,77,ALB,BOT,1,1
 2023,Baku,Baku,23,81,ALB,PIA,1,0
 2023,Baku,Baku,24,2,ZHO,SAR,1,1
-2023,Baku,Baku,24,4,ZHO,NOR,2,0
+2023,Baku,Baku,24,4,ZHO,NOR,2,1
 2023,Baku,Baku,24,10,ZHO,GAS,3,2
 2023,Baku,Baku,24,20,ZHO,MAG,2,2
 2023,Baku,Baku,24,21,ZHO,DEV,1,1
 2023,Baku,Baku,24,22,ZHO,TSU,1,0
 2023,Baku,Baku,24,23,ZHO,ALB,1,0
-2023,Baku,Baku,24,27,ZHO,HUL,1,0
+2023,Baku,Baku,24,27,ZHO,HUL,1,1
 2023,Baku,Baku,24,44,ZHO,HAM,1,0
-2023,Baku,Baku,24,77,ZHO,BOT,2,1
+2023,Baku,Baku,24,77,ZHO,BOT,2,2
 2023,Baku,Baku,24,81,ZHO,PIA,1,0
 2023,Baku,Baku,27,2,HUL,SAR,1,1
-2023,Baku,Baku,27,4,HUL,NOR,3,1
+2023,Baku,Baku,27,4,HUL,NOR,3,2
 2023,Baku,Baku,27,10,HUL,GAS,1,0
 2023,Baku,Baku,27,20,HUL,MAG,1,1
 2023,Baku,Baku,27,21,HUL,DEV,1,0
@@ -1018,10 +1018,10 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Baku,Baku,27,77,HUL,BOT,1,1
 2023,Baku,Baku,27,81,HUL,PIA,2,1
 2023,Baku,Baku,31,2,OCO,SAR,1,1
-2023,Baku,Baku,31,4,OCO,NOR,2,0
+2023,Baku,Baku,31,4,OCO,NOR,2,1
 2023,Baku,Baku,31,10,OCO,GAS,1,1
 2023,Baku,Baku,31,20,OCO,MAG,1,1
-2023,Baku,Baku,31,21,OCO,DEV,2,0
+2023,Baku,Baku,31,21,OCO,DEV,2,1
 2023,Baku,Baku,31,22,OCO,TSU,2,1
 2023,Baku,Baku,31,23,OCO,ALB,1,0
 2023,Baku,Baku,31,24,OCO,ZHO,1,0
@@ -1048,14 +1048,14 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Baku,Baku,63,22,RUS,TSU,1,1
 2023,Baku,Baku,63,44,RUS,HAM,1,0
 2023,Baku,Baku,63,81,RUS,PIA,1,1
-2023,Baku,Baku,77,4,BOT,NOR,1,0
+2023,Baku,Baku,77,4,BOT,NOR,1,1
 2023,Baku,Baku,77,10,BOT,GAS,2,1
 2023,Baku,Baku,77,20,BOT,MAG,1,1
 2023,Baku,Baku,77,21,BOT,DEV,1,0
 2023,Baku,Baku,77,23,BOT,ALB,1,1
 2023,Baku,Baku,77,24,BOT,ZHO,2,1
 2023,Baku,Baku,81,2,PIA,SAR,1,1
-2023,Baku,Baku,81,4,PIA,NOR,1,0
+2023,Baku,Baku,81,4,PIA,NOR,1,1
 2023,Baku,Baku,81,10,PIA,GAS,1,1
 2023,Baku,Baku,81,20,PIA,MAG,1,0
 2023,Baku,Baku,81,21,PIA,DEV,2,1
@@ -1809,12 +1809,12 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Las Vegas,Las Vegas,81,55,PIA,SAI,2,1
 2023,Las Vegas,Las Vegas,81,63,PIA,RUS,2,0
 2023,Las Vegas,Las Vegas,81,77,PIA,BOT,2,2
-2023,Melbourne,Melbourne,1,44,VER,HAM,1,0
+2023,Melbourne,Melbourne,1,44,VER,HAM,1,1
 2023,Melbourne,Melbourne,1,63,VER,RUS,1,0
-2023,Melbourne,Melbourne,2,11,SAR,PER,2,0
+2023,Melbourne,Melbourne,2,11,SAR,PER,2,1
 2023,Melbourne,Melbourne,2,16,SAR,LEC,1,1
 2023,Melbourne,Melbourne,2,20,SAR,MAG,2,0
-2023,Melbourne,Melbourne,2,21,SAR,DEV,3,1
+2023,Melbourne,Melbourne,2,21,SAR,DEV,3,3
 2023,Melbourne,Melbourne,2,23,SAR,ALB,1,0
 2023,Melbourne,Melbourne,2,63,SAR,RUS,1,0
 2023,Melbourne,Melbourne,2,77,SAR,BOT,2,0
@@ -1822,40 +1822,40 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Melbourne,Melbourne,4,11,NOR,PER,1,1
 2023,Melbourne,Melbourne,4,14,NOR,ALO,1,1
 2023,Melbourne,Melbourne,4,16,NOR,LEC,1,1
-2023,Melbourne,Melbourne,4,18,NOR,STR,1,1
-2023,Melbourne,Melbourne,4,22,NOR,TSU,3,1
+2023,Melbourne,Melbourne,4,18,NOR,STR,1,0
+2023,Melbourne,Melbourne,4,22,NOR,TSU,3,3
 2023,Melbourne,Melbourne,4,23,NOR,ALB,1,0
-2023,Melbourne,Melbourne,4,27,NOR,HUL,2,1
+2023,Melbourne,Melbourne,4,27,NOR,HUL,2,2
 2023,Melbourne,Melbourne,4,31,NOR,OCO,1,0
 2023,Melbourne,Melbourne,4,55,NOR,SAI,2,0
-2023,Melbourne,Melbourne,4,63,NOR,RUS,2,0
+2023,Melbourne,Melbourne,4,63,NOR,RUS,2,1
 2023,Melbourne,Melbourne,10,14,GAS,ALO,1,1
 2023,Melbourne,Melbourne,10,16,GAS,LEC,1,1
-2023,Melbourne,Melbourne,10,18,GAS,STR,1,0
+2023,Melbourne,Melbourne,10,18,GAS,STR,1,1
 2023,Melbourne,Melbourne,10,23,GAS,ALB,2,1
 2023,Melbourne,Melbourne,10,55,GAS,SAI,2,1
-2023,Melbourne,Melbourne,10,63,GAS,RUS,2,0
-2023,Melbourne,Melbourne,11,2,PER,SAR,3,0
-2023,Melbourne,Melbourne,11,4,PER,NOR,2,1
+2023,Melbourne,Melbourne,10,63,GAS,RUS,2,1
+2023,Melbourne,Melbourne,11,2,PER,SAR,3,1
+2023,Melbourne,Melbourne,11,4,PER,NOR,2,2
 2023,Melbourne,Melbourne,11,10,PER,GAS,1,0
 2023,Melbourne,Melbourne,11,14,PER,ALO,1,1
 2023,Melbourne,Melbourne,11,16,PER,LEC,1,1
-2023,Melbourne,Melbourne,11,18,PER,STR,2,2
-2023,Melbourne,Melbourne,11,20,PER,MAG,2,0
-2023,Melbourne,Melbourne,11,21,PER,DEV,1,0
-2023,Melbourne,Melbourne,11,22,PER,TSU,2,1
+2023,Melbourne,Melbourne,11,18,PER,STR,2,1
+2023,Melbourne,Melbourne,11,20,PER,MAG,2,1
+2023,Melbourne,Melbourne,11,21,PER,DEV,1,1
+2023,Melbourne,Melbourne,11,22,PER,TSU,2,2
 2023,Melbourne,Melbourne,11,23,PER,ALB,1,0
-2023,Melbourne,Melbourne,11,24,PER,ZHO,4,2
-2023,Melbourne,Melbourne,11,27,PER,HUL,2,1
-2023,Melbourne,Melbourne,11,31,PER,OCO,3,0
+2023,Melbourne,Melbourne,11,24,PER,ZHO,4,3
+2023,Melbourne,Melbourne,11,27,PER,HUL,2,2
+2023,Melbourne,Melbourne,11,31,PER,OCO,3,1
 2023,Melbourne,Melbourne,11,55,PER,SAI,1,0
-2023,Melbourne,Melbourne,11,63,PER,RUS,1,0
+2023,Melbourne,Melbourne,11,63,PER,RUS,1,1
 2023,Melbourne,Melbourne,11,77,PER,BOT,4,4
-2023,Melbourne,Melbourne,11,81,PER,PIA,2,1
+2023,Melbourne,Melbourne,11,81,PER,PIA,2,2
 2023,Melbourne,Melbourne,14,4,ALO,NOR,1,1
 2023,Melbourne,Melbourne,14,10,ALO,GAS,1,0
 2023,Melbourne,Melbourne,14,11,ALO,PER,1,1
-2023,Melbourne,Melbourne,14,18,ALO,STR,1,1
+2023,Melbourne,Melbourne,14,18,ALO,STR,1,0
 2023,Melbourne,Melbourne,14,22,ALO,TSU,1,1
 2023,Melbourne,Melbourne,14,24,ALO,ZHO,1,1
 2023,Melbourne,Melbourne,14,27,ALO,HUL,1,1
@@ -1875,110 +1875,110 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Melbourne,Melbourne,18,24,STR,ZHO,1,1
 2023,Melbourne,Melbourne,18,27,STR,HUL,1,1
 2023,Melbourne,Melbourne,18,55,STR,SAI,2,1
-2023,Melbourne,Melbourne,18,63,STR,RUS,2,0
+2023,Melbourne,Melbourne,18,63,STR,RUS,2,1
 2023,Melbourne,Melbourne,18,77,STR,BOT,1,1
 2023,Melbourne,Melbourne,18,81,STR,PIA,1,1
-2023,Melbourne,Melbourne,20,2,MAG,SAR,1,0
-2023,Melbourne,Melbourne,20,11,MAG,PER,1,0
+2023,Melbourne,Melbourne,20,2,MAG,SAR,1,1
+2023,Melbourne,Melbourne,20,11,MAG,PER,1,1
 2023,Melbourne,Melbourne,20,16,MAG,LEC,1,1
-2023,Melbourne,Melbourne,20,21,MAG,DEV,1,0
-2023,Melbourne,Melbourne,20,22,MAG,TSU,1,0
+2023,Melbourne,Melbourne,20,21,MAG,DEV,1,1
+2023,Melbourne,Melbourne,20,22,MAG,TSU,1,1
 2023,Melbourne,Melbourne,20,23,MAG,ALB,1,0
-2023,Melbourne,Melbourne,20,24,MAG,ZHO,1,0
+2023,Melbourne,Melbourne,20,24,MAG,ZHO,1,1
 2023,Melbourne,Melbourne,20,31,MAG,OCO,1,0
-2023,Melbourne,Melbourne,20,63,MAG,RUS,1,0
-2023,Melbourne,Melbourne,20,77,MAG,BOT,1,0
-2023,Melbourne,Melbourne,21,2,DEV,SAR,3,1
+2023,Melbourne,Melbourne,20,63,MAG,RUS,1,1
+2023,Melbourne,Melbourne,20,77,MAG,BOT,1,1
+2023,Melbourne,Melbourne,21,2,DEV,SAR,3,2
 2023,Melbourne,Melbourne,21,16,DEV,LEC,1,1
 2023,Melbourne,Melbourne,21,20,DEV,MAG,2,0
 2023,Melbourne,Melbourne,21,23,DEV,ALB,1,0
 2023,Melbourne,Melbourne,21,24,DEV,ZHO,2,0
-2023,Melbourne,Melbourne,21,31,DEV,OCO,3,0
+2023,Melbourne,Melbourne,21,31,DEV,OCO,3,2
 2023,Melbourne,Melbourne,21,55,DEV,SAI,1,0
 2023,Melbourne,Melbourne,21,63,DEV,RUS,1,0
-2023,Melbourne,Melbourne,21,77,DEV,BOT,1,0
+2023,Melbourne,Melbourne,21,77,DEV,BOT,1,1
 2023,Melbourne,Melbourne,22,4,TSU,NOR,2,1
 2023,Melbourne,Melbourne,22,10,TSU,GAS,1,0
 2023,Melbourne,Melbourne,22,11,TSU,PER,1,1
 2023,Melbourne,Melbourne,22,14,TSU,ALO,1,1
 2023,Melbourne,Melbourne,22,16,TSU,LEC,1,1
-2023,Melbourne,Melbourne,22,18,TSU,STR,1,1
+2023,Melbourne,Melbourne,22,18,TSU,STR,1,0
 2023,Melbourne,Melbourne,22,20,TSU,MAG,1,0
 2023,Melbourne,Melbourne,22,23,TSU,ALB,1,0
 2023,Melbourne,Melbourne,22,24,TSU,ZHO,1,0
 2023,Melbourne,Melbourne,22,31,TSU,OCO,2,0
 2023,Melbourne,Melbourne,22,55,TSU,SAI,2,0
-2023,Melbourne,Melbourne,22,63,TSU,RUS,2,0
-2023,Melbourne,Melbourne,22,81,TSU,PIA,2,1
+2023,Melbourne,Melbourne,22,63,TSU,RUS,2,1
+2023,Melbourne,Melbourne,22,81,TSU,PIA,2,2
 2023,Melbourne,Melbourne,23,10,ALB,GAS,1,1
 2023,Melbourne,Melbourne,23,16,ALB,LEC,1,1
 2023,Melbourne,Melbourne,23,18,ALB,STR,1,1
 2023,Melbourne,Melbourne,24,10,ZHO,GAS,1,0
-2023,Melbourne,Melbourne,24,11,ZHO,PER,3,1
+2023,Melbourne,Melbourne,24,11,ZHO,PER,3,2
 2023,Melbourne,Melbourne,24,14,ZHO,ALO,1,1
 2023,Melbourne,Melbourne,24,16,ZHO,LEC,1,1
-2023,Melbourne,Melbourne,24,18,ZHO,STR,1,1
+2023,Melbourne,Melbourne,24,18,ZHO,STR,1,0
 2023,Melbourne,Melbourne,24,20,ZHO,MAG,2,0
-2023,Melbourne,Melbourne,24,21,ZHO,DEV,3,1
-2023,Melbourne,Melbourne,24,22,ZHO,TSU,2,1
+2023,Melbourne,Melbourne,24,21,ZHO,DEV,3,2
+2023,Melbourne,Melbourne,24,22,ZHO,TSU,2,2
 2023,Melbourne,Melbourne,24,23,ZHO,ALB,1,0
-2023,Melbourne,Melbourne,24,31,ZHO,OCO,3,0
+2023,Melbourne,Melbourne,24,31,ZHO,OCO,3,1
 2023,Melbourne,Melbourne,24,55,ZHO,SAI,1,0
-2023,Melbourne,Melbourne,24,63,ZHO,RUS,1,0
+2023,Melbourne,Melbourne,24,63,ZHO,RUS,1,1
 2023,Melbourne,Melbourne,24,81,ZHO,PIA,2,2
 2023,Melbourne,Melbourne,27,4,HUL,NOR,1,1
 2023,Melbourne,Melbourne,27,10,HUL,GAS,1,0
 2023,Melbourne,Melbourne,27,11,HUL,PER,1,1
 2023,Melbourne,Melbourne,27,14,HUL,ALO,1,1
 2023,Melbourne,Melbourne,27,16,HUL,LEC,1,1
-2023,Melbourne,Melbourne,27,18,HUL,STR,1,1
+2023,Melbourne,Melbourne,27,18,HUL,STR,1,0
 2023,Melbourne,Melbourne,27,23,HUL,ALB,1,0
 2023,Melbourne,Melbourne,27,31,HUL,OCO,1,0
 2023,Melbourne,Melbourne,27,55,HUL,SAI,1,0
-2023,Melbourne,Melbourne,27,63,HUL,RUS,2,0
-2023,Melbourne,Melbourne,31,11,OCO,PER,2,1
+2023,Melbourne,Melbourne,27,63,HUL,RUS,2,1
+2023,Melbourne,Melbourne,31,11,OCO,PER,2,2
 2023,Melbourne,Melbourne,31,14,OCO,ALO,1,1
 2023,Melbourne,Melbourne,31,16,OCO,LEC,1,1
 2023,Melbourne,Melbourne,31,20,OCO,MAG,1,0
-2023,Melbourne,Melbourne,31,21,OCO,DEV,3,0
-2023,Melbourne,Melbourne,31,22,OCO,TSU,1,0
+2023,Melbourne,Melbourne,31,21,OCO,DEV,3,3
+2023,Melbourne,Melbourne,31,22,OCO,TSU,1,1
 2023,Melbourne,Melbourne,31,23,OCO,ALB,1,0
-2023,Melbourne,Melbourne,31,24,OCO,ZHO,2,0
+2023,Melbourne,Melbourne,31,24,OCO,ZHO,2,1
 2023,Melbourne,Melbourne,31,27,OCO,HUL,1,1
 2023,Melbourne,Melbourne,31,55,OCO,SAI,1,0
-2023,Melbourne,Melbourne,31,63,OCO,RUS,1,0
-2023,Melbourne,Melbourne,31,81,OCO,PIA,2,1
+2023,Melbourne,Melbourne,31,63,OCO,RUS,1,1
+2023,Melbourne,Melbourne,31,81,OCO,PIA,2,2
 2023,Melbourne,Melbourne,44,1,HAM,VER,1,1
 2023,Melbourne,Melbourne,44,55,HAM,SAI,1,1
 2023,Melbourne,Melbourne,44,63,HAM,RUS,1,0
-2023,Melbourne,Melbourne,55,4,SAI,NOR,2,0
-2023,Melbourne,Melbourne,55,10,SAI,GAS,2,0
+2023,Melbourne,Melbourne,55,4,SAI,NOR,2,1
+2023,Melbourne,Melbourne,55,10,SAI,GAS,2,1
 2023,Melbourne,Melbourne,55,11,SAI,PER,1,0
 2023,Melbourne,Melbourne,55,14,SAI,ALO,2,2
-2023,Melbourne,Melbourne,55,18,SAI,STR,2,1
+2023,Melbourne,Melbourne,55,18,SAI,STR,2,2
 2023,Melbourne,Melbourne,55,21,SAI,DEV,1,0
-2023,Melbourne,Melbourne,55,22,SAI,TSU,2,0
+2023,Melbourne,Melbourne,55,22,SAI,TSU,2,1
 2023,Melbourne,Melbourne,55,24,SAI,ZHO,1,0
-2023,Melbourne,Melbourne,55,27,SAI,HUL,1,0
+2023,Melbourne,Melbourne,55,27,SAI,HUL,1,1
 2023,Melbourne,Melbourne,55,31,SAI,OCO,1,0
 2023,Melbourne,Melbourne,55,44,SAI,HAM,1,1
-2023,Melbourne,Melbourne,55,63,SAI,RUS,1,0
-2023,Melbourne,Melbourne,55,81,SAI,PIA,2,0
+2023,Melbourne,Melbourne,55,63,SAI,RUS,1,1
+2023,Melbourne,Melbourne,55,81,SAI,PIA,2,1
 2023,Melbourne,Melbourne,63,1,RUS,VER,1,1
 2023,Melbourne,Melbourne,63,4,RUS,NOR,1,0
-2023,Melbourne,Melbourne,63,10,RUS,GAS,1,0
-2023,Melbourne,Melbourne,63,18,RUS,STR,1,0
+2023,Melbourne,Melbourne,63,10,RUS,GAS,1,1
+2023,Melbourne,Melbourne,63,18,RUS,STR,1,1
 2023,Melbourne,Melbourne,63,22,RUS,TSU,1,0
-2023,Melbourne,Melbourne,63,27,RUS,HUL,1,0
+2023,Melbourne,Melbourne,63,27,RUS,HUL,1,1
 2023,Melbourne,Melbourne,63,81,RUS,PIA,1,0
-2023,Melbourne,Melbourne,77,2,BOT,SAR,3,0
+2023,Melbourne,Melbourne,77,2,BOT,SAR,3,1
 2023,Melbourne,Melbourne,77,10,BOT,GAS,1,0
 2023,Melbourne,Melbourne,77,11,BOT,PER,3,2
 2023,Melbourne,Melbourne,77,14,BOT,ALO,1,1
 2023,Melbourne,Melbourne,77,16,BOT,LEC,1,1
-2023,Melbourne,Melbourne,77,18,BOT,STR,1,1
+2023,Melbourne,Melbourne,77,18,BOT,STR,1,0
 2023,Melbourne,Melbourne,77,20,BOT,MAG,2,0
-2023,Melbourne,Melbourne,77,21,BOT,DEV,2,0
+2023,Melbourne,Melbourne,77,21,BOT,DEV,2,2
 2023,Melbourne,Melbourne,77,23,BOT,ALB,1,0
 2023,Melbourne,Melbourne,77,31,BOT,OCO,1,0
 2023,Melbourne,Melbourne,77,63,BOT,RUS,1,0
@@ -1986,15 +1986,15 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Melbourne,Melbourne,81,11,PIA,PER,1,1
 2023,Melbourne,Melbourne,81,14,PIA,ALO,1,1
 2023,Melbourne,Melbourne,81,16,PIA,LEC,1,1
-2023,Melbourne,Melbourne,81,18,PIA,STR,1,1
+2023,Melbourne,Melbourne,81,18,PIA,STR,1,0
 2023,Melbourne,Melbourne,81,20,PIA,MAG,1,0
 2023,Melbourne,Melbourne,81,21,PIA,DEV,1,1
-2023,Melbourne,Melbourne,81,22,PIA,TSU,3,1
+2023,Melbourne,Melbourne,81,22,PIA,TSU,3,3
 2023,Melbourne,Melbourne,81,23,PIA,ALB,1,0
 2023,Melbourne,Melbourne,81,24,PIA,ZHO,2,2
 2023,Melbourne,Melbourne,81,31,PIA,OCO,3,0
 2023,Melbourne,Melbourne,81,55,PIA,SAI,2,0
-2023,Melbourne,Melbourne,81,63,PIA,RUS,2,0
+2023,Melbourne,Melbourne,81,63,PIA,RUS,2,1
 2023,Mexico City,Mexico City,1,3,VER,RIC,1,1
 2023,Mexico City,Mexico City,1,11,VER,PER,1,1
 2023,Mexico City,Mexico City,1,16,VER,LEC,3,2
@@ -2004,11 +2004,11 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Mexico City,Mexico City,1,81,VER,PIA,1,1
 2023,Mexico City,Mexico City,2,4,SAR,NOR,1,0
 2023,Mexico City,Mexico City,2,11,SAR,PER,2,1
-2023,Mexico City,Mexico City,2,14,SAR,ALO,4,1
-2023,Mexico City,Mexico City,2,18,SAR,STR,3,0
+2023,Mexico City,Mexico City,2,14,SAR,ALO,4,2
+2023,Mexico City,Mexico City,2,18,SAR,STR,3,1
 2023,Mexico City,Mexico City,2,20,SAR,MAG,3,0
-2023,Mexico City,Mexico City,2,22,SAR,TSU,4,1
-2023,Mexico City,Mexico City,2,24,SAR,ZHO,3,0
+2023,Mexico City,Mexico City,2,22,SAR,TSU,4,3
+2023,Mexico City,Mexico City,2,24,SAR,ZHO,3,1
 2023,Mexico City,Mexico City,2,27,SAR,HUL,2,1
 2023,Mexico City,Mexico City,2,31,SAR,OCO,1,1
 2023,Mexico City,Mexico City,2,77,SAR,BOT,3,1
@@ -2017,32 +2017,32 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Mexico City,Mexico City,3,11,RIC,PER,2,2
 2023,Mexico City,Mexico City,3,44,RIC,HAM,3,2
 2023,Mexico City,Mexico City,4,2,NOR,SAR,1,0
-2023,Mexico City,Mexico City,4,3,NOR,RIC,1,0
-2023,Mexico City,Mexico City,4,10,NOR,GAS,3,0
+2023,Mexico City,Mexico City,4,3,NOR,RIC,1,1
+2023,Mexico City,Mexico City,4,10,NOR,GAS,3,2
 2023,Mexico City,Mexico City,4,11,NOR,PER,2,2
 2023,Mexico City,Mexico City,4,14,NOR,ALO,3,3
 2023,Mexico City,Mexico City,4,18,NOR,STR,1,1
 2023,Mexico City,Mexico City,4,20,NOR,MAG,1,0
-2023,Mexico City,Mexico City,4,22,NOR,TSU,2,0
-2023,Mexico City,Mexico City,4,23,NOR,ALB,3,1
-2023,Mexico City,Mexico City,4,24,NOR,ZHO,2,0
-2023,Mexico City,Mexico City,4,27,NOR,HUL,2,0
-2023,Mexico City,Mexico City,4,31,NOR,OCO,3,2
+2023,Mexico City,Mexico City,4,22,NOR,TSU,2,1
+2023,Mexico City,Mexico City,4,23,NOR,ALB,3,3
+2023,Mexico City,Mexico City,4,24,NOR,ZHO,2,1
+2023,Mexico City,Mexico City,4,27,NOR,HUL,2,1
+2023,Mexico City,Mexico City,4,31,NOR,OCO,3,3
 2023,Mexico City,Mexico City,4,63,NOR,RUS,1,1
-2023,Mexico City,Mexico City,4,77,NOR,BOT,2,1
-2023,Mexico City,Mexico City,4,81,NOR,PIA,1,0
+2023,Mexico City,Mexico City,4,77,NOR,BOT,2,2
+2023,Mexico City,Mexico City,4,81,NOR,PIA,1,1
 2023,Mexico City,Mexico City,10,3,GAS,RIC,1,0
-2023,Mexico City,Mexico City,10,4,GAS,NOR,2,0
+2023,Mexico City,Mexico City,10,4,GAS,NOR,2,2
 2023,Mexico City,Mexico City,10,11,GAS,PER,1,1
 2023,Mexico City,Mexico City,10,14,GAS,ALO,1,0
 2023,Mexico City,Mexico City,10,18,GAS,STR,1,0
-2023,Mexico City,Mexico City,10,22,GAS,TSU,1,0
+2023,Mexico City,Mexico City,10,22,GAS,TSU,1,1
 2023,Mexico City,Mexico City,10,23,GAS,ALB,1,0
 2023,Mexico City,Mexico City,10,24,GAS,ZHO,2,2
-2023,Mexico City,Mexico City,10,27,GAS,HUL,2,0
+2023,Mexico City,Mexico City,10,27,GAS,HUL,2,1
 2023,Mexico City,Mexico City,10,31,GAS,OCO,1,1
 2023,Mexico City,Mexico City,10,63,GAS,RUS,1,0
-2023,Mexico City,Mexico City,10,77,GAS,BOT,6,1
+2023,Mexico City,Mexico City,10,77,GAS,BOT,6,5
 2023,Mexico City,Mexico City,10,81,GAS,PIA,1,0
 2023,Mexico City,Mexico City,11,1,PER,VER,1,1
 2023,Mexico City,Mexico City,11,2,PER,SAR,1,0
@@ -2050,24 +2050,24 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Mexico City,Mexico City,11,16,PER,LEC,1,1
 2023,Mexico City,Mexico City,11,44,PER,HAM,1,1
 2023,Mexico City,Mexico City,11,55,PER,SAI,1,1
-2023,Mexico City,Mexico City,14,2,ALO,SAR,2,0
+2023,Mexico City,Mexico City,14,2,ALO,SAR,2,1
 2023,Mexico City,Mexico City,14,4,ALO,NOR,2,1
 2023,Mexico City,Mexico City,14,10,ALO,GAS,1,0
 2023,Mexico City,Mexico City,14,11,ALO,PER,1,1
-2023,Mexico City,Mexico City,14,18,ALO,STR,1,0
+2023,Mexico City,Mexico City,14,18,ALO,STR,1,1
 2023,Mexico City,Mexico City,14,20,ALO,MAG,2,0
 2023,Mexico City,Mexico City,14,22,ALO,TSU,2,1
-2023,Mexico City,Mexico City,14,24,ALO,ZHO,2,0
+2023,Mexico City,Mexico City,14,24,ALO,ZHO,2,1
 2023,Mexico City,Mexico City,14,27,ALO,HUL,2,1
 2023,Mexico City,Mexico City,16,1,LEC,VER,2,1
 2023,Mexico City,Mexico City,16,11,LEC,PER,1,1
-2023,Mexico City,Mexico City,18,2,STR,SAR,2,0
+2023,Mexico City,Mexico City,18,2,STR,SAR,2,1
 2023,Mexico City,Mexico City,18,4,STR,NOR,1,0
 2023,Mexico City,Mexico City,18,10,STR,GAS,1,0
-2023,Mexico City,Mexico City,18,14,STR,ALO,2,1
+2023,Mexico City,Mexico City,18,14,STR,ALO,2,2
 2023,Mexico City,Mexico City,18,20,STR,MAG,2,0
-2023,Mexico City,Mexico City,18,22,STR,TSU,2,0
-2023,Mexico City,Mexico City,18,24,STR,ZHO,3,0
+2023,Mexico City,Mexico City,18,22,STR,TSU,2,1
+2023,Mexico City,Mexico City,18,24,STR,ZHO,3,2
 2023,Mexico City,Mexico City,18,27,STR,HUL,1,0
 2023,Mexico City,Mexico City,18,31,STR,OCO,1,1
 2023,Mexico City,Mexico City,20,2,MAG,SAR,1,1
@@ -2078,92 +2078,92 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Mexico City,Mexico City,20,24,MAG,ZHO,1,0
 2023,Mexico City,Mexico City,20,31,MAG,OCO,1,1
 2023,Mexico City,Mexico City,20,77,MAG,BOT,1,0
-2023,Mexico City,Mexico City,22,2,TSU,SAR,3,1
+2023,Mexico City,Mexico City,22,2,TSU,SAR,3,2
 2023,Mexico City,Mexico City,22,4,TSU,NOR,2,1
 2023,Mexico City,Mexico City,22,10,TSU,GAS,1,0
 2023,Mexico City,Mexico City,22,11,TSU,PER,1,1
 2023,Mexico City,Mexico City,22,14,TSU,ALO,3,3
-2023,Mexico City,Mexico City,22,18,TSU,STR,2,0
+2023,Mexico City,Mexico City,22,18,TSU,STR,2,1
 2023,Mexico City,Mexico City,22,20,TSU,MAG,2,1
 2023,Mexico City,Mexico City,22,23,TSU,ALB,1,0
 2023,Mexico City,Mexico City,22,24,TSU,ZHO,1,0
 2023,Mexico City,Mexico City,22,27,TSU,HUL,4,0
 2023,Mexico City,Mexico City,22,31,TSU,OCO,2,2
 2023,Mexico City,Mexico City,22,77,TSU,BOT,2,1
-2023,Mexico City,Mexico City,22,81,TSU,PIA,2,0
-2023,Mexico City,Mexico City,23,4,ALB,NOR,2,0
-2023,Mexico City,Mexico City,23,10,ALB,GAS,2,0
+2023,Mexico City,Mexico City,22,81,TSU,PIA,2,2
+2023,Mexico City,Mexico City,23,4,ALB,NOR,2,2
+2023,Mexico City,Mexico City,23,10,ALB,GAS,2,1
 2023,Mexico City,Mexico City,23,11,ALB,PER,1,1
 2023,Mexico City,Mexico City,23,14,ALB,ALO,1,1
-2023,Mexico City,Mexico City,23,22,ALB,TSU,1,0
+2023,Mexico City,Mexico City,23,22,ALB,TSU,1,1
 2023,Mexico City,Mexico City,23,24,ALB,ZHO,1,1
-2023,Mexico City,Mexico City,23,27,ALB,HUL,2,0
+2023,Mexico City,Mexico City,23,27,ALB,HUL,2,1
 2023,Mexico City,Mexico City,23,63,ALB,RUS,1,0
 2023,Mexico City,Mexico City,23,77,ALB,BOT,1,1
 2023,Mexico City,Mexico City,23,81,ALB,PIA,1,0
 2023,Mexico City,Mexico City,24,2,ZHO,SAR,2,0
-2023,Mexico City,Mexico City,24,4,ZHO,NOR,1,0
+2023,Mexico City,Mexico City,24,4,ZHO,NOR,1,1
 2023,Mexico City,Mexico City,24,10,ZHO,GAS,1,0
 2023,Mexico City,Mexico City,24,11,ZHO,PER,1,1
-2023,Mexico City,Mexico City,24,14,ZHO,ALO,2,0
-2023,Mexico City,Mexico City,24,18,ZHO,STR,3,1
+2023,Mexico City,Mexico City,24,14,ZHO,ALO,2,1
+2023,Mexico City,Mexico City,24,18,ZHO,STR,3,2
 2023,Mexico City,Mexico City,24,20,ZHO,MAG,1,0
-2023,Mexico City,Mexico City,24,31,ZHO,OCO,2,1
-2023,Mexico City,Mexico City,24,77,ZHO,BOT,3,1
+2023,Mexico City,Mexico City,24,31,ZHO,OCO,2,2
+2023,Mexico City,Mexico City,24,77,ZHO,BOT,3,2
 2023,Mexico City,Mexico City,27,2,HUL,SAR,1,0
 2023,Mexico City,Mexico City,27,4,HUL,NOR,1,0
 2023,Mexico City,Mexico City,27,10,HUL,GAS,2,1
 2023,Mexico City,Mexico City,27,11,HUL,PER,1,1
 2023,Mexico City,Mexico City,27,14,HUL,ALO,2,1
 2023,Mexico City,Mexico City,27,18,HUL,STR,1,0
-2023,Mexico City,Mexico City,27,22,HUL,TSU,3,0
+2023,Mexico City,Mexico City,27,22,HUL,TSU,3,1
 2023,Mexico City,Mexico City,27,23,HUL,ALB,1,0
 2023,Mexico City,Mexico City,27,24,HUL,ZHO,1,1
 2023,Mexico City,Mexico City,27,31,HUL,OCO,1,1
 2023,Mexico City,Mexico City,27,77,HUL,BOT,2,1
 2023,Mexico City,Mexico City,27,81,HUL,PIA,1,1
 2023,Mexico City,Mexico City,31,2,OCO,SAR,1,0
-2023,Mexico City,Mexico City,31,4,OCO,NOR,2,0
-2023,Mexico City,Mexico City,31,10,OCO,GAS,2,0
+2023,Mexico City,Mexico City,31,4,OCO,NOR,2,1
+2023,Mexico City,Mexico City,31,10,OCO,GAS,2,1
 2023,Mexico City,Mexico City,31,11,OCO,PER,1,1
 2023,Mexico City,Mexico City,31,14,OCO,ALO,1,0
 2023,Mexico City,Mexico City,31,18,OCO,STR,1,0
 2023,Mexico City,Mexico City,31,20,OCO,MAG,1,0
-2023,Mexico City,Mexico City,31,22,OCO,TSU,2,0
-2023,Mexico City,Mexico City,31,24,OCO,ZHO,3,0
-2023,Mexico City,Mexico City,31,27,OCO,HUL,2,0
+2023,Mexico City,Mexico City,31,22,OCO,TSU,2,1
+2023,Mexico City,Mexico City,31,24,OCO,ZHO,3,2
+2023,Mexico City,Mexico City,31,27,OCO,HUL,2,1
 2023,Mexico City,Mexico City,31,77,OCO,BOT,1,0
 2023,Mexico City,Mexico City,44,1,HAM,VER,1,0
 2023,Mexico City,Mexico City,44,3,HAM,RIC,4,3
 2023,Mexico City,Mexico City,44,11,HAM,PER,2,2
-2023,Mexico City,Mexico City,44,16,HAM,LEC,1,0
+2023,Mexico City,Mexico City,44,16,HAM,LEC,1,1
 2023,Mexico City,Mexico City,44,55,HAM,SAI,1,0
 2023,Mexico City,Mexico City,44,63,HAM,RUS,1,0
 2023,Mexico City,Mexico City,44,81,HAM,PIA,1,0
 2023,Mexico City,Mexico City,55,1,SAI,VER,1,0
 2023,Mexico City,Mexico City,55,11,SAI,PER,1,1
 2023,Mexico City,Mexico City,63,1,RUS,VER,1,0
-2023,Mexico City,Mexico City,63,3,RUS,RIC,1,0
+2023,Mexico City,Mexico City,63,3,RUS,RIC,1,1
 2023,Mexico City,Mexico City,63,10,RUS,GAS,1,0
 2023,Mexico City,Mexico City,63,11,RUS,PER,1,1
 2023,Mexico City,Mexico City,63,23,RUS,ALB,1,1
 2023,Mexico City,Mexico City,63,44,RUS,HAM,1,0
 2023,Mexico City,Mexico City,63,77,RUS,BOT,1,1
-2023,Mexico City,Mexico City,63,81,RUS,PIA,3,1
-2023,Mexico City,Mexico City,77,2,BOT,SAR,2,0
-2023,Mexico City,Mexico City,77,4,BOT,NOR,1,0
-2023,Mexico City,Mexico City,77,10,BOT,GAS,5,0
+2023,Mexico City,Mexico City,63,81,RUS,PIA,3,2
+2023,Mexico City,Mexico City,77,2,BOT,SAR,2,1
+2023,Mexico City,Mexico City,77,4,BOT,NOR,1,1
+2023,Mexico City,Mexico City,77,10,BOT,GAS,5,4
 2023,Mexico City,Mexico City,77,11,BOT,PER,1,1
 2023,Mexico City,Mexico City,77,20,BOT,MAG,1,0
-2023,Mexico City,Mexico City,77,22,BOT,TSU,1,0
-2023,Mexico City,Mexico City,77,24,BOT,ZHO,3,0
+2023,Mexico City,Mexico City,77,22,BOT,TSU,1,1
+2023,Mexico City,Mexico City,77,24,BOT,ZHO,3,2
 2023,Mexico City,Mexico City,77,27,BOT,HUL,1,0
 2023,Mexico City,Mexico City,77,63,BOT,RUS,1,0
 2023,Mexico City,Mexico City,77,81,BOT,PIA,2,1
 2023,Mexico City,Mexico City,81,1,PIA,VER,1,0
 2023,Mexico City,Mexico City,81,10,PIA,GAS,1,0
 2023,Mexico City,Mexico City,81,11,PIA,PER,1,1
-2023,Mexico City,Mexico City,81,22,PIA,TSU,2,0
+2023,Mexico City,Mexico City,81,22,PIA,TSU,2,2
 2023,Mexico City,Mexico City,81,23,PIA,ALB,1,1
 2023,Mexico City,Mexico City,81,27,PIA,HUL,1,1
 2023,Mexico City,Mexico City,81,44,PIA,HAM,1,0
@@ -3076,11 +3076,11 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Sao Paulo,Interlagos,2,20,SAR,MAG,1,1
 2023,Sao Paulo,Interlagos,2,22,SAR,TSU,1,0
 2023,Sao Paulo,Interlagos,2,23,SAR,ALB,1,1
-2023,Sao Paulo,Interlagos,2,24,SAR,ZHO,2,0
-2023,Sao Paulo,Interlagos,2,27,SAR,HUL,5,2
+2023,Sao Paulo,Interlagos,2,24,SAR,ZHO,2,1
+2023,Sao Paulo,Interlagos,2,27,SAR,HUL,5,3
 2023,Sao Paulo,Interlagos,2,31,SAR,OCO,3,0
-2023,Sao Paulo,Interlagos,2,63,SAR,RUS,1,0
-2023,Sao Paulo,Interlagos,2,77,SAR,BOT,1,0
+2023,Sao Paulo,Interlagos,2,63,SAR,RUS,1,1
+2023,Sao Paulo,Interlagos,2,77,SAR,BOT,1,1
 2023,Sao Paulo,Interlagos,2,81,SAR,PIA,2,1
 2023,Sao Paulo,Interlagos,3,16,RIC,LEC,1,1
 2023,Sao Paulo,Interlagos,3,20,RIC,MAG,1,1
@@ -3090,45 +3090,45 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Sao Paulo,Interlagos,3,55,RIC,SAI,2,2
 2023,Sao Paulo,Interlagos,3,63,RIC,RUS,1,0
 2023,Sao Paulo,Interlagos,3,77,RIC,BOT,1,0
-2023,Sao Paulo,Interlagos,3,81,RIC,PIA,3,2
+2023,Sao Paulo,Interlagos,3,81,RIC,PIA,3,3
 2023,Sao Paulo,Interlagos,4,1,NOR,VER,1,0
 2023,Sao Paulo,Interlagos,4,14,NOR,ALO,1,1
 2023,Sao Paulo,Interlagos,4,16,NOR,LEC,1,1
 2023,Sao Paulo,Interlagos,4,18,NOR,STR,1,1
-2023,Sao Paulo,Interlagos,4,44,NOR,HAM,2,1
+2023,Sao Paulo,Interlagos,4,44,NOR,HAM,2,2
 2023,Sao Paulo,Interlagos,4,63,NOR,RUS,1,1
-2023,Sao Paulo,Interlagos,10,2,GAS,SAR,1,0
+2023,Sao Paulo,Interlagos,10,2,GAS,SAR,1,1
 2023,Sao Paulo,Interlagos,10,11,GAS,PER,1,0
 2023,Sao Paulo,Interlagos,10,14,GAS,ALO,3,2
 2023,Sao Paulo,Interlagos,10,16,GAS,LEC,1,1
 2023,Sao Paulo,Interlagos,10,18,GAS,STR,1,0
 2023,Sao Paulo,Interlagos,10,20,GAS,MAG,2,2
-2023,Sao Paulo,Interlagos,10,22,GAS,TSU,3,0
+2023,Sao Paulo,Interlagos,10,22,GAS,TSU,3,2
 2023,Sao Paulo,Interlagos,10,23,GAS,ALB,1,1
 2023,Sao Paulo,Interlagos,10,27,GAS,HUL,2,2
-2023,Sao Paulo,Interlagos,10,31,GAS,OCO,3,0
-2023,Sao Paulo,Interlagos,10,44,GAS,HAM,2,0
-2023,Sao Paulo,Interlagos,10,63,GAS,RUS,2,0
-2023,Sao Paulo,Interlagos,10,77,GAS,BOT,1,0
+2023,Sao Paulo,Interlagos,10,31,GAS,OCO,3,2
+2023,Sao Paulo,Interlagos,10,44,GAS,HAM,2,1
+2023,Sao Paulo,Interlagos,10,63,GAS,RUS,2,1
+2023,Sao Paulo,Interlagos,10,77,GAS,BOT,1,1
 2023,Sao Paulo,Interlagos,10,81,GAS,PIA,4,3
 2023,Sao Paulo,Interlagos,11,10,PER,GAS,1,0
-2023,Sao Paulo,Interlagos,11,14,PER,ALO,1,0
+2023,Sao Paulo,Interlagos,11,14,PER,ALO,1,1
 2023,Sao Paulo,Interlagos,11,16,PER,LEC,1,1
-2023,Sao Paulo,Interlagos,11,18,PER,STR,3,0
+2023,Sao Paulo,Interlagos,11,18,PER,STR,3,1
 2023,Sao Paulo,Interlagos,11,22,PER,TSU,2,0
 2023,Sao Paulo,Interlagos,11,27,PER,HUL,1,0
-2023,Sao Paulo,Interlagos,11,44,PER,HAM,4,1
+2023,Sao Paulo,Interlagos,11,44,PER,HAM,4,3
 2023,Sao Paulo,Interlagos,11,55,PER,SAI,3,1
-2023,Sao Paulo,Interlagos,11,63,PER,RUS,5,3
+2023,Sao Paulo,Interlagos,11,63,PER,RUS,5,5
 2023,Sao Paulo,Interlagos,14,10,ALO,GAS,4,3
-2023,Sao Paulo,Interlagos,14,11,ALO,PER,1,0
+2023,Sao Paulo,Interlagos,14,11,ALO,PER,1,1
 2023,Sao Paulo,Interlagos,14,16,ALO,LEC,1,1
 2023,Sao Paulo,Interlagos,14,18,ALO,STR,2,1
 2023,Sao Paulo,Interlagos,14,20,ALO,MAG,1,1
 2023,Sao Paulo,Interlagos,14,22,ALO,TSU,1,0
 2023,Sao Paulo,Interlagos,14,27,ALO,HUL,3,3
 2023,Sao Paulo,Interlagos,14,31,ALO,OCO,1,1
-2023,Sao Paulo,Interlagos,14,44,ALO,HAM,1,0
+2023,Sao Paulo,Interlagos,14,44,ALO,HAM,1,1
 2023,Sao Paulo,Interlagos,14,55,ALO,SAI,2,0
 2023,Sao Paulo,Interlagos,14,77,ALO,BOT,2,2
 2023,Sao Paulo,Interlagos,14,81,ALO,PIA,1,1
@@ -3142,17 +3142,17 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Sao Paulo,Interlagos,18,22,STR,TSU,2,0
 2023,Sao Paulo,Interlagos,18,27,STR,HUL,1,1
 2023,Sao Paulo,Interlagos,18,31,STR,OCO,1,1
-2023,Sao Paulo,Interlagos,18,44,STR,HAM,2,0
+2023,Sao Paulo,Interlagos,18,44,STR,HAM,2,1
 2023,Sao Paulo,Interlagos,18,55,STR,SAI,1,0
-2023,Sao Paulo,Interlagos,18,63,STR,RUS,2,0
+2023,Sao Paulo,Interlagos,18,63,STR,RUS,2,1
 2023,Sao Paulo,Interlagos,18,77,STR,BOT,2,2
 2023,Sao Paulo,Interlagos,18,81,STR,PIA,1,1
 2023,Sao Paulo,Interlagos,20,16,MAG,LEC,1,1
 2023,Sao Paulo,Interlagos,20,27,MAG,HUL,3,3
 2023,Sao Paulo,Interlagos,20,77,MAG,BOT,1,1
 2023,Sao Paulo,Interlagos,20,81,MAG,PIA,1,1
-2023,Sao Paulo,Interlagos,22,2,TSU,SAR,1,0
-2023,Sao Paulo,Interlagos,22,10,TSU,GAS,3,1
+2023,Sao Paulo,Interlagos,22,2,TSU,SAR,1,1
+2023,Sao Paulo,Interlagos,22,10,TSU,GAS,3,2
 2023,Sao Paulo,Interlagos,22,11,TSU,PER,2,0
 2023,Sao Paulo,Interlagos,22,14,TSU,ALO,1,0
 2023,Sao Paulo,Interlagos,22,16,TSU,LEC,1,1
@@ -3160,11 +3160,11 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Sao Paulo,Interlagos,22,20,TSU,MAG,1,1
 2023,Sao Paulo,Interlagos,22,23,TSU,ALB,1,1
 2023,Sao Paulo,Interlagos,22,27,TSU,HUL,1,1
-2023,Sao Paulo,Interlagos,22,31,TSU,OCO,4,0
+2023,Sao Paulo,Interlagos,22,31,TSU,OCO,4,3
 2023,Sao Paulo,Interlagos,22,44,TSU,HAM,3,1
 2023,Sao Paulo,Interlagos,22,55,TSU,SAI,1,0
-2023,Sao Paulo,Interlagos,22,63,TSU,RUS,3,0
-2023,Sao Paulo,Interlagos,22,77,TSU,BOT,2,0
+2023,Sao Paulo,Interlagos,22,63,TSU,RUS,3,1
+2023,Sao Paulo,Interlagos,22,77,TSU,BOT,2,1
 2023,Sao Paulo,Interlagos,22,81,TSU,PIA,2,1
 2023,Sao Paulo,Interlagos,23,20,ALB,MAG,1,1
 2023,Sao Paulo,Interlagos,23,24,ALB,ZHO,2,2
@@ -3176,39 +3176,39 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Sao Paulo,Interlagos,24,16,ZHO,LEC,1,1
 2023,Sao Paulo,Interlagos,24,20,ZHO,MAG,1,1
 2023,Sao Paulo,Interlagos,24,23,ZHO,ALB,2,2
-2023,Sao Paulo,Interlagos,24,27,ZHO,HUL,5,3
+2023,Sao Paulo,Interlagos,24,27,ZHO,HUL,5,4
 2023,Sao Paulo,Interlagos,24,31,ZHO,OCO,1,0
 2023,Sao Paulo,Interlagos,24,77,ZHO,BOT,2,1
 2023,Sao Paulo,Interlagos,24,81,ZHO,PIA,2,1
-2023,Sao Paulo,Interlagos,27,2,HUL,SAR,4,1
+2023,Sao Paulo,Interlagos,27,2,HUL,SAR,4,2
 2023,Sao Paulo,Interlagos,27,3,HUL,RIC,1,0
 2023,Sao Paulo,Interlagos,27,11,HUL,PER,1,0
 2023,Sao Paulo,Interlagos,27,14,HUL,ALO,2,2
 2023,Sao Paulo,Interlagos,27,16,HUL,LEC,1,1
 2023,Sao Paulo,Interlagos,27,20,HUL,MAG,3,3
-2023,Sao Paulo,Interlagos,27,24,HUL,ZHO,4,1
+2023,Sao Paulo,Interlagos,27,24,HUL,ZHO,4,2
 2023,Sao Paulo,Interlagos,27,31,HUL,OCO,2,0
 2023,Sao Paulo,Interlagos,27,44,HUL,HAM,1,0
 2023,Sao Paulo,Interlagos,27,63,HUL,RUS,2,0
-2023,Sao Paulo,Interlagos,27,77,HUL,BOT,3,0
+2023,Sao Paulo,Interlagos,27,77,HUL,BOT,3,1
 2023,Sao Paulo,Interlagos,27,81,HUL,PIA,2,1
-2023,Sao Paulo,Interlagos,31,2,OCO,SAR,3,0
+2023,Sao Paulo,Interlagos,31,2,OCO,SAR,3,1
 2023,Sao Paulo,Interlagos,31,10,OCO,GAS,2,0
 2023,Sao Paulo,Interlagos,31,14,OCO,ALO,1,1
 2023,Sao Paulo,Interlagos,31,16,OCO,LEC,1,1
 2023,Sao Paulo,Interlagos,31,20,OCO,MAG,2,2
-2023,Sao Paulo,Interlagos,31,22,OCO,TSU,3,0
+2023,Sao Paulo,Interlagos,31,22,OCO,TSU,3,2
 2023,Sao Paulo,Interlagos,31,23,OCO,ALB,1,1
 2023,Sao Paulo,Interlagos,31,24,OCO,ZHO,1,0
-2023,Sao Paulo,Interlagos,31,27,OCO,HUL,4,2
+2023,Sao Paulo,Interlagos,31,27,OCO,HUL,4,3
 2023,Sao Paulo,Interlagos,31,44,OCO,HAM,1,0
 2023,Sao Paulo,Interlagos,31,55,OCO,SAI,1,0
-2023,Sao Paulo,Interlagos,31,63,OCO,RUS,2,0
+2023,Sao Paulo,Interlagos,31,63,OCO,RUS,2,1
 2023,Sao Paulo,Interlagos,31,77,OCO,BOT,3,1
 2023,Sao Paulo,Interlagos,31,81,OCO,PIA,2,2
-2023,Sao Paulo,Interlagos,44,4,HAM,NOR,1,0
+2023,Sao Paulo,Interlagos,44,4,HAM,NOR,1,1
 2023,Sao Paulo,Interlagos,44,10,HAM,GAS,1,0
-2023,Sao Paulo,Interlagos,44,11,HAM,PER,3,1
+2023,Sao Paulo,Interlagos,44,11,HAM,PER,3,2
 2023,Sao Paulo,Interlagos,44,14,HAM,ALO,1,1
 2023,Sao Paulo,Interlagos,44,16,HAM,LEC,1,1
 2023,Sao Paulo,Interlagos,44,18,HAM,STR,2,1
@@ -3224,14 +3224,14 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Sao Paulo,Interlagos,55,18,SAI,STR,1,0
 2023,Sao Paulo,Interlagos,55,22,SAI,TSU,1,0
 2023,Sao Paulo,Interlagos,55,31,SAI,OCO,1,0
-2023,Sao Paulo,Interlagos,55,44,SAI,HAM,2,0
-2023,Sao Paulo,Interlagos,55,63,SAI,RUS,2,0
+2023,Sao Paulo,Interlagos,55,44,SAI,HAM,2,1
+2023,Sao Paulo,Interlagos,55,63,SAI,RUS,2,1
 2023,Sao Paulo,Interlagos,55,81,SAI,PIA,1,1
 2023,Sao Paulo,Interlagos,63,4,RUS,NOR,1,1
 2023,Sao Paulo,Interlagos,63,10,RUS,GAS,1,0
-2023,Sao Paulo,Interlagos,63,11,RUS,PER,4,3
+2023,Sao Paulo,Interlagos,63,11,RUS,PER,4,4
 2023,Sao Paulo,Interlagos,63,16,RUS,LEC,1,1
-2023,Sao Paulo,Interlagos,63,18,RUS,STR,2,0
+2023,Sao Paulo,Interlagos,63,18,RUS,STR,2,1
 2023,Sao Paulo,Interlagos,63,22,RUS,TSU,2,0
 2023,Sao Paulo,Interlagos,63,27,RUS,HUL,1,0
 2023,Sao Paulo,Interlagos,63,31,RUS,OCO,1,0
@@ -3243,10 +3243,10 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Sao Paulo,Interlagos,77,16,BOT,LEC,1,1
 2023,Sao Paulo,Interlagos,77,18,BOT,STR,1,1
 2023,Sao Paulo,Interlagos,77,20,BOT,MAG,2,2
-2023,Sao Paulo,Interlagos,77,22,BOT,TSU,2,0
+2023,Sao Paulo,Interlagos,77,22,BOT,TSU,2,1
 2023,Sao Paulo,Interlagos,77,23,BOT,ALB,1,1
 2023,Sao Paulo,Interlagos,77,24,BOT,ZHO,1,0
-2023,Sao Paulo,Interlagos,77,27,BOT,HUL,3,1
+2023,Sao Paulo,Interlagos,77,27,BOT,HUL,3,2
 2023,Sao Paulo,Interlagos,77,31,BOT,OCO,2,0
 2023,Sao Paulo,Interlagos,77,81,BOT,PIA,2,1
 2023,Sao Paulo,Interlagos,81,2,PIA,SAR,1,1
@@ -3264,7 +3264,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Sao Paulo,Interlagos,81,63,PIA,RUS,1,0
 2023,Sao Paulo,Interlagos,81,77,PIA,BOT,2,1
 2023,Silverstone,Silverstone,1,4,VER,NOR,1,1
-2023,Silverstone,Silverstone,2,10,SAR,GAS,1,0
+2023,Silverstone,Silverstone,2,10,SAR,GAS,1,1
 2023,Silverstone,Silverstone,2,11,SAR,PER,1,0
 2023,Silverstone,Silverstone,2,20,SAR,MAG,1,0
 2023,Silverstone,Silverstone,2,22,SAR,TSU,2,0
@@ -3273,15 +3273,15 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Silverstone,Silverstone,2,77,SAR,BOT,1,0
 2023,Silverstone,Silverstone,4,1,NOR,VER,1,1
 2023,Silverstone,Silverstone,10,16,GAS,LEC,1,0
-2023,Silverstone,Silverstone,10,18,GAS,STR,1,0
+2023,Silverstone,Silverstone,10,18,GAS,STR,1,1
 2023,Silverstone,Silverstone,10,23,GAS,ALB,1,1
 2023,Silverstone,Silverstone,10,44,GAS,HAM,1,1
-2023,Silverstone,Silverstone,10,55,GAS,SAI,2,0
+2023,Silverstone,Silverstone,10,55,GAS,SAI,2,1
 2023,Silverstone,Silverstone,10,63,GAS,RUS,1,0
 2023,Silverstone,Silverstone,10,81,GAS,PIA,1,0
 2023,Silverstone,Silverstone,11,2,PER,SAR,2,1
 2023,Silverstone,Silverstone,11,10,PER,GAS,1,0
-2023,Silverstone,Silverstone,11,14,PER,ALO,1,0
+2023,Silverstone,Silverstone,11,14,PER,ALO,1,1
 2023,Silverstone,Silverstone,11,16,PER,LEC,2,0
 2023,Silverstone,Silverstone,11,18,PER,STR,2,1
 2023,Silverstone,Silverstone,11,21,PER,DEV,1,1
@@ -3289,7 +3289,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Silverstone,Silverstone,11,23,PER,ALB,2,1
 2023,Silverstone,Silverstone,11,27,PER,HUL,1,1
 2023,Silverstone,Silverstone,11,31,PER,OCO,1,0
-2023,Silverstone,Silverstone,11,55,PER,SAI,2,0
+2023,Silverstone,Silverstone,11,55,PER,SAI,2,1
 2023,Silverstone,Silverstone,14,16,ALO,LEC,1,0
 2023,Silverstone,Silverstone,14,23,ALO,ALB,1,1
 2023,Silverstone,Silverstone,14,44,ALO,HAM,1,1
@@ -3299,9 +3299,9 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Silverstone,Silverstone,16,10,LEC,GAS,1,0
 2023,Silverstone,Silverstone,16,11,LEC,PER,1,0
 2023,Silverstone,Silverstone,16,18,LEC,STR,1,1
-2023,Silverstone,Silverstone,16,55,LEC,SAI,2,0
+2023,Silverstone,Silverstone,16,55,LEC,SAI,2,1
 2023,Silverstone,Silverstone,16,63,LEC,RUS,2,0
-2023,Silverstone,Silverstone,18,10,STR,GAS,2,0
+2023,Silverstone,Silverstone,18,10,STR,GAS,2,2
 2023,Silverstone,Silverstone,18,11,STR,PER,1,0
 2023,Silverstone,Silverstone,18,16,STR,LEC,1,0
 2023,Silverstone,Silverstone,18,20,STR,MAG,1,0
@@ -3317,7 +3317,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Silverstone,Silverstone,20,24,MAG,ZHO,2,1
 2023,Silverstone,Silverstone,20,27,MAG,HUL,1,0
 2023,Silverstone,Silverstone,20,31,MAG,OCO,1,0
-2023,Silverstone,Silverstone,21,10,DEV,GAS,1,0
+2023,Silverstone,Silverstone,21,10,DEV,GAS,1,1
 2023,Silverstone,Silverstone,21,11,DEV,PER,1,1
 2023,Silverstone,Silverstone,21,20,DEV,MAG,1,0
 2023,Silverstone,Silverstone,21,22,DEV,TSU,1,0
@@ -3325,7 +3325,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Silverstone,Silverstone,21,27,DEV,HUL,1,0
 2023,Silverstone,Silverstone,21,31,DEV,OCO,1,0
 2023,Silverstone,Silverstone,22,2,TSU,SAR,2,1
-2023,Silverstone,Silverstone,22,10,TSU,GAS,1,0
+2023,Silverstone,Silverstone,22,10,TSU,GAS,1,1
 2023,Silverstone,Silverstone,22,11,TSU,PER,1,1
 2023,Silverstone,Silverstone,22,18,TSU,STR,1,0
 2023,Silverstone,Silverstone,22,20,TSU,MAG,1,0
@@ -3336,19 +3336,19 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Silverstone,Silverstone,23,10,ALB,GAS,1,0
 2023,Silverstone,Silverstone,23,11,ALB,PER,1,0
 2023,Silverstone,Silverstone,23,16,ALB,LEC,1,0
-2023,Silverstone,Silverstone,23,55,ALB,SAI,2,0
+2023,Silverstone,Silverstone,23,55,ALB,SAI,2,1
 2023,Silverstone,Silverstone,23,63,ALB,RUS,1,0
-2023,Silverstone,Silverstone,24,10,ZHO,GAS,1,0
+2023,Silverstone,Silverstone,24,10,ZHO,GAS,1,1
 2023,Silverstone,Silverstone,24,20,ZHO,MAG,2,1
-2023,Silverstone,Silverstone,24,21,ZHO,DEV,3,0
-2023,Silverstone,Silverstone,24,22,ZHO,TSU,4,0
+2023,Silverstone,Silverstone,24,21,ZHO,DEV,3,1
+2023,Silverstone,Silverstone,24,22,ZHO,TSU,4,1
 2023,Silverstone,Silverstone,24,27,ZHO,HUL,1,0
 2023,Silverstone,Silverstone,24,31,ZHO,OCO,1,0
 2023,Silverstone,Silverstone,24,77,ZHO,BOT,1,1
-2023,Silverstone,Silverstone,27,10,HUL,GAS,1,0
+2023,Silverstone,Silverstone,27,10,HUL,GAS,1,1
 2023,Silverstone,Silverstone,27,20,HUL,MAG,1,0
-2023,Silverstone,Silverstone,27,21,HUL,DEV,1,0
-2023,Silverstone,Silverstone,27,22,HUL,TSU,1,0
+2023,Silverstone,Silverstone,27,21,HUL,DEV,1,1
+2023,Silverstone,Silverstone,27,22,HUL,TSU,1,1
 2023,Silverstone,Silverstone,27,24,HUL,ZHO,1,0
 2023,Silverstone,Silverstone,27,31,HUL,OCO,1,0
 2023,Silverstone,Silverstone,31,18,OCO,STR,1,1
@@ -3359,7 +3359,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Silverstone,Silverstone,44,55,HAM,SAI,1,0
 2023,Silverstone,Silverstone,44,63,HAM,RUS,1,0
 2023,Silverstone,Silverstone,44,81,HAM,PIA,1,0
-2023,Silverstone,Silverstone,55,10,SAI,GAS,2,0
+2023,Silverstone,Silverstone,55,10,SAI,GAS,2,1
 2023,Silverstone,Silverstone,55,11,SAI,PER,1,0
 2023,Silverstone,Silverstone,55,16,SAI,LEC,2,0
 2023,Silverstone,Silverstone,55,18,SAI,STR,1,1
@@ -3370,7 +3370,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2023,Silverstone,Silverstone,63,23,RUS,ALB,1,0
 2023,Silverstone,Silverstone,63,55,RUS,SAI,1,1
 2023,Silverstone,Silverstone,77,2,BOT,SAR,1,0
-2023,Silverstone,Silverstone,77,10,BOT,GAS,1,0
+2023,Silverstone,Silverstone,77,10,BOT,GAS,1,1
 2023,Silverstone,Silverstone,77,18,BOT,STR,1,0
 2023,Silverstone,Silverstone,77,20,BOT,MAG,1,1
 2023,Silverstone,Silverstone,77,21,BOT,DEV,1,0
@@ -6516,13 +6516,13 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Monaco,Monte Carlo,10,23,GAS,ALB,1,0
 2024,Monaco,Monte Carlo,10,31,GAS,OCO,1,0
 2024,Monaco,Monte Carlo,10,55,GAS,SAI,1,0
-2024,Monaco,Monte Carlo,14,3,ALO,RIC,1,0
+2024,Monaco,Monte Carlo,14,3,ALO,RIC,1,1
 2024,Monaco,Monte Carlo,14,18,ALO,STR,1,0
 2024,Monaco,Monte Carlo,14,31,ALO,OCO,1,0
 2024,Monaco,Monte Carlo,14,55,ALO,SAI,1,0
-2024,Monaco,Monte Carlo,18,2,STR,SAR,1,0
+2024,Monaco,Monte Carlo,18,2,STR,SAR,1,1
 2024,Monaco,Monte Carlo,18,3,STR,RIC,1,0
-2024,Monaco,Monte Carlo,18,24,STR,ZHO,1,0
+2024,Monaco,Monte Carlo,18,24,STR,ZHO,1,1
 2024,Monaco,Monte Carlo,18,31,STR,OCO,1,0
 2024,Monaco,Monte Carlo,18,55,STR,SAI,1,0
 2024,Monaco,Monte Carlo,20,24,MAG,ZHO,1,0
@@ -6544,7 +6544,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Monaco,Monte Carlo,31,55,OCO,SAI,1,0
 2024,Monaco,Monte Carlo,44,55,HAM,SAI,1,0
 2024,Monaco,Monte Carlo,63,55,RUS,SAI,1,0
-2024,Monaco,Monte Carlo,77,2,BOT,SAR,2,0
+2024,Monaco,Monte Carlo,77,2,BOT,SAR,2,2
 2024,Monaco,Monte Carlo,77,11,BOT,PER,1,0
 2024,Monaco,Monte Carlo,77,18,BOT,STR,1,0
 2024,Monaco,Monte Carlo,77,31,BOT,OCO,1,0
@@ -6889,16 +6889,16 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Qatar,Lusail,4,16,NOR,LEC,2,2
 2024,Qatar,Lusail,4,18,NOR,STR,2,2
 2024,Qatar,Lusail,4,20,NOR,MAG,2,2
-2024,Qatar,Lusail,4,22,NOR,TSU,3,2
-2024,Qatar,Lusail,4,23,NOR,ALB,3,2
+2024,Qatar,Lusail,4,22,NOR,TSU,3,3
+2024,Qatar,Lusail,4,23,NOR,ALB,3,3
 2024,Qatar,Lusail,4,24,NOR,ZHO,2,2
 2024,Qatar,Lusail,4,27,NOR,HUL,2,2
-2024,Qatar,Lusail,4,30,NOR,LAW,3,2
+2024,Qatar,Lusail,4,30,NOR,LAW,3,3
 2024,Qatar,Lusail,4,31,NOR,OCO,1,1
 2024,Qatar,Lusail,4,44,NOR,HAM,3,2
 2024,Qatar,Lusail,4,55,NOR,SAI,1,1
 2024,Qatar,Lusail,4,63,NOR,RUS,1,1
-2024,Qatar,Lusail,4,77,NOR,BOT,4,2
+2024,Qatar,Lusail,4,77,NOR,BOT,4,4
 2024,Qatar,Lusail,10,1,GAS,VER,2,2
 2024,Qatar,Lusail,10,4,GAS,NOR,3,2
 2024,Qatar,Lusail,10,11,GAS,PER,1,0
@@ -6952,7 +6952,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Qatar,Lusail,20,14,MAG,ALO,4,4
 2024,Qatar,Lusail,20,18,MAG,STR,1,1
 2024,Qatar,Lusail,20,22,MAG,TSU,2,1
-2024,Qatar,Lusail,20,23,MAG,ALB,4,2
+2024,Qatar,Lusail,20,23,MAG,ALB,4,3
 2024,Qatar,Lusail,20,27,MAG,HUL,1,0
 2024,Qatar,Lusail,20,30,MAG,LAW,2,1
 2024,Qatar,Lusail,20,44,MAG,HAM,2,1
@@ -6969,16 +6969,16 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Qatar,Lusail,22,23,TSU,ALB,2,1
 2024,Qatar,Lusail,22,24,TSU,ZHO,3,3
 2024,Qatar,Lusail,22,27,TSU,HUL,1,0
-2024,Qatar,Lusail,22,44,TSU,HAM,3,0
+2024,Qatar,Lusail,22,44,TSU,HAM,3,1
 2024,Qatar,Lusail,22,55,TSU,SAI,1,1
 2024,Qatar,Lusail,22,63,TSU,RUS,2,2
-2024,Qatar,Lusail,22,77,TSU,BOT,3,1
+2024,Qatar,Lusail,22,77,TSU,BOT,3,2
 2024,Qatar,Lusail,22,81,TSU,PIA,2,2
 2024,Qatar,Lusail,23,1,ALB,VER,1,1
 2024,Qatar,Lusail,23,4,ALB,NOR,3,2
 2024,Qatar,Lusail,23,11,ALB,PER,1,0
 2024,Qatar,Lusail,23,18,ALB,STR,1,0
-2024,Qatar,Lusail,23,20,ALB,MAG,3,1
+2024,Qatar,Lusail,23,20,ALB,MAG,3,2
 2024,Qatar,Lusail,23,22,ALB,TSU,2,2
 2024,Qatar,Lusail,23,24,ALB,ZHO,1,1
 2024,Qatar,Lusail,23,30,ALB,LAW,2,2
@@ -7045,10 +7045,10 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Qatar,Lusail,44,14,HAM,ALO,1,1
 2024,Qatar,Lusail,44,16,HAM,LEC,1,1
 2024,Qatar,Lusail,44,20,HAM,MAG,1,1
-2024,Qatar,Lusail,44,22,HAM,TSU,3,0
+2024,Qatar,Lusail,44,22,HAM,TSU,3,2
 2024,Qatar,Lusail,44,23,HAM,ALB,1,0
 2024,Qatar,Lusail,44,27,HAM,HUL,1,0
-2024,Qatar,Lusail,44,30,HAM,LAW,2,1
+2024,Qatar,Lusail,44,30,HAM,LAW,2,2
 2024,Qatar,Lusail,44,55,HAM,SAI,1,1
 2024,Qatar,Lusail,44,63,HAM,RUS,3,2
 2024,Qatar,Lusail,44,81,HAM,PIA,2,2
@@ -7088,18 +7088,18 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Qatar,Lusail,63,55,RUS,SAI,2,1
 2024,Qatar,Lusail,63,77,RUS,BOT,2,2
 2024,Qatar,Lusail,77,1,BOT,VER,1,1
-2024,Qatar,Lusail,77,4,BOT,NOR,4,2
+2024,Qatar,Lusail,77,4,BOT,NOR,4,3
 2024,Qatar,Lusail,77,10,BOT,GAS,1,1
 2024,Qatar,Lusail,77,11,BOT,PER,1,0
 2024,Qatar,Lusail,77,14,BOT,ALO,1,1
 2024,Qatar,Lusail,77,18,BOT,STR,1,1
 2024,Qatar,Lusail,77,20,BOT,MAG,1,1
-2024,Qatar,Lusail,77,22,BOT,TSU,3,1
-2024,Qatar,Lusail,77,23,BOT,ALB,3,2
+2024,Qatar,Lusail,77,22,BOT,TSU,3,2
+2024,Qatar,Lusail,77,23,BOT,ALB,3,3
 2024,Qatar,Lusail,77,24,BOT,ZHO,1,1
 2024,Qatar,Lusail,77,27,BOT,HUL,2,1
 2024,Qatar,Lusail,77,30,BOT,LAW,2,1
-2024,Qatar,Lusail,77,44,BOT,HAM,2,0
+2024,Qatar,Lusail,77,44,BOT,HAM,2,1
 2024,Qatar,Lusail,77,55,BOT,SAI,1,1
 2024,Qatar,Lusail,77,63,BOT,RUS,2,2
 2024,Qatar,Lusail,77,81,BOT,PIA,2,2
@@ -7130,14 +7130,14 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Sao Paulo,Interlagos,1,18,VER,STR,1,1
 2024,Sao Paulo,Interlagos,1,23,VER,ALB,1,0
 2024,Sao Paulo,Interlagos,1,30,VER,LAW,1,1
-2024,Sao Paulo,Interlagos,1,31,VER,OCO,1,0
+2024,Sao Paulo,Interlagos,1,31,VER,OCO,1,1
 2024,Sao Paulo,Interlagos,1,43,VER,COL,2,2
 2024,Sao Paulo,Interlagos,1,44,VER,HAM,1,1
 2024,Sao Paulo,Interlagos,1,50,VER,BEA,1,1
 2024,Sao Paulo,Interlagos,1,63,VER,RUS,1,0
 2024,Sao Paulo,Interlagos,1,81,VER,PIA,1,1
 2024,Sao Paulo,Interlagos,4,63,NOR,RUS,1,1
-2024,Sao Paulo,Interlagos,4,81,NOR,PIA,2,1
+2024,Sao Paulo,Interlagos,4,81,NOR,PIA,2,2
 2024,Sao Paulo,Interlagos,10,4,GAS,NOR,1,0
 2024,Sao Paulo,Interlagos,10,11,GAS,PER,1,1
 2024,Sao Paulo,Interlagos,10,14,GAS,ALO,1,1
@@ -7149,33 +7149,33 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Sao Paulo,Interlagos,10,63,GAS,RUS,1,0
 2024,Sao Paulo,Interlagos,10,77,GAS,BOT,1,1
 2024,Sao Paulo,Interlagos,10,81,GAS,PIA,1,1
-2024,Sao Paulo,Interlagos,11,14,PER,ALO,1,0
+2024,Sao Paulo,Interlagos,11,14,PER,ALO,1,1
 2024,Sao Paulo,Interlagos,11,18,PER,STR,1,1
 2024,Sao Paulo,Interlagos,11,23,PER,ALB,2,1
 2024,Sao Paulo,Interlagos,11,24,PER,ZHO,1,1
 2024,Sao Paulo,Interlagos,11,27,PER,HUL,2,1
 2024,Sao Paulo,Interlagos,11,30,PER,LAW,2,2
 2024,Sao Paulo,Interlagos,11,43,PER,COL,1,0
-2024,Sao Paulo,Interlagos,11,44,PER,HAM,2,1
+2024,Sao Paulo,Interlagos,11,44,PER,HAM,2,2
 2024,Sao Paulo,Interlagos,11,50,PER,BEA,3,3
-2024,Sao Paulo,Interlagos,11,55,PER,SAI,1,0
-2024,Sao Paulo,Interlagos,11,77,PER,BOT,2,1
+2024,Sao Paulo,Interlagos,11,55,PER,SAI,1,1
+2024,Sao Paulo,Interlagos,11,77,PER,BOT,2,2
 2024,Sao Paulo,Interlagos,14,16,ALO,LEC,1,0
 2024,Sao Paulo,Interlagos,14,18,ALO,STR,1,1
 2024,Sao Paulo,Interlagos,14,23,ALO,ALB,1,0
 2024,Sao Paulo,Interlagos,14,24,ALO,ZHO,1,1
 2024,Sao Paulo,Interlagos,14,27,ALO,HUL,1,0
 2024,Sao Paulo,Interlagos,14,30,ALO,LAW,2,1
-2024,Sao Paulo,Interlagos,14,44,ALO,HAM,1,0
+2024,Sao Paulo,Interlagos,14,44,ALO,HAM,1,1
 2024,Sao Paulo,Interlagos,14,81,ALO,PIA,1,1
-2024,Sao Paulo,Interlagos,16,4,LEC,NOR,1,0
+2024,Sao Paulo,Interlagos,16,4,LEC,NOR,1,1
 2024,Sao Paulo,Interlagos,16,14,LEC,ALO,1,0
-2024,Sao Paulo,Interlagos,16,22,LEC,TSU,1,0
+2024,Sao Paulo,Interlagos,16,22,LEC,TSU,1,1
 2024,Sao Paulo,Interlagos,16,27,LEC,HUL,1,0
 2024,Sao Paulo,Interlagos,16,30,LEC,LAW,2,1
 2024,Sao Paulo,Interlagos,16,44,LEC,HAM,1,0
 2024,Sao Paulo,Interlagos,16,50,LEC,BEA,1,0
-2024,Sao Paulo,Interlagos,16,63,LEC,RUS,1,0
+2024,Sao Paulo,Interlagos,16,63,LEC,RUS,1,1
 2024,Sao Paulo,Interlagos,16,81,LEC,PIA,1,0
 2024,Sao Paulo,Interlagos,18,14,STR,ALO,1,1
 2024,Sao Paulo,Interlagos,18,27,STR,HUL,1,0
@@ -7197,12 +7197,12 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Sao Paulo,Interlagos,23,30,ALB,LAW,1,1
 2024,Sao Paulo,Interlagos,23,50,ALB,BEA,1,1
 2024,Sao Paulo,Interlagos,24,11,ZHO,PER,1,1
-2024,Sao Paulo,Interlagos,24,14,ZHO,ALO,2,1
+2024,Sao Paulo,Interlagos,24,14,ZHO,ALO,2,2
 2024,Sao Paulo,Interlagos,24,18,ZHO,STR,2,2
 2024,Sao Paulo,Interlagos,24,23,ZHO,ALB,1,0
 2024,Sao Paulo,Interlagos,24,27,ZHO,HUL,2,1
 2024,Sao Paulo,Interlagos,24,43,ZHO,COL,1,0
-2024,Sao Paulo,Interlagos,24,50,ZHO,BEA,3,1
+2024,Sao Paulo,Interlagos,24,50,ZHO,BEA,3,2
 2024,Sao Paulo,Interlagos,24,55,ZHO,SAI,1,0
 2024,Sao Paulo,Interlagos,27,11,HUL,PER,1,1
 2024,Sao Paulo,Interlagos,27,16,HUL,LEC,1,0
@@ -7213,11 +7213,11 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Sao Paulo,Interlagos,27,50,HUL,BEA,2,2
 2024,Sao Paulo,Interlagos,27,77,HUL,BOT,1,1
 2024,Sao Paulo,Interlagos,30,11,LAW,PER,1,1
-2024,Sao Paulo,Interlagos,30,14,LAW,ALO,2,0
+2024,Sao Paulo,Interlagos,30,14,LAW,ALO,2,1
 2024,Sao Paulo,Interlagos,30,16,LAW,LEC,1,0
 2024,Sao Paulo,Interlagos,30,22,LAW,TSU,1,0
 2024,Sao Paulo,Interlagos,30,23,LAW,ALB,1,1
-2024,Sao Paulo,Interlagos,30,44,LAW,HAM,2,0
+2024,Sao Paulo,Interlagos,30,44,LAW,HAM,2,1
 2024,Sao Paulo,Interlagos,30,77,LAW,BOT,1,0
 2024,Sao Paulo,Interlagos,30,81,LAW,PIA,1,0
 2024,Sao Paulo,Interlagos,31,4,OCO,NOR,1,0
@@ -7235,27 +7235,27 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Sao Paulo,Interlagos,43,50,COL,BEA,2,2
 2024,Sao Paulo,Interlagos,43,77,COL,BOT,2,2
 2024,Sao Paulo,Interlagos,44,11,HAM,PER,2,2
-2024,Sao Paulo,Interlagos,44,14,HAM,ALO,2,0
+2024,Sao Paulo,Interlagos,44,14,HAM,ALO,2,2
 2024,Sao Paulo,Interlagos,44,16,HAM,LEC,1,0
 2024,Sao Paulo,Interlagos,44,18,HAM,STR,1,1
 2024,Sao Paulo,Interlagos,44,23,HAM,ALB,1,0
 2024,Sao Paulo,Interlagos,44,27,HAM,HUL,3,1
-2024,Sao Paulo,Interlagos,44,30,HAM,LAW,2,0
+2024,Sao Paulo,Interlagos,44,30,HAM,LAW,2,1
 2024,Sao Paulo,Interlagos,44,43,HAM,COL,2,2
-2024,Sao Paulo,Interlagos,44,50,HAM,BEA,3,1
+2024,Sao Paulo,Interlagos,44,50,HAM,BEA,3,2
 2024,Sao Paulo,Interlagos,44,55,HAM,SAI,1,1
 2024,Sao Paulo,Interlagos,44,77,HAM,BOT,2,2
 2024,Sao Paulo,Interlagos,50,11,BEA,PER,3,3
-2024,Sao Paulo,Interlagos,50,14,BEA,ALO,1,0
+2024,Sao Paulo,Interlagos,50,14,BEA,ALO,1,1
 2024,Sao Paulo,Interlagos,50,16,BEA,LEC,1,0
 2024,Sao Paulo,Interlagos,50,18,BEA,STR,1,1
 2024,Sao Paulo,Interlagos,50,23,BEA,ALB,2,1
-2024,Sao Paulo,Interlagos,50,24,BEA,ZHO,3,1
+2024,Sao Paulo,Interlagos,50,24,BEA,ZHO,3,3
 2024,Sao Paulo,Interlagos,50,27,BEA,HUL,2,1
 2024,Sao Paulo,Interlagos,50,43,BEA,COL,1,1
-2024,Sao Paulo,Interlagos,50,44,BEA,HAM,2,1
+2024,Sao Paulo,Interlagos,50,44,BEA,HAM,2,2
 2024,Sao Paulo,Interlagos,50,55,BEA,SAI,2,1
-2024,Sao Paulo,Interlagos,50,77,BEA,BOT,4,2
+2024,Sao Paulo,Interlagos,50,77,BEA,BOT,4,4
 2024,Sao Paulo,Interlagos,55,11,SAI,PER,1,1
 2024,Sao Paulo,Interlagos,55,18,SAI,STR,1,1
 2024,Sao Paulo,Interlagos,55,23,SAI,ALB,1,0
@@ -7264,23 +7264,23 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Sao Paulo,Interlagos,55,43,SAI,COL,1,0
 2024,Sao Paulo,Interlagos,55,44,SAI,HAM,1,1
 2024,Sao Paulo,Interlagos,55,50,SAI,BEA,2,1
-2024,Sao Paulo,Interlagos,55,77,SAI,BOT,2,1
-2024,Sao Paulo,Interlagos,63,4,RUS,NOR,2,1
-2024,Sao Paulo,Interlagos,63,16,RUS,LEC,1,0
+2024,Sao Paulo,Interlagos,55,77,SAI,BOT,2,2
+2024,Sao Paulo,Interlagos,63,4,RUS,NOR,2,2
+2024,Sao Paulo,Interlagos,63,16,RUS,LEC,1,1
 2024,Sao Paulo,Interlagos,77,11,BOT,PER,1,0
-2024,Sao Paulo,Interlagos,77,14,BOT,ALO,1,0
+2024,Sao Paulo,Interlagos,77,14,BOT,ALO,1,1
 2024,Sao Paulo,Interlagos,77,18,BOT,STR,1,1
 2024,Sao Paulo,Interlagos,77,23,BOT,ALB,1,0
 2024,Sao Paulo,Interlagos,77,27,BOT,HUL,2,0
 2024,Sao Paulo,Interlagos,77,30,BOT,LAW,1,0
 2024,Sao Paulo,Interlagos,77,43,BOT,COL,2,1
 2024,Sao Paulo,Interlagos,77,44,BOT,HAM,1,0
-2024,Sao Paulo,Interlagos,77,50,BOT,BEA,3,1
+2024,Sao Paulo,Interlagos,77,50,BOT,BEA,3,2
 2024,Sao Paulo,Interlagos,77,55,BOT,SAI,2,0
-2024,Sao Paulo,Interlagos,81,4,PIA,NOR,1,0
+2024,Sao Paulo,Interlagos,81,4,PIA,NOR,1,1
 2024,Sao Paulo,Interlagos,81,14,PIA,ALO,1,1
 2024,Sao Paulo,Interlagos,81,16,PIA,LEC,1,0
-2024,Sao Paulo,Interlagos,81,22,PIA,TSU,3,2
+2024,Sao Paulo,Interlagos,81,22,PIA,TSU,3,3
 2024,Sao Paulo,Interlagos,81,23,PIA,ALB,1,0
 2024,Sao Paulo,Interlagos,81,30,PIA,LAW,2,1
 2024,Shanghai,Shanghai,1,4,VER,NOR,2,2
@@ -7289,11 +7289,11 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Shanghai,Shanghai,1,44,VER,HAM,1,1
 2024,Shanghai,Shanghai,1,55,VER,SAI,1,1
 2024,Shanghai,Shanghai,1,81,VER,PIA,1,0
-2024,Shanghai,Shanghai,2,3,SAR,RIC,1,0
-2024,Shanghai,Shanghai,2,10,SAR,GAS,3,0
+2024,Shanghai,Shanghai,2,3,SAR,RIC,1,1
+2024,Shanghai,Shanghai,2,10,SAR,GAS,3,1
 2024,Shanghai,Shanghai,2,14,SAR,ALO,3,0
-2024,Shanghai,Shanghai,2,18,SAR,STR,2,0
-2024,Shanghai,Shanghai,2,20,SAR,MAG,2,0
+2024,Shanghai,Shanghai,2,18,SAR,STR,2,1
+2024,Shanghai,Shanghai,2,20,SAR,MAG,2,1
 2024,Shanghai,Shanghai,2,22,SAR,TSU,3,0
 2024,Shanghai,Shanghai,2,23,SAR,ALB,2,0
 2024,Shanghai,Shanghai,2,24,SAR,ZHO,3,0
@@ -7304,7 +7304,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Shanghai,Shanghai,2,77,SAR,BOT,2,0
 2024,Shanghai,Shanghai,3,10,RIC,GAS,1,0
 2024,Shanghai,Shanghai,3,14,RIC,ALO,2,0
-2024,Shanghai,Shanghai,3,18,RIC,STR,3,0
+2024,Shanghai,Shanghai,3,18,RIC,STR,3,1
 2024,Shanghai,Shanghai,3,20,RIC,MAG,1,0
 2024,Shanghai,Shanghai,3,22,RIC,TSU,1,1
 2024,Shanghai,Shanghai,3,23,RIC,ALB,2,1
@@ -7317,14 +7317,14 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Shanghai,Shanghai,4,1,NOR,VER,2,0
 2024,Shanghai,Shanghai,4,11,NOR,PER,2,0
 2024,Shanghai,Shanghai,4,14,NOR,ALO,1,1
-2024,Shanghai,Shanghai,10,2,GAS,SAR,3,0
-2024,Shanghai,Shanghai,10,3,GAS,RIC,2,1
+2024,Shanghai,Shanghai,10,2,GAS,SAR,3,3
+2024,Shanghai,Shanghai,10,3,GAS,RIC,2,2
 2024,Shanghai,Shanghai,10,14,GAS,ALO,1,0
-2024,Shanghai,Shanghai,10,18,GAS,STR,2,0
-2024,Shanghai,Shanghai,10,20,GAS,MAG,3,0
+2024,Shanghai,Shanghai,10,18,GAS,STR,2,1
+2024,Shanghai,Shanghai,10,20,GAS,MAG,3,2
 2024,Shanghai,Shanghai,10,22,GAS,TSU,1,0
 2024,Shanghai,Shanghai,10,23,GAS,ALB,2,1
-2024,Shanghai,Shanghai,10,24,GAS,ZHO,2,0
+2024,Shanghai,Shanghai,10,24,GAS,ZHO,2,1
 2024,Shanghai,Shanghai,10,27,GAS,HUL,2,1
 2024,Shanghai,Shanghai,10,31,GAS,OCO,2,1
 2024,Shanghai,Shanghai,10,44,GAS,HAM,2,0
@@ -7332,7 +7332,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Shanghai,Shanghai,11,1,PER,VER,1,0
 2024,Shanghai,Shanghai,11,4,PER,NOR,2,1
 2024,Shanghai,Shanghai,11,14,PER,ALO,2,1
-2024,Shanghai,Shanghai,11,16,PER,LEC,2,0
+2024,Shanghai,Shanghai,11,16,PER,LEC,2,1
 2024,Shanghai,Shanghai,11,55,PER,SAI,6,4
 2024,Shanghai,Shanghai,11,81,PER,PIA,1,0
 2024,Shanghai,Shanghai,14,2,ALO,SAR,2,0
@@ -7341,13 +7341,13 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Shanghai,Shanghai,14,11,ALO,PER,1,1
 2024,Shanghai,Shanghai,14,16,ALO,LEC,1,0
 2024,Shanghai,Shanghai,14,20,ALO,MAG,1,1
-2024,Shanghai,Shanghai,14,23,ALO,ALB,1,0
-2024,Shanghai,Shanghai,14,27,ALO,HUL,1,0
-2024,Shanghai,Shanghai,14,31,ALO,OCO,1,0
-2024,Shanghai,Shanghai,14,44,ALO,HAM,1,0
-2024,Shanghai,Shanghai,14,55,ALO,SAI,4,0
+2024,Shanghai,Shanghai,14,23,ALO,ALB,1,1
+2024,Shanghai,Shanghai,14,27,ALO,HUL,1,1
+2024,Shanghai,Shanghai,14,31,ALO,OCO,1,1
+2024,Shanghai,Shanghai,14,44,ALO,HAM,1,1
+2024,Shanghai,Shanghai,14,55,ALO,SAI,4,1
 2024,Shanghai,Shanghai,14,63,ALO,RUS,1,0
-2024,Shanghai,Shanghai,14,81,ALO,PIA,3,0
+2024,Shanghai,Shanghai,14,81,ALO,PIA,3,1
 2024,Shanghai,Shanghai,16,1,LEC,VER,1,0
 2024,Shanghai,Shanghai,16,4,LEC,NOR,1,1
 2024,Shanghai,Shanghai,16,11,LEC,PER,2,0
@@ -7356,24 +7356,24 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Shanghai,Shanghai,16,55,LEC,SAI,1,1
 2024,Shanghai,Shanghai,16,63,LEC,RUS,2,2
 2024,Shanghai,Shanghai,16,81,LEC,PIA,1,1
-2024,Shanghai,Shanghai,18,2,STR,SAR,2,0
-2024,Shanghai,Shanghai,18,3,STR,RIC,3,0
+2024,Shanghai,Shanghai,18,2,STR,SAR,2,1
+2024,Shanghai,Shanghai,18,3,STR,RIC,3,2
 2024,Shanghai,Shanghai,18,10,STR,GAS,2,1
 2024,Shanghai,Shanghai,18,14,STR,ALO,1,0
-2024,Shanghai,Shanghai,18,20,STR,MAG,5,1
+2024,Shanghai,Shanghai,18,20,STR,MAG,5,5
 2024,Shanghai,Shanghai,18,22,STR,TSU,2,0
 2024,Shanghai,Shanghai,18,27,STR,HUL,4,3
 2024,Shanghai,Shanghai,18,31,STR,OCO,2,1
 2024,Shanghai,Shanghai,18,55,STR,SAI,1,0
 2024,Shanghai,Shanghai,18,77,STR,BOT,2,2
 2024,Shanghai,Shanghai,18,81,STR,PIA,1,0
-2024,Shanghai,Shanghai,20,2,MAG,SAR,2,0
-2024,Shanghai,Shanghai,20,3,MAG,RIC,2,0
+2024,Shanghai,Shanghai,20,2,MAG,SAR,2,1
+2024,Shanghai,Shanghai,20,3,MAG,RIC,2,1
 2024,Shanghai,Shanghai,20,10,MAG,GAS,3,0
 2024,Shanghai,Shanghai,20,14,MAG,ALO,2,0
-2024,Shanghai,Shanghai,20,18,MAG,STR,6,0
+2024,Shanghai,Shanghai,20,18,MAG,STR,6,4
 2024,Shanghai,Shanghai,20,22,MAG,TSU,3,0
-2024,Shanghai,Shanghai,20,23,MAG,ALB,3,0
+2024,Shanghai,Shanghai,20,23,MAG,ALB,3,1
 2024,Shanghai,Shanghai,20,24,MAG,ZHO,9,7
 2024,Shanghai,Shanghai,20,27,MAG,HUL,1,0
 2024,Shanghai,Shanghai,20,31,MAG,OCO,1,0
@@ -7384,66 +7384,66 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Shanghai,Shanghai,22,2,TSU,SAR,2,0
 2024,Shanghai,Shanghai,22,3,TSU,RIC,1,0
 2024,Shanghai,Shanghai,22,10,TSU,GAS,1,0
-2024,Shanghai,Shanghai,22,18,TSU,STR,2,0
-2024,Shanghai,Shanghai,22,20,TSU,MAG,3,1
+2024,Shanghai,Shanghai,22,18,TSU,STR,2,1
+2024,Shanghai,Shanghai,22,20,TSU,MAG,3,2
 2024,Shanghai,Shanghai,22,23,TSU,ALB,5,3
 2024,Shanghai,Shanghai,22,24,TSU,ZHO,1,1
 2024,Shanghai,Shanghai,22,31,TSU,OCO,1,1
 2024,Shanghai,Shanghai,22,44,TSU,HAM,4,2
 2024,Shanghai,Shanghai,22,77,TSU,BOT,1,0
 2024,Shanghai,Shanghai,23,2,ALB,SAR,2,0
-2024,Shanghai,Shanghai,23,3,ALB,RIC,2,1
+2024,Shanghai,Shanghai,23,3,ALB,RIC,2,2
 2024,Shanghai,Shanghai,23,10,ALB,GAS,2,1
 2024,Shanghai,Shanghai,23,14,ALB,ALO,2,0
-2024,Shanghai,Shanghai,23,18,ALB,STR,1,0
-2024,Shanghai,Shanghai,23,20,ALB,MAG,3,0
+2024,Shanghai,Shanghai,23,18,ALB,STR,1,1
+2024,Shanghai,Shanghai,23,20,ALB,MAG,3,2
 2024,Shanghai,Shanghai,23,22,ALB,TSU,4,2
 2024,Shanghai,Shanghai,23,27,ALB,HUL,3,2
 2024,Shanghai,Shanghai,23,44,ALB,HAM,1,0
 2024,Shanghai,Shanghai,23,77,ALB,BOT,1,0
-2024,Shanghai,Shanghai,24,2,ZHO,SAR,3,0
-2024,Shanghai,Shanghai,24,3,ZHO,RIC,2,0
+2024,Shanghai,Shanghai,24,2,ZHO,SAR,3,2
+2024,Shanghai,Shanghai,24,3,ZHO,RIC,2,1
 2024,Shanghai,Shanghai,24,10,ZHO,GAS,3,0
 2024,Shanghai,Shanghai,24,14,ZHO,ALO,1,0
-2024,Shanghai,Shanghai,24,18,ZHO,STR,1,0
-2024,Shanghai,Shanghai,24,20,ZHO,MAG,10,7
+2024,Shanghai,Shanghai,24,18,ZHO,STR,1,1
+2024,Shanghai,Shanghai,24,20,ZHO,MAG,10,9
 2024,Shanghai,Shanghai,24,22,ZHO,TSU,1,0
 2024,Shanghai,Shanghai,24,44,ZHO,HAM,1,0
 2024,Shanghai,Shanghai,24,77,ZHO,BOT,2,1
 2024,Shanghai,Shanghai,27,2,HUL,SAR,2,0
-2024,Shanghai,Shanghai,27,3,HUL,RIC,4,1
+2024,Shanghai,Shanghai,27,3,HUL,RIC,4,3
 2024,Shanghai,Shanghai,27,10,HUL,GAS,2,1
 2024,Shanghai,Shanghai,27,14,HUL,ALO,2,0
 2024,Shanghai,Shanghai,27,16,HUL,LEC,1,1
-2024,Shanghai,Shanghai,27,18,HUL,STR,3,1
+2024,Shanghai,Shanghai,27,18,HUL,STR,3,2
 2024,Shanghai,Shanghai,27,20,HUL,MAG,1,1
 2024,Shanghai,Shanghai,27,23,HUL,ALB,2,1
 2024,Shanghai,Shanghai,27,31,HUL,OCO,2,0
-2024,Shanghai,Shanghai,27,44,HUL,HAM,2,0
+2024,Shanghai,Shanghai,27,44,HUL,HAM,2,1
 2024,Shanghai,Shanghai,27,55,HUL,SAI,3,2
 2024,Shanghai,Shanghai,27,63,HUL,RUS,1,1
 2024,Shanghai,Shanghai,27,77,HUL,BOT,1,0
 2024,Shanghai,Shanghai,31,2,OCO,SAR,2,0
-2024,Shanghai,Shanghai,31,3,OCO,RIC,3,1
+2024,Shanghai,Shanghai,31,3,OCO,RIC,3,2
 2024,Shanghai,Shanghai,31,10,OCO,GAS,3,2
 2024,Shanghai,Shanghai,31,14,OCO,ALO,2,0
-2024,Shanghai,Shanghai,31,18,OCO,STR,4,1
+2024,Shanghai,Shanghai,31,18,OCO,STR,4,2
 2024,Shanghai,Shanghai,31,20,OCO,MAG,1,0
 2024,Shanghai,Shanghai,31,22,OCO,TSU,1,1
 2024,Shanghai,Shanghai,31,27,OCO,HUL,3,1
 2024,Shanghai,Shanghai,31,77,OCO,BOT,1,0
 2024,Shanghai,Shanghai,44,2,HAM,SAR,2,0
-2024,Shanghai,Shanghai,44,3,HAM,RIC,2,0
+2024,Shanghai,Shanghai,44,3,HAM,RIC,2,1
 2024,Shanghai,Shanghai,44,4,HAM,NOR,1,1
 2024,Shanghai,Shanghai,44,10,HAM,GAS,3,0
 2024,Shanghai,Shanghai,44,14,HAM,ALO,1,0
-2024,Shanghai,Shanghai,44,18,HAM,STR,1,0
+2024,Shanghai,Shanghai,44,18,HAM,STR,1,1
 2024,Shanghai,Shanghai,44,20,HAM,MAG,3,2
 2024,Shanghai,Shanghai,44,22,HAM,TSU,4,2
 2024,Shanghai,Shanghai,44,23,HAM,ALB,2,1
 2024,Shanghai,Shanghai,44,24,HAM,ZHO,2,1
-2024,Shanghai,Shanghai,44,27,HAM,HUL,3,0
-2024,Shanghai,Shanghai,44,31,HAM,OCO,1,0
+2024,Shanghai,Shanghai,44,27,HAM,HUL,3,2
+2024,Shanghai,Shanghai,44,31,HAM,OCO,1,1
 2024,Shanghai,Shanghai,44,77,HAM,BOT,1,0
 2024,Shanghai,Shanghai,55,1,SAI,VER,1,1
 2024,Shanghai,Shanghai,55,4,SAI,NOR,1,1
@@ -7927,144 +7927,144 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2024,Spa,Spa-Francorchamps,81,44,PIA,HAM,1,0
 2024,Spa,Spa-Francorchamps,81,55,PIA,SAI,1,0
 2024,Spa,Spa-Francorchamps,81,63,PIA,RUS,2,0
-2024,Suzuka,Suzuka,1,16,VER,LEC,1,0
+2024,Suzuka,Suzuka,1,16,VER,LEC,1,1
 2024,Suzuka,Suzuka,1,55,VER,SAI,1,0
 2024,Suzuka,Suzuka,1,63,VER,RUS,1,0
 2024,Suzuka,Suzuka,2,3,SAR,RIC,1,0
-2024,Suzuka,Suzuka,2,10,SAR,GAS,1,0
-2024,Suzuka,Suzuka,2,18,SAR,STR,2,0
+2024,Suzuka,Suzuka,2,10,SAR,GAS,1,1
+2024,Suzuka,Suzuka,2,18,SAR,STR,2,1
 2024,Suzuka,Suzuka,2,20,SAR,MAG,1,0
-2024,Suzuka,Suzuka,2,22,SAR,TSU,2,0
+2024,Suzuka,Suzuka,2,22,SAR,TSU,2,1
 2024,Suzuka,Suzuka,2,23,SAR,ALB,1,0
-2024,Suzuka,Suzuka,2,24,SAR,ZHO,3,0
-2024,Suzuka,Suzuka,2,27,SAR,HUL,3,0
-2024,Suzuka,Suzuka,2,31,SAR,OCO,2,0
+2024,Suzuka,Suzuka,2,24,SAR,ZHO,3,1
+2024,Suzuka,Suzuka,2,27,SAR,HUL,3,1
+2024,Suzuka,Suzuka,2,31,SAR,OCO,2,2
 2024,Suzuka,Suzuka,2,77,SAR,BOT,1,0
 2024,Suzuka,Suzuka,2,81,SAR,PIA,1,0
 2024,Suzuka,Suzuka,3,22,RIC,TSU,1,0
 2024,Suzuka,Suzuka,4,11,NOR,PER,2,0
 2024,Suzuka,Suzuka,4,14,NOR,ALO,2,0
 2024,Suzuka,Suzuka,4,18,NOR,STR,1,0
-2024,Suzuka,Suzuka,4,44,NOR,HAM,1,0
+2024,Suzuka,Suzuka,4,44,NOR,HAM,1,1
 2024,Suzuka,Suzuka,4,55,NOR,SAI,2,0
-2024,Suzuka,Suzuka,4,63,NOR,RUS,2,0
+2024,Suzuka,Suzuka,4,63,NOR,RUS,2,2
 2024,Suzuka,Suzuka,4,81,NOR,PIA,2,0
-2024,Suzuka,Suzuka,10,2,GAS,SAR,1,0
+2024,Suzuka,Suzuka,10,2,GAS,SAR,1,1
 2024,Suzuka,Suzuka,10,3,GAS,RIC,1,0
 2024,Suzuka,Suzuka,10,18,GAS,STR,2,0
-2024,Suzuka,Suzuka,10,22,GAS,TSU,2,0
+2024,Suzuka,Suzuka,10,22,GAS,TSU,2,1
 2024,Suzuka,Suzuka,10,23,GAS,ALB,1,0
-2024,Suzuka,Suzuka,10,27,GAS,HUL,1,0
-2024,Suzuka,Suzuka,10,31,GAS,OCO,1,0
+2024,Suzuka,Suzuka,10,27,GAS,HUL,1,1
+2024,Suzuka,Suzuka,10,31,GAS,OCO,1,1
 2024,Suzuka,Suzuka,10,77,GAS,BOT,1,0
-2024,Suzuka,Suzuka,11,4,PER,NOR,2,0
-2024,Suzuka,Suzuka,11,16,PER,LEC,2,0
-2024,Suzuka,Suzuka,11,44,PER,HAM,1,0
+2024,Suzuka,Suzuka,11,4,PER,NOR,2,2
+2024,Suzuka,Suzuka,11,16,PER,LEC,2,1
+2024,Suzuka,Suzuka,11,44,PER,HAM,1,1
 2024,Suzuka,Suzuka,11,55,PER,SAI,1,0
-2024,Suzuka,Suzuka,11,63,PER,RUS,1,0
+2024,Suzuka,Suzuka,11,63,PER,RUS,1,1
 2024,Suzuka,Suzuka,14,4,ALO,NOR,2,0
 2024,Suzuka,Suzuka,14,16,ALO,LEC,1,0
-2024,Suzuka,Suzuka,14,44,ALO,HAM,2,0
+2024,Suzuka,Suzuka,14,44,ALO,HAM,2,1
 2024,Suzuka,Suzuka,14,63,ALO,RUS,2,0
 2024,Suzuka,Suzuka,16,1,LEC,VER,1,0
 2024,Suzuka,Suzuka,16,4,LEC,NOR,1,0
 2024,Suzuka,Suzuka,16,11,LEC,PER,2,0
 2024,Suzuka,Suzuka,16,14,LEC,ALO,2,0
-2024,Suzuka,Suzuka,16,44,LEC,HAM,2,0
+2024,Suzuka,Suzuka,16,44,LEC,HAM,2,2
 2024,Suzuka,Suzuka,16,55,LEC,SAI,2,0
 2024,Suzuka,Suzuka,16,81,LEC,PIA,2,0
-2024,Suzuka,Suzuka,18,2,STR,SAR,2,0
+2024,Suzuka,Suzuka,18,2,STR,SAR,2,1
 2024,Suzuka,Suzuka,18,3,STR,RIC,1,0
 2024,Suzuka,Suzuka,18,4,STR,NOR,1,0
-2024,Suzuka,Suzuka,18,10,STR,GAS,2,0
-2024,Suzuka,Suzuka,18,20,STR,MAG,3,0
-2024,Suzuka,Suzuka,18,22,STR,TSU,3,0
+2024,Suzuka,Suzuka,18,10,STR,GAS,2,2
+2024,Suzuka,Suzuka,18,20,STR,MAG,3,2
+2024,Suzuka,Suzuka,18,22,STR,TSU,3,2
 2024,Suzuka,Suzuka,18,23,STR,ALB,2,0
-2024,Suzuka,Suzuka,18,24,STR,ZHO,1,0
-2024,Suzuka,Suzuka,18,27,STR,HUL,3,0
-2024,Suzuka,Suzuka,18,31,STR,OCO,3,0
-2024,Suzuka,Suzuka,18,77,STR,BOT,3,0
+2024,Suzuka,Suzuka,18,24,STR,ZHO,1,1
+2024,Suzuka,Suzuka,18,27,STR,HUL,3,2
+2024,Suzuka,Suzuka,18,31,STR,OCO,3,2
+2024,Suzuka,Suzuka,18,77,STR,BOT,3,1
 2024,Suzuka,Suzuka,20,2,MAG,SAR,1,0
 2024,Suzuka,Suzuka,20,3,MAG,RIC,1,0
-2024,Suzuka,Suzuka,20,10,MAG,GAS,1,0
-2024,Suzuka,Suzuka,20,18,MAG,STR,3,0
-2024,Suzuka,Suzuka,20,22,MAG,TSU,2,0
+2024,Suzuka,Suzuka,20,10,MAG,GAS,1,1
+2024,Suzuka,Suzuka,20,18,MAG,STR,3,1
+2024,Suzuka,Suzuka,20,22,MAG,TSU,2,1
 2024,Suzuka,Suzuka,20,23,MAG,ALB,1,0
-2024,Suzuka,Suzuka,20,27,MAG,HUL,2,0
-2024,Suzuka,Suzuka,20,31,MAG,OCO,2,0
+2024,Suzuka,Suzuka,20,27,MAG,HUL,2,1
+2024,Suzuka,Suzuka,20,31,MAG,OCO,2,2
 2024,Suzuka,Suzuka,20,77,MAG,BOT,1,0
 2024,Suzuka,Suzuka,20,81,MAG,PIA,1,0
-2024,Suzuka,Suzuka,22,2,TSU,SAR,2,0
+2024,Suzuka,Suzuka,22,2,TSU,SAR,2,1
 2024,Suzuka,Suzuka,22,3,TSU,RIC,1,0
-2024,Suzuka,Suzuka,22,10,TSU,GAS,2,0
-2024,Suzuka,Suzuka,22,18,TSU,STR,3,0
-2024,Suzuka,Suzuka,22,20,TSU,MAG,2,0
-2024,Suzuka,Suzuka,22,24,TSU,ZHO,1,0
-2024,Suzuka,Suzuka,22,27,TSU,HUL,2,0
-2024,Suzuka,Suzuka,22,31,TSU,OCO,3,0
-2024,Suzuka,Suzuka,22,63,TSU,RUS,1,0
-2024,Suzuka,Suzuka,22,77,TSU,BOT,2,0
+2024,Suzuka,Suzuka,22,10,TSU,GAS,2,2
+2024,Suzuka,Suzuka,22,18,TSU,STR,3,2
+2024,Suzuka,Suzuka,22,20,TSU,MAG,2,1
+2024,Suzuka,Suzuka,22,24,TSU,ZHO,1,1
+2024,Suzuka,Suzuka,22,27,TSU,HUL,2,2
+2024,Suzuka,Suzuka,22,31,TSU,OCO,3,2
+2024,Suzuka,Suzuka,22,63,TSU,RUS,1,1
+2024,Suzuka,Suzuka,22,77,TSU,BOT,2,1
 2024,Suzuka,Suzuka,23,18,ALB,STR,1,0
-2024,Suzuka,Suzuka,24,2,ZHO,SAR,3,0
+2024,Suzuka,Suzuka,24,2,ZHO,SAR,3,2
 2024,Suzuka,Suzuka,24,3,ZHO,RIC,1,0
-2024,Suzuka,Suzuka,24,18,ZHO,STR,1,0
-2024,Suzuka,Suzuka,24,22,ZHO,TSU,1,0
+2024,Suzuka,Suzuka,24,18,ZHO,STR,1,1
+2024,Suzuka,Suzuka,24,22,ZHO,TSU,1,1
 2024,Suzuka,Suzuka,24,23,ZHO,ALB,1,0
-2024,Suzuka,Suzuka,24,27,ZHO,HUL,1,0
+2024,Suzuka,Suzuka,24,27,ZHO,HUL,1,1
 2024,Suzuka,Suzuka,24,77,ZHO,BOT,1,0
-2024,Suzuka,Suzuka,27,2,HUL,SAR,3,0
+2024,Suzuka,Suzuka,27,2,HUL,SAR,3,1
 2024,Suzuka,Suzuka,27,3,HUL,RIC,1,0
-2024,Suzuka,Suzuka,27,10,HUL,GAS,1,0
-2024,Suzuka,Suzuka,27,18,HUL,STR,3,0
-2024,Suzuka,Suzuka,27,20,HUL,MAG,2,0
+2024,Suzuka,Suzuka,27,10,HUL,GAS,1,1
+2024,Suzuka,Suzuka,27,18,HUL,STR,3,1
+2024,Suzuka,Suzuka,27,20,HUL,MAG,2,1
 2024,Suzuka,Suzuka,27,22,HUL,TSU,2,0
 2024,Suzuka,Suzuka,27,24,HUL,ZHO,1,0
-2024,Suzuka,Suzuka,27,31,HUL,OCO,1,0
-2024,Suzuka,Suzuka,27,77,HUL,BOT,4,0
-2024,Suzuka,Suzuka,31,2,OCO,SAR,2,0
+2024,Suzuka,Suzuka,27,31,HUL,OCO,1,1
+2024,Suzuka,Suzuka,27,77,HUL,BOT,4,1
+2024,Suzuka,Suzuka,31,2,OCO,SAR,2,1
 2024,Suzuka,Suzuka,31,3,OCO,RIC,1,0
-2024,Suzuka,Suzuka,31,10,OCO,GAS,1,0
+2024,Suzuka,Suzuka,31,10,OCO,GAS,1,1
 2024,Suzuka,Suzuka,31,18,OCO,STR,2,0
 2024,Suzuka,Suzuka,31,20,OCO,MAG,1,0
-2024,Suzuka,Suzuka,31,22,OCO,TSU,3,0
+2024,Suzuka,Suzuka,31,22,OCO,TSU,3,1
 2024,Suzuka,Suzuka,31,23,OCO,ALB,1,0
-2024,Suzuka,Suzuka,31,27,OCO,HUL,1,0
-2024,Suzuka,Suzuka,31,77,OCO,BOT,3,0
+2024,Suzuka,Suzuka,31,27,OCO,HUL,1,1
+2024,Suzuka,Suzuka,31,77,OCO,BOT,3,1
 2024,Suzuka,Suzuka,31,81,OCO,PIA,1,0
 2024,Suzuka,Suzuka,44,4,HAM,NOR,1,0
 2024,Suzuka,Suzuka,44,11,HAM,PER,1,0
 2024,Suzuka,Suzuka,44,14,HAM,ALO,2,0
-2024,Suzuka,Suzuka,44,16,HAM,LEC,1,0
+2024,Suzuka,Suzuka,44,16,HAM,LEC,1,1
 2024,Suzuka,Suzuka,44,55,HAM,SAI,2,0
 2024,Suzuka,Suzuka,44,63,HAM,RUS,2,0
 2024,Suzuka,Suzuka,44,81,HAM,PIA,3,0
 2024,Suzuka,Suzuka,55,1,SAI,VER,1,0
-2024,Suzuka,Suzuka,55,4,SAI,NOR,3,0
+2024,Suzuka,Suzuka,55,4,SAI,NOR,3,1
 2024,Suzuka,Suzuka,55,11,SAI,PER,1,0
-2024,Suzuka,Suzuka,55,16,SAI,LEC,2,0
-2024,Suzuka,Suzuka,55,44,SAI,HAM,2,0
-2024,Suzuka,Suzuka,55,63,SAI,RUS,2,0
+2024,Suzuka,Suzuka,55,16,SAI,LEC,2,1
+2024,Suzuka,Suzuka,55,44,SAI,HAM,2,2
+2024,Suzuka,Suzuka,55,63,SAI,RUS,2,1
 2024,Suzuka,Suzuka,63,1,RUS,VER,1,0
 2024,Suzuka,Suzuka,63,4,RUS,NOR,2,0
 2024,Suzuka,Suzuka,63,11,RUS,PER,1,0
 2024,Suzuka,Suzuka,63,14,RUS,ALO,2,0
-2024,Suzuka,Suzuka,63,22,RUS,TSU,1,0
-2024,Suzuka,Suzuka,63,44,RUS,HAM,3,0
+2024,Suzuka,Suzuka,63,22,RUS,TSU,1,1
+2024,Suzuka,Suzuka,63,44,RUS,HAM,3,1
 2024,Suzuka,Suzuka,63,55,RUS,SAI,2,0
-2024,Suzuka,Suzuka,63,81,RUS,PIA,3,0
-2024,Suzuka,Suzuka,77,2,BOT,SAR,1,0
+2024,Suzuka,Suzuka,63,81,RUS,PIA,3,1
+2024,Suzuka,Suzuka,77,2,BOT,SAR,1,1
 2024,Suzuka,Suzuka,77,3,BOT,RIC,1,0
-2024,Suzuka,Suzuka,77,10,BOT,GAS,1,0
+2024,Suzuka,Suzuka,77,10,BOT,GAS,1,1
 2024,Suzuka,Suzuka,77,18,BOT,STR,2,0
 2024,Suzuka,Suzuka,77,22,BOT,TSU,2,0
 2024,Suzuka,Suzuka,77,24,BOT,ZHO,1,0
-2024,Suzuka,Suzuka,77,27,BOT,HUL,4,0
-2024,Suzuka,Suzuka,77,31,BOT,OCO,3,0
+2024,Suzuka,Suzuka,77,27,BOT,HUL,4,1
+2024,Suzuka,Suzuka,77,31,BOT,OCO,3,3
 2024,Suzuka,Suzuka,81,2,PIA,SAR,1,0
 2024,Suzuka,Suzuka,81,4,PIA,NOR,2,0
 2024,Suzuka,Suzuka,81,16,PIA,LEC,1,0
-2024,Suzuka,Suzuka,81,20,PIA,MAG,1,0
-2024,Suzuka,Suzuka,81,31,PIA,OCO,1,0
+2024,Suzuka,Suzuka,81,20,PIA,MAG,1,1
+2024,Suzuka,Suzuka,81,31,PIA,OCO,1,1
 2024,Suzuka,Suzuka,81,44,PIA,HAM,3,0
 2024,Suzuka,Suzuka,81,63,PIA,RUS,2,0
 2024,Zandvoort,Zandvoort,1,3,VER,RIC,1,0
@@ -11318,20 +11318,20 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,4,1,NOR,VER,2,1
 2025,Sao Paulo,Interlagos,4,63,NOR,RUS,1,0
 2025,Sao Paulo,Interlagos,4,81,NOR,PIA,2,0
-2025,Sao Paulo,Interlagos,5,23,BOR,ALB,2,0
+2025,Sao Paulo,Interlagos,5,23,BOR,ALB,2,2
 2025,Sao Paulo,Interlagos,5,27,BOR,HUL,1,1
 2025,Sao Paulo,Interlagos,5,43,BOR,COL,2,1
 2025,Sao Paulo,Interlagos,5,44,BOR,HAM,1,1
 2025,Sao Paulo,Interlagos,5,81,BOR,PIA,1,0
 2025,Sao Paulo,Interlagos,5,87,BOR,BEA,1,1
 2025,Sao Paulo,Interlagos,6,1,HAD,VER,1,0
-2025,Sao Paulo,Interlagos,6,5,HAD,BOR,1,0
+2025,Sao Paulo,Interlagos,6,5,HAD,BOR,1,1
 2025,Sao Paulo,Interlagos,6,10,HAD,GAS,2,2
 2025,Sao Paulo,Interlagos,6,14,HAD,ALO,2,0
 2025,Sao Paulo,Interlagos,6,16,HAD,LEC,1,0
 2025,Sao Paulo,Interlagos,6,18,HAD,STR,2,1
 2025,Sao Paulo,Interlagos,6,22,HAD,TSU,2,1
-2025,Sao Paulo,Interlagos,6,23,HAD,ALB,3,0
+2025,Sao Paulo,Interlagos,6,23,HAD,ALB,3,1
 2025,Sao Paulo,Interlagos,6,27,HAD,HUL,4,3
 2025,Sao Paulo,Interlagos,6,30,HAD,LAW,2,1
 2025,Sao Paulo,Interlagos,6,31,HAD,OCO,2,1
@@ -11342,7 +11342,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,10,6,GAS,HAD,4,3
 2025,Sao Paulo,Interlagos,10,14,GAS,ALO,2,0
 2025,Sao Paulo,Interlagos,10,16,GAS,LEC,1,0
-2025,Sao Paulo,Interlagos,10,18,GAS,STR,3,1
+2025,Sao Paulo,Interlagos,10,18,GAS,STR,3,2
 2025,Sao Paulo,Interlagos,10,22,GAS,TSU,2,1
 2025,Sao Paulo,Interlagos,10,23,GAS,ALB,4,2
 2025,Sao Paulo,Interlagos,10,27,GAS,HUL,2,1
@@ -11379,7 +11379,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,14,81,ALO,PIA,1,0
 2025,Sao Paulo,Interlagos,14,87,ALO,BEA,2,1
 2025,Sao Paulo,Interlagos,16,12,LEC,ANT,1,1
-2025,Sao Paulo,Interlagos,16,14,LEC,ALO,2,1
+2025,Sao Paulo,Interlagos,16,14,LEC,ALO,2,2
 2025,Sao Paulo,Interlagos,16,18,LEC,STR,1,1
 2025,Sao Paulo,Interlagos,16,30,LEC,LAW,1,1
 2025,Sao Paulo,Interlagos,16,31,LEC,OCO,1,1
@@ -11400,14 +11400,14 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,18,81,STR,PIA,1,0
 2025,Sao Paulo,Interlagos,18,87,STR,BEA,1,0
 2025,Sao Paulo,Interlagos,22,1,TSU,VER,1,0
-2025,Sao Paulo,Interlagos,22,5,TSU,BOR,1,0
+2025,Sao Paulo,Interlagos,22,5,TSU,BOR,1,1
 2025,Sao Paulo,Interlagos,22,6,TSU,HAD,2,0
 2025,Sao Paulo,Interlagos,22,10,TSU,GAS,2,0
 2025,Sao Paulo,Interlagos,22,12,TSU,ANT,1,0
 2025,Sao Paulo,Interlagos,22,14,TSU,ALO,1,0
 2025,Sao Paulo,Interlagos,22,16,TSU,LEC,1,0
 2025,Sao Paulo,Interlagos,22,18,TSU,STR,3,2
-2025,Sao Paulo,Interlagos,22,23,TSU,ALB,1,0
+2025,Sao Paulo,Interlagos,22,23,TSU,ALB,1,1
 2025,Sao Paulo,Interlagos,22,27,TSU,HUL,1,0
 2025,Sao Paulo,Interlagos,22,30,TSU,LAW,1,0
 2025,Sao Paulo,Interlagos,22,31,TSU,OCO,1,1
@@ -11416,7 +11416,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,22,55,TSU,SAI,2,0
 2025,Sao Paulo,Interlagos,22,81,TSU,PIA,1,0
 2025,Sao Paulo,Interlagos,23,1,ALB,VER,1,0
-2025,Sao Paulo,Interlagos,23,5,ALB,BOR,2,0
+2025,Sao Paulo,Interlagos,23,5,ALB,BOR,2,2
 2025,Sao Paulo,Interlagos,23,6,ALB,HAD,3,1
 2025,Sao Paulo,Interlagos,23,10,ALB,GAS,3,1
 2025,Sao Paulo,Interlagos,23,12,ALB,ANT,1,0
@@ -11432,13 +11432,13 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,23,81,ALB,PIA,1,0
 2025,Sao Paulo,Interlagos,23,87,ALB,BEA,2,0
 2025,Sao Paulo,Interlagos,27,1,HUL,VER,1,0
-2025,Sao Paulo,Interlagos,27,5,HUL,BOR,1,0
+2025,Sao Paulo,Interlagos,27,5,HUL,BOR,1,1
 2025,Sao Paulo,Interlagos,27,6,HUL,HAD,3,2
 2025,Sao Paulo,Interlagos,27,10,HUL,GAS,2,0
 2025,Sao Paulo,Interlagos,27,12,HUL,ANT,1,0
 2025,Sao Paulo,Interlagos,27,14,HUL,ALO,4,4
 2025,Sao Paulo,Interlagos,27,16,HUL,LEC,1,0
-2025,Sao Paulo,Interlagos,27,23,HUL,ALB,2,1
+2025,Sao Paulo,Interlagos,27,23,HUL,ALB,2,2
 2025,Sao Paulo,Interlagos,27,30,HUL,LAW,1,0
 2025,Sao Paulo,Interlagos,27,31,HUL,OCO,1,1
 2025,Sao Paulo,Interlagos,27,43,HUL,COL,1,0
@@ -11447,7 +11447,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,27,81,HUL,PIA,1,0
 2025,Sao Paulo,Interlagos,27,87,HUL,BEA,2,1
 2025,Sao Paulo,Interlagos,30,1,LAW,VER,1,0
-2025,Sao Paulo,Interlagos,30,5,LAW,BOR,2,0
+2025,Sao Paulo,Interlagos,30,5,LAW,BOR,2,1
 2025,Sao Paulo,Interlagos,30,6,LAW,HAD,4,2
 2025,Sao Paulo,Interlagos,30,10,LAW,GAS,2,0
 2025,Sao Paulo,Interlagos,30,12,LAW,ANT,1,0
@@ -11455,7 +11455,7 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,30,16,LAW,LEC,2,0
 2025,Sao Paulo,Interlagos,30,18,LAW,STR,2,1
 2025,Sao Paulo,Interlagos,30,22,LAW,TSU,2,1
-2025,Sao Paulo,Interlagos,30,23,LAW,ALB,3,1
+2025,Sao Paulo,Interlagos,30,23,LAW,ALB,3,2
 2025,Sao Paulo,Interlagos,30,27,LAW,HUL,3,1
 2025,Sao Paulo,Interlagos,30,31,LAW,OCO,2,2
 2025,Sao Paulo,Interlagos,30,43,LAW,COL,3,1
@@ -11465,16 +11465,16 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,30,81,LAW,PIA,3,0
 2025,Sao Paulo,Interlagos,30,87,LAW,BEA,4,2
 2025,Sao Paulo,Interlagos,31,1,OCO,VER,1,0
-2025,Sao Paulo,Interlagos,31,5,OCO,BOR,3,0
+2025,Sao Paulo,Interlagos,31,5,OCO,BOR,3,1
 2025,Sao Paulo,Interlagos,31,6,OCO,HAD,2,0
 2025,Sao Paulo,Interlagos,31,10,OCO,GAS,1,0
 2025,Sao Paulo,Interlagos,31,14,OCO,ALO,1,0
 2025,Sao Paulo,Interlagos,31,16,OCO,LEC,2,0
 2025,Sao Paulo,Interlagos,31,18,OCO,STR,3,1
 2025,Sao Paulo,Interlagos,31,22,OCO,TSU,2,0
-2025,Sao Paulo,Interlagos,31,23,OCO,ALB,3,0
+2025,Sao Paulo,Interlagos,31,23,OCO,ALB,3,1
 2025,Sao Paulo,Interlagos,31,27,OCO,HUL,2,0
-2025,Sao Paulo,Interlagos,31,30,OCO,LAW,2,0
+2025,Sao Paulo,Interlagos,31,30,OCO,LAW,2,1
 2025,Sao Paulo,Interlagos,31,43,OCO,COL,2,0
 2025,Sao Paulo,Interlagos,31,44,OCO,HAM,3,1
 2025,Sao Paulo,Interlagos,31,55,OCO,SAI,4,1
@@ -11509,13 +11509,13 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,44,55,HAM,SAI,1,0
 2025,Sao Paulo,Interlagos,44,81,HAM,PIA,1,0
 2025,Sao Paulo,Interlagos,55,1,SAI,VER,1,0
-2025,Sao Paulo,Interlagos,55,5,SAI,BOR,1,0
+2025,Sao Paulo,Interlagos,55,5,SAI,BOR,1,1
 2025,Sao Paulo,Interlagos,55,6,SAI,HAD,1,0
 2025,Sao Paulo,Interlagos,55,14,SAI,ALO,3,1
 2025,Sao Paulo,Interlagos,55,16,SAI,LEC,1,0
 2025,Sao Paulo,Interlagos,55,18,SAI,STR,3,1
 2025,Sao Paulo,Interlagos,55,22,SAI,TSU,2,1
-2025,Sao Paulo,Interlagos,55,23,SAI,ALB,3,0
+2025,Sao Paulo,Interlagos,55,23,SAI,ALB,3,1
 2025,Sao Paulo,Interlagos,55,27,SAI,HUL,3,1
 2025,Sao Paulo,Interlagos,55,31,SAI,OCO,2,1
 2025,Sao Paulo,Interlagos,55,43,SAI,COL,2,0
@@ -11540,14 +11540,14 @@ year,grand_prix,circuit,overtaking_driver_number,overtaken_driver_number,overtak
 2025,Sao Paulo,Interlagos,81,63,PIA,RUS,1,0
 2025,Sao Paulo,Interlagos,81,87,PIA,BEA,2,1
 2025,Sao Paulo,Interlagos,87,1,BEA,VER,1,0
-2025,Sao Paulo,Interlagos,87,5,BEA,BOR,2,1
+2025,Sao Paulo,Interlagos,87,5,BEA,BOR,2,2
 2025,Sao Paulo,Interlagos,87,6,BEA,HAD,1,0
 2025,Sao Paulo,Interlagos,87,10,BEA,GAS,2,2
 2025,Sao Paulo,Interlagos,87,14,BEA,ALO,3,2
 2025,Sao Paulo,Interlagos,87,16,BEA,LEC,1,0
 2025,Sao Paulo,Interlagos,87,18,BEA,STR,1,1
 2025,Sao Paulo,Interlagos,87,22,BEA,TSU,1,0
-2025,Sao Paulo,Interlagos,87,23,BEA,ALB,3,2
+2025,Sao Paulo,Interlagos,87,23,BEA,ALB,3,3
 2025,Sao Paulo,Interlagos,87,27,BEA,HUL,4,2
 2025,Sao Paulo,Interlagos,87,30,BEA,LAW,4,3
 2025,Sao Paulo,Interlagos,87,31,BEA,OCO,1,0

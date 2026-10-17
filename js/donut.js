@@ -257,11 +257,13 @@ window.SessionMix = (function () {
 
   function drawFlags(svg, row, grow) {
     const flags = row.onTrack;
-    const items = [
-      ["Lap 1", flags.lap1],
-      ["Same-second burst", flags.burst],
-      ["8-second bounce", flags.bounce],
-    ];
+    const items = row.focused
+      ? [["Lap 1", flags.lap1]]
+      : [
+        ["Lap 1", flags.lap1],
+        ["Same-second burst", flags.burst],
+        ["8-second bounce", flags.bounce],
+      ];
     const width = 250;
     svg.append("text")
       .attr("x", 16)
@@ -356,10 +358,37 @@ window.SessionMix = (function () {
       });
   }
 
+  function focusedRow(base) {
+    const focus = window.FocusFilter;
+    if (!base || !focus || !focus.active()) return base;
+    const counts = {};
+    TAGS.forEach(([tag]) => { counts[tag] = 0; });
+    let lap1 = 0;
+    (window.LAP_DATA || []).forEach((session) => {
+      if (session.year !== base.year) return;
+      if (base.type !== "Season" && String(session.key) !== String(sessionKey)) return;
+      session.events.forEach((event) => {
+        if (!focus.pair(session.year, event[2], event[3])) return;
+        const tag = event[5];
+        counts[tag] = (counts[tag] || 0) + 1;
+        if (tag === "on_track" && event[0] === 1) lap1 += 1;
+      });
+    });
+    const onTrackN = counts.on_track || 0;
+    const n = TAGS.reduce((sum, [tag]) => sum + (counts[tag] || 0), 0);
+    return {
+      ...base,
+      n,
+      counts,
+      focused: true,
+      onTrack: { n: onTrackN, lap1, burst: 0, bounce: 0, rest: Math.max(0, onTrackN - lap1) },
+    };
+  }
+
   function draw(mode) {
     drawToken += 1;
     const token = drawToken;
-    const row = current();
+    const row = focusedRow(current());
     const status = document.getElementById("mix-status");
     const note = document.getElementById("mix-note");
     const host = document.getElementById("mix-chart");
@@ -382,9 +411,13 @@ window.SessionMix = (function () {
       line += ". This session has no pit feed, so the pit share may be low and the true-pass share may be high.";
     }
     status.textContent = line;
-    note.textContent = expanded
-      ? "Lap 1, same-second bursts, and 8-second bounce-backs can overlap, so the three bars can add up to more than the true-pass count. Click the empty chart to return to the ring."
-      : "Counts of zero stay in the table and are not drawn. Labels appear on a slice only when it is at least 8%.";
+    if (row.focused) {
+      note.textContent = "Counts use swaps that have a lap number. Same-second bursts and 8-second bounce-backs are not split out while a driver or team is selected.";
+    } else {
+      note.textContent = expanded
+        ? "Lap 1, same-second bursts, and 8-second bounce-backs can overlap, so the three bars can add up to more than the true-pass count. Click the empty chart to return to the ring."
+        : "Counts of zero stay in the table and are not drawn. Labels appear on a slice only when it is at least 8%.";
+    }
     drawTable(row);
     if (mode === "expand" && !reduceMotion() && row.counts.on_track > 0 && host.querySelector("path")) {
       expandRing(row, token);

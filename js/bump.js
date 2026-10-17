@@ -155,6 +155,12 @@ window.RankBump = (function () {
     } else if (local.range === "top10") {
       rows = rows.filter((row) => lastOf(row).position <= 10);
     }
+    const focus = window.FocusFilter;
+    if (focus && focus.active()) {
+      const pick = focus.get();
+      if (pick.kind === "driver") return rows.filter((row) => row.id === pick.id);
+      if (pick.kind === "team") return rows.filter((row) => row.team === pick.id);
+    }
     if (local.teams.size) {
       rows = rows.filter((row) => local.teams.has(row.team));
     }

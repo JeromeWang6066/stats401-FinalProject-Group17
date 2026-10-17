@@ -57,6 +57,73 @@ def test_empty_race_control():
     assert intervals.empty
 
 
+def _rc(rows: list[tuple[str, str, str]]) -> pd.DataFrame:
+    return pd.DataFrame([
+        {"date": date, "message": message, "category": category}
+        for date, message, category in rows
+    ])
+
+
+def test_virtual_safety_car_does_not_open_real_safety_car():
+    intervals = build_neutralized_intervals(
+        _rc([
+            ("2025-03-16T12:10:00Z", "VIRTUAL SAFETY CAR DEPLOYED", "SafetyCar"),
+            ("2025-03-16T12:12:00Z", "VIRTUAL SAFETY CAR ENDING", "SafetyCar"),
+        ]),
+        pd.Timestamp("2025-03-16T14:00:00Z"),
+    )
+    assert list(intervals["kind"]) == ["vsc"]
+    assert intervals.iloc[0]["end"] == pd.Timestamp("2025-03-16T12:12:00Z")
+
+
+def test_virtual_ending_does_not_close_real_safety_car():
+    intervals = build_neutralized_intervals(
+        _rc([
+            ("2025-03-16T12:10:00Z", "SAFETY CAR DEPLOYED", "SafetyCar"),
+            ("2025-03-16T12:20:00Z", "VIRTUAL SAFETY CAR ENDING", "SafetyCar"),
+            ("2025-03-16T12:30:00Z", "SAFETY CAR IN THIS LAP", "SafetyCar"),
+        ]),
+        pd.Timestamp("2025-03-16T14:00:00Z"),
+    )
+    assert list(intervals["kind"]) == ["safety_car"]
+    assert intervals.iloc[0]["start"] == pd.Timestamp("2025-03-16T12:10:00Z")
+    assert intervals.iloc[0]["end"] == pd.Timestamp("2025-03-16T12:30:00Z")
+
+
+def test_race_will_resume_closes_red_flag_and_allows_another():
+    intervals = build_neutralized_intervals(
+        _rc([
+            ("2025-03-16T12:10:00Z", "RED FLAG", "Flag"),
+            ("2025-03-16T12:40:00Z", "RACE WILL RESUME AT 15:33", "Other"),
+            ("2025-03-16T13:10:00Z", "RED FLAG", "Flag"),
+            ("2025-03-16T13:20:00Z", "RACE WILL RESUME AT 16:56 - STANDING START PROCEDURE", "Other"),
+        ]),
+        pd.Timestamp("2025-03-16T14:00:00Z"),
+    )
+    assert list(intervals["kind"]) == ["red_flag", "red_flag"]
+    assert intervals.iloc[0]["end"] == pd.Timestamp("2025-03-16T12:40:00Z")
+    assert intervals.iloc[1]["start"] == pd.Timestamp("2025-03-16T13:10:00Z")
+    assert intervals.iloc[1]["end"] == pd.Timestamp("2025-03-16T13:20:00Z")
+
+
+def test_red_flag_cuts_safety_car_and_safety_car_cuts_virtual():
+    intervals = build_neutralized_intervals(
+        _rc([
+            ("2025-03-16T12:10:00Z", "VIRTUAL SAFETY CAR DEPLOYED", "SafetyCar"),
+            ("2025-03-16T12:12:00Z", "SAFETY CAR DEPLOYED", "SafetyCar"),
+            ("2025-03-16T12:18:00Z", "RED FLAG", "Flag"),
+            ("2025-03-16T12:40:00Z", "RACE WILL RESUME AT 15:33", "Other"),
+        ]),
+        pd.Timestamp("2025-03-16T14:00:00Z"),
+    )
+    assert list(intervals["kind"]) == ["vsc", "safety_car", "red_flag"]
+    assert intervals.iloc[0]["end"] == pd.Timestamp("2025-03-16T12:12:00Z")
+    assert intervals.iloc[1]["start"] == pd.Timestamp("2025-03-16T12:12:00Z")
+    assert intervals.iloc[1]["end"] == pd.Timestamp("2025-03-16T12:18:00Z")
+    assert intervals.iloc[2]["start"] == pd.Timestamp("2025-03-16T12:18:00Z")
+    assert intervals.iloc[2]["end"] == pd.Timestamp("2025-03-16T12:40:00Z")
+
+
 def test_lap1_burst_is_true_on_track():
     laps = _laps([
         {"driver_number": 1, "lap_number": 1, "date_start": "2025-03-16T12:00:00Z", "is_pit_out_lap": False},

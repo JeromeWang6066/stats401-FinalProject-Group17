@@ -55,6 +55,7 @@ window.OvertakeNetwork = (function () {
       if (yearOk != null && year !== yearOk) continue;
       if (!state.gps.has(gp)) continue;
       if (!state.tags.has(tag)) continue;
+      if (window.FocusFilter && window.FocusFilter.active() && !window.FocusFilter.pair(year, a, b)) continue;
       const key = a + ">" + b;
       directed.set(key, (directed.get(key) || 0) + n);
       eventCount += n;

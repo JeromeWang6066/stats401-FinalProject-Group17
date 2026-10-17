@@ -10,6 +10,10 @@ from datetime import datetime
 from pathlib import Path
 from statistics import median
 
+import pandas as pd
+
+from process_overtakes import build_neutralized_intervals
+
 ROOT = Path(__file__).resolve().parents[1]
 CSV_PATH = ROOT / "data" / "processed" / "overtakes_tagged.csv"
 RAW_ROOT = ROOT / "data" / "raw"
@@ -58,34 +62,28 @@ def progress(timeline: list[tuple[int, datetime, float]], when: datetime) -> flo
     return round(lap + fraction, 3)
 
 
+BAND_KIND = {"vsc": "VSC", "safety_car": "SC", "red_flag": "RED"}
+
+
 def neutralized_intervals(folder: Path, end: datetime | None) -> list[tuple[str, datetime, datetime]]:
     path = folder / "race_control.json"
     if not path.exists():
         return []
     rows = json.loads(path.read_text(encoding="utf-8"))
-    dated = [(t, row) for row in rows if (t := timestamp(row.get("date"))) is not None]
-    dated.sort(key=lambda item: item[0])
-    active: dict[str, datetime | None] = {"VSC": None, "SC": None, "RED": None}
-    intervals = []
-    for when, row in dated:
-        message = str(row.get("message") or "").upper().strip()
-        category = str(row.get("category") or "").upper().strip()
-        vsc_start = "VIRTUAL SAFETY CAR" in message and "DEPLOY" in message
-        vsc_end = "VIRTUAL SAFETY CAR" in message and ("ENDING" in message or "ENDED" in message)
-        sc_start = ("SAFETY CAR" in message and "DEPLOY" in message) or (category == "SAFETYCAR" and "IN THIS LAP" not in message)
-        sc_end = "SAFETY CAR" in message and ("IN THIS LAP" in message or "ENDING" in message)
-        red_start = "RED FLAG" in message and "CHEQUERED FLAG" not in message
-        red_end = any(part in message for part in ("GREEN FLAG", "GREEN LIGHT", "SESSION WILL RESUME", "SESSION RESUMED"))
-        for kind, starts, stops in (("VSC", vsc_start, vsc_end), ("SC", sc_start, sc_end), ("RED", red_start, red_end)):
-            if starts and active[kind] is None:
-                active[kind] = when
-            elif stops and active[kind] is not None:
-                if when > active[kind]:
-                    intervals.append((kind, active[kind], when))
-                active[kind] = None
-    if end is not None:
-        intervals.extend((kind, start, end) for kind, start in active.items() if start is not None and end > start)
-    return intervals
+    if not rows:
+        return []
+    session_end = pd.Timestamp(end) if end is not None else None
+    intervals = build_neutralized_intervals(pd.DataFrame(rows), session_end)
+    if intervals.empty:
+        return []
+    if end is None:
+        cap = pd.Timestamp.max.tz_localize("UTC") - pd.Timedelta(days=1)
+        intervals = intervals[intervals["end"] < cap]
+    out = []
+    for row in intervals.itertuples(index=False):
+        kind = BAND_KIND.get(str(row.kind), str(row.kind).upper())
+        out.append((kind, row.start.to_pydatetime(), row.end.to_pydatetime()))
+    return out
 
 
 def build_lap_data() -> list[dict]:

@@ -65,8 +65,11 @@ window.LapChart = (function () {
       return;
     }
 
+    const events = row.events.filter((item) => (
+      !window.FocusFilter || !window.FocusFilter.active() || window.FocusFilter.pair(row.year, item[2], item[3])
+    ));
     const perLap = Array.from({ length: row.maxLap }, () => []);
-    row.events.forEach((item) => {
+    events.forEach((item) => {
       if (item[0] >= 1 && item[0] <= row.maxLap) perLap[item[0] - 1].push(item);
     });
     const peak = Math.max(1, ...perLap.map((items) => items.length));
@@ -139,9 +142,8 @@ window.LapChart = (function () {
       .attr("transform", `translate(13,${(top + baseline) / 2}) rotate(-90)`)
       .attr("text-anchor", "middle").text("Position swaps");
 
-    const cleanCount = row.events.filter((event) => event[5] === "on_track").length;
-    status.textContent = `${row.type} · ${row.events.length} raw swaps · ${cleanCount} true passes · ` +
-      `Missing lap: ${row.missingRaw} raw, ${row.missingClean} cleaned (excluded from bars).`;
+    const cleanCount = events.filter((event) => event[5] === "on_track").length;
+    status.textContent = `${row.type} · ${events.length} raw swaps · ${cleanCount} true passes · Missing lap: ${row.missingRaw} raw, ${row.missingClean} cleaned (excluded from bars).`;
   }
 
   function paint() {
@@ -183,5 +185,5 @@ window.LapChart = (function () {
     paint();
   }
 
-  return { init };
+  return { init, draw };
 })();

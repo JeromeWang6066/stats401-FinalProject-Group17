@@ -447,7 +447,13 @@ window.TrackMap = (function () {
   }
 
   function visibleEvents(row) {
-    return row.events.filter((item) => selected.has(item[4]) && (!lap1Only || item[5] === 1) && (lapPick == null || item[3] === lapPick));
+    return row.events.filter((item) => {
+      if (!selected.has(item[4])) return false;
+      if (lap1Only && item[5] !== 1) return false;
+      if (lapPick != null && item[3] !== lapPick) return false;
+      if (window.FocusFilter && window.FocusFilter.active() && !window.FocusFilter.pair(row.year, item[8], item[9])) return false;
+      return true;
+    });
   }
 
   function draw() {

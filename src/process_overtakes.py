@@ -134,27 +134,42 @@ def build_neutralized_intervals(rc: pd.DataFrame, session_end: pd.Timestamp | No
         msg = str(getattr(row, "message", "") or "").upper().strip()
         category = str(getattr(row, "category", "") or "").upper().strip()
         t = row.date
-        is_vsc_start = "VIRTUAL SAFETY CAR" in msg and ("DEPLOY" in msg or "DEPLOYED" in msg)
-        is_vsc_end = "VIRTUAL SAFETY CAR" in msg and ("ENDING" in msg or "ENDED" in msg)
-        if is_vsc_start and states["vsc"] is None:
-            states["vsc"] = t
-        elif is_vsc_end and states["vsc"] is not None:
-            add("vsc", states["vsc"], t)
-            states["vsc"] = None
-        is_sc_start = ("SAFETY CAR" in msg and "DEPLOY" in msg) or (category == "SAFETYCAR" and "IN THIS LAP" not in msg)
-        is_sc_end = "SAFETY CAR" in msg and ("IN THIS LAP" in msg or "ENDING" in msg)
-        if is_sc_start and states["sc"] is None:
-            states["sc"] = t
-        elif is_sc_end and states["sc"] is not None:
-            add("safety_car", states["sc"], t)
-            states["sc"] = None
+        virtual = "VIRTUAL SAFETY CAR" in msg
+        is_vsc_start = virtual and ("DEPLOY" in msg or "DEPLOYED" in msg)
+        is_vsc_end = virtual and ("ENDING" in msg or "ENDED" in msg)
+        is_sc_start = (not virtual) and (
+            ("SAFETY CAR" in msg and "DEPLOY" in msg)
+            or (category == "SAFETYCAR" and "IN THIS LAP" not in msg)
+        )
+        is_sc_end = (not virtual) and "SAFETY CAR" in msg and ("IN THIS LAP" in msg or "ENDING" in msg)
         is_red_start = "RED FLAG" in msg and "CHEQUERED FLAG" not in msg
         is_red_end = (
             "GREEN FLAG" in msg
             or "GREEN LIGHT" in msg
             or "SESSION WILL RESUME" in msg
             or "SESSION RESUMED" in msg
+            or "RACE WILL RESUME" in msg
         )
+        if is_red_start:
+            if states["vsc"] is not None:
+                add("vsc", states["vsc"], t)
+                states["vsc"] = None
+            if states["sc"] is not None:
+                add("safety_car", states["sc"], t)
+                states["sc"] = None
+        elif is_sc_start and states["vsc"] is not None:
+            add("vsc", states["vsc"], t)
+            states["vsc"] = None
+        if is_vsc_start and states["vsc"] is None:
+            states["vsc"] = t
+        elif is_vsc_end and states["vsc"] is not None:
+            add("vsc", states["vsc"], t)
+            states["vsc"] = None
+        if is_sc_start and states["sc"] is None:
+            states["sc"] = t
+        elif is_sc_end and states["sc"] is not None:
+            add("safety_car", states["sc"], t)
+            states["sc"] = None
         if is_red_start and states["red_flag"] is None:
             states["red_flag"] = t
         elif is_red_end and states["red_flag"] is not None:
