@@ -6,130 +6,52 @@
   <title>What counts as an overtake? · Live demo</title>
   <link rel="stylesheet" href="css/style.css?v=8" />
   <style>
-    /* Mirror index.html chart/focus helpers so existing JS keeps working. */
-    #track-lap-row { margin: 10px 0 0; }
-    #mix-picks { display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    /* Helpers mirrored from index so chart JS keeps working. */
+    #track-lap-row { margin: 4px 0 0; }
+    #mix-picks { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
     #mix-picks[hidden] { display: none; }
     .mix-layout {
       display: grid;
-      grid-template-columns: minmax(240px, 340px) minmax(260px, 1fr);
-      gap: 8px 22px;
+      grid-template-columns: minmax(200px, 300px) minmax(220px, 1fr);
+      gap: 6px 16px;
       align-items: center;
+      flex: 1 1 auto;
+      min-height: 0;
     }
-    .mix-chart { min-height: 280px; }
-    .mix-chart svg { display: block; width: 100%; height: auto; }
-    .mix-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .mix-chart { min-height: 0; height: 100%; }
+    .mix-chart svg { display: block; width: 100%; height: auto; max-height: 100%; }
+    .mix-table { width: 100%; border-collapse: collapse; font-size: 12px; }
     .mix-table th {
       text-align: left;
       color: var(--muted);
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-weight: 600;
-      padding: 0 8px 8px;
+      padding: 0 6px 6px;
     }
-    .mix-table td { padding: 7px 8px; border-top: 1px solid var(--line); }
+    .mix-table td { padding: 5px 6px; border-top: 1px solid var(--line); }
     .mix-table tbody tr { cursor: pointer; }
     .mix-table tbody tr:hover td { background: #16161e; }
     .mix-table tr.mix-on td { background: var(--accent-soft); }
     .mix-table .num { text-align: right; font-variant-numeric: tabular-nums; }
     .mix-swatch {
       display: inline-block;
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      margin-right: 8px;
+      margin-right: 6px;
     }
     @media (max-width: 800px) {
       .mix-layout { grid-template-columns: 1fr; }
     }
-    .focus-bar {
-      position: sticky;
-      top: 0;
-      z-index: 19;
-      background: rgba(7, 7, 10, 0.94);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-    }
-    .focus-bar-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 8px 24px 10px;
-      display: grid;
-      gap: 8px;
-    }
-    .focus-triggers {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .focus-trigger {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      width: 100%;
-      min-width: 0;
-      font: inherit;
-      cursor: pointer;
-      text-align: left;
-      border: 1px solid var(--line);
-      background: #111118;
-      color: var(--ink);
-      border-radius: 10px;
-      padding: 8px 14px;
-    }
-    .focus-trigger:hover,
-    .focus-trigger[aria-expanded="true"] { border-color: #3f3f4a; }
-    .focus-trigger.is-set { border-color: var(--accent); }
-    .focus-kicker {
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      flex: none;
-    }
-    .focus-value {
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .focus-trigger::after {
-      content: "";
-      flex: none;
-      width: 7px;
-      height: 7px;
-      margin-left: 4px;
-      border-right: 1.5px solid var(--muted);
-      border-bottom: 1.5px solid var(--muted);
-      transform: translateY(-2px) rotate(45deg);
-    }
-    .focus-trigger[aria-expanded="true"]::after {
-      transform: translateY(2px) rotate(225deg);
-    }
-    .focus-drawer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      max-height: 280px;
-      overflow: auto;
-      padding: 10px;
-      background: #0c0c12;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
-    }
-    .focus-drawer[hidden] { display: none; }
-    .focus-drawer .chip { flex: none; white-space: nowrap; }
-    #track-title { margin-top: 0; color: var(--muted); font-size: 13px; }
+    #track-title { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.3; }
+    #bump-why:empty { display: none; }
 
-    /* —— Presentation shell —— */
+    /* —— Intro (unchanged feel, slight tighten) —— */
     body.presentation-mode {
-      overflow-x: hidden;
+      overflow: hidden;
+      height: 100vh;
     }
     body.presentation-mode.intro-open {
       overflow: hidden;
@@ -142,7 +64,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 32px 24px;
+      padding: 28px 24px;
       background:
         radial-gradient(900px 420px at 50% -10%, #2a0c10 0%, transparent 55%),
         radial-gradient(700px 380px at 80% 90%, rgba(225, 6, 0, 0.12) 0%, transparent 50%),
@@ -191,24 +113,24 @@
       text-transform: uppercase;
       font-size: 12px;
       color: var(--muted);
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       font-weight: 600;
     }
     .intro-kicker span { color: var(--accent); }
 
     .intro-title {
-      font-size: clamp(36px, 6vw, 56px);
+      font-size: clamp(34px, 5.5vw, 52px);
       font-weight: 700;
       letter-spacing: -0.03em;
       line-height: 1.08;
-      margin: 0 0 18px;
+      margin: 0 0 14px;
     }
 
     .intro-lede {
-      font-size: 17px;
-      line-height: 1.55;
+      font-size: 16px;
+      line-height: 1.5;
       color: var(--muted);
-      margin: 0 auto 22px;
+      margin: 0 auto 18px;
       max-width: 38em;
     }
 
@@ -216,19 +138,19 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px 14px;
-      margin: 0 0 26px;
+      gap: 8px 12px;
+      margin: 0 0 20px;
     }
     .intro-stat {
       border: 1px solid var(--line);
       background: rgba(17, 17, 24, 0.85);
-      border-radius: 12px;
-      padding: 10px 14px;
-      min-width: 120px;
+      border-radius: 10px;
+      padding: 8px 12px;
+      min-width: 110px;
     }
     .intro-stat b {
       display: block;
-      font-size: 20px;
+      font-size: 18px;
       font-variant-numeric: tabular-nums;
       letter-spacing: -0.02em;
     }
@@ -237,7 +159,7 @@
       display: block;
       margin-top: 2px;
       color: var(--muted);
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-weight: 600;
@@ -245,16 +167,16 @@
 
     .intro-people {
       text-align: left;
-      margin: 0 auto 28px;
+      margin: 0 auto 22px;
       max-width: 34em;
-      padding: 14px 16px;
+      padding: 12px 14px;
       border: 1px solid var(--line);
-      border-radius: 14px;
+      border-radius: 12px;
       background: rgba(17, 17, 24, 0.7);
     }
     .intro-people h2 {
-      margin: 0 0 8px;
-      font-size: 12px;
+      margin: 0 0 6px;
+      font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
@@ -265,12 +187,12 @@
       padding: 0;
       list-style: none;
       display: grid;
-      gap: 8px;
+      gap: 6px;
     }
     .intro-people li {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--ink);
-      line-height: 1.45;
+      line-height: 1.4;
     }
     .intro-people strong { font-weight: 600; }
     .intro-people .role {
@@ -289,7 +211,7 @@
       color: #fff;
       background: var(--accent);
       border-radius: 999px;
-      padding: 14px 28px;
+      padding: 12px 26px;
       box-shadow: 0 0 0 1px rgba(225, 6, 0, 0.35), 0 12px 32px rgba(225, 6, 0, 0.25);
       transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     }
@@ -303,9 +225,14 @@
       outline-offset: 3px;
     }
 
+    /* —— Single-viewport stage —— */
     .viz-stage {
-      min-height: 100vh;
-      padding-bottom: 88px;
+      height: 100vh;
+      max-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 0;
       opacity: 0.35;
       filter: blur(2px);
       pointer-events: none;
@@ -317,62 +244,295 @@
       pointer-events: auto;
     }
 
-    .stage-top {
+    .stage-chrome {
+      flex: 0 0 auto;
       max-width: 1180px;
+      width: 100%;
       margin: 0 auto;
-      padding: 14px 24px 0;
+      padding: 8px 52px 6px;
       display: flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 12px 20px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 20;
     }
     .stage-brand {
       margin: 0;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
+      flex: none;
     }
     .stage-brand span { color: var(--accent); }
     .stage-index {
       margin: 0;
-      font-size: 13px;
+      font-size: 12px;
       color: var(--muted);
       font-variant-numeric: tabular-nums;
+      flex: none;
     }
+
+    /* Compact Team / Driver — popover, not in-flow drawer */
+    .focus-bar {
+      position: relative;
+      flex: 1 1 auto;
+      min-width: 0;
+      background: transparent;
+      border: none;
+      backdrop-filter: none;
+      z-index: 25;
+    }
+    .focus-bar-inner {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      display: block;
+      position: relative;
+    }
+    .focus-triggers {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px 18px;
+    }
+    .focus-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      width: auto;
+      min-width: 0;
+      font: inherit;
+      cursor: pointer;
+      text-align: left;
+      border: none;
+      background: transparent;
+      color: var(--ink);
+      border-radius: 0;
+      padding: 0;
+    }
+    .focus-trigger:hover,
+    .focus-trigger[aria-expanded="true"] { border-color: transparent; }
+    .focus-trigger.is-set .focus-value {
+      border-color: var(--accent);
+      color: var(--ink);
+    }
+    .focus-kicker {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex: none;
+    }
+    .focus-value {
+      min-width: 3.5em;
+      max-width: 16em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.2;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #111118;
+      color: var(--ink);
+    }
+    .focus-trigger::after {
+      content: "";
+      flex: none;
+      width: 5px;
+      height: 5px;
+      margin-left: 0;
+      border-right: 1.5px solid var(--muted);
+      border-bottom: 1.5px solid var(--muted);
+      transform: translateY(-1px) rotate(45deg);
+    }
+    .focus-trigger[aria-expanded="true"]::after {
+      transform: translateY(1px) rotate(225deg);
+    }
+    .focus-drawer {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 40;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      width: min(520px, 72vw);
+      max-height: min(42vh, 280px);
+      overflow: auto;
+      padding: 10px;
+      background: #0c0c12;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+    }
+    .focus-drawer[hidden] { display: none; }
+    .focus-drawer .chip {
+      flex: none;
+      white-space: nowrap;
+      font-size: 12px;
+      padding: 4px 9px;
+    }
+    .focus-drawer[data-anchor="team"] { left: 0; transform: none; }
+    .focus-drawer[data-anchor="driver"] { left: auto; right: 0; transform: none; }
 
     .carousel {
       position: relative;
+      flex: 1 1 auto;
+      min-height: 0;
       max-width: 1180px;
+      width: 100%;
       margin: 0 auto;
-      padding: 8px 56px 0;
+      padding: 0 44px 36px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
     }
     .carousel-viewport {
+      flex: 1 1 auto;
+      min-height: 0;
       overflow: hidden;
       width: 100%;
       touch-action: pan-y;
     }
     .slides-track {
       display: flex;
+      height: 100%;
       width: 100%;
-      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
       will-change: transform;
     }
     .slide {
       flex: 0 0 100%;
       width: 100%;
       min-width: 100%;
+      height: 100%;
       box-sizing: border-box;
-      padding: 0 2px;
+      padding: 0;
+      overflow: hidden;
     }
-    .slide .chart-card {
-      margin: 12px 0 0;
-      min-height: calc(100vh - 220px);
+
+    /* No card chrome — blend into page bg */
+    .slide .chart-card,
+    .viz-stage .chart-card {
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 2px 0 0;
+      margin: 0;
+      min-height: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      overflow: hidden;
+    }
+    .slide .chart-card > h3 {
+      margin: 0 0 2px;
+      font-size: 17px;
+      line-height: 1.2;
+      flex: 0 0 auto;
     }
     .slide .chart-why {
-      font-size: 14px;
-      max-width: 62em;
+      font-size: 12px;
+      line-height: 1.35;
+      max-width: 70em;
+      margin: 0 0 6px;
+      flex: 0 0 auto;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .slide .chart-why.lap-note,
+    .slide #mix-note {
+      display: none;
+    }
+    .slide .filter-bar,
+    .slide .filter-row,
+    .slide .weight-row,
+    .slide .status-line,
+    .slide .legend {
+      flex: 0 0 auto;
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+    .slide .status-line {
+      font-size: 11px;
+      margin: 0 0 4px;
+      min-height: 0;
+    }
+    .slide .status-line:empty { display: none; }
+    .slide .legend {
+      font-size: 11px;
+      margin: 4px 0 0;
+    }
+    .slide .filter-row {
+      gap: 6px 10px;
+      margin-bottom: 4px;
+    }
+    .slide .filter-label { font-size: 10px; }
+    .slide .seg button,
+    .slide .chip,
+    .slide .gp-toggle {
+      font-size: 11px;
+      padding: 4px 9px;
+    }
+    .slide .lap-pick select {
+      font-size: 12px;
+      padding: 4px 10px;
+      min-width: 110px;
+    }
+    .slide .weight-row {
+      font-size: 12px;
+      margin: 2px 0 4px;
+    }
+    .slide .weight-row input[type="range"] { width: 140px; }
+
+    /* Chart areas fill leftover viewport */
+    .slide .network-chart,
+    .slide .bump-chart,
+    .slide .track-chart,
+    .slide .lap-chart-scroll {
+      flex: 1 1 auto;
+      min-height: 0 !important;
+      height: auto !important;
+      max-height: none;
+      width: 100%;
+    }
+    .slide .network-chart {
+      height: 100% !important;
+    }
+    .slide .bump-chart {
+      height: 100% !important;
+    }
+    .slide .track-chart {
+      height: 100% !important;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+    }
+    .slide .lap-chart-scroll {
+      overflow: auto;
+    }
+    .slide .lap-chart,
+    .slide .lap-chart svg {
+      height: 100%;
+      max-height: 100%;
+    }
+    .slide .mix-layout {
+      flex: 1 1 auto;
+      min-height: 0;
     }
 
     .carousel-btn {
@@ -380,8 +540,8 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 5;
-      width: 42px;
-      height: 42px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       border: 1px solid var(--line);
       background: rgba(17, 17, 24, 0.92);
@@ -403,31 +563,31 @@
       outline: 2px solid var(--accent);
       outline-offset: 2px;
     }
-    .carousel-btn.prev { left: 8px; }
-    .carousel-btn.next { right: 8px; }
+    .carousel-btn.prev { left: 6px; }
+    .carousel-btn.next { right: 6px; }
     .carousel-btn svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       display: block;
     }
 
     .carousel-dots {
-      position: fixed;
+      position: absolute;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: 8px;
       z-index: 18;
       display: flex;
       justify-content: center;
-      gap: 12px;
-      padding: 16px 24px 22px;
-      background: linear-gradient(to top, rgba(7, 7, 10, 0.96), rgba(7, 7, 10, 0.72), transparent);
+      gap: 10px;
+      padding: 0;
+      background: none;
       pointer-events: none;
     }
     .carousel-dots button {
       pointer-events: auto;
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       padding: 0;
       border: none;
       border-radius: 50%;
@@ -437,7 +597,7 @@
     }
     .carousel-dots button[aria-current="true"] {
       background: #fff;
-      transform: scale(1.15);
+      transform: scale(1.2);
       box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
     }
     .carousel-dots button:hover {
@@ -448,13 +608,24 @@
       outline-offset: 3px;
     }
 
-    @media (max-width: 720px) {
-      .carousel { padding: 8px 44px 0; }
-      .carousel-btn { width: 36px; height: 36px; }
-      .carousel-btn.prev { left: 4px; }
-      .carousel-btn.next { right: 4px; }
-      .intro-people { text-align: left; }
-      .slide .chart-card { min-height: 0; }
+    @media (max-width: 900px) {
+      .stage-chrome {
+        flex-wrap: wrap;
+        padding: 6px 40px 4px;
+        row-gap: 4px;
+      }
+      .focus-bar { order: 3; flex: 1 1 100%; }
+      .carousel { padding: 0 38px 32px; }
+    }
+
+    @media (max-height: 760px) {
+      .slide .chart-card > h3 { font-size: 15px; }
+      .slide .chart-why {
+        font-size: 11px;
+        -webkit-line-clamp: 1;
+        margin-bottom: 4px;
+      }
+      .stage-chrome { padding-top: 4px; padding-bottom: 2px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -501,25 +672,24 @@
   </div>
 
   <div class="viz-stage" id="viz-stage" aria-hidden="true">
-    <div class="stage-top">
+    <div class="stage-chrome">
       <p class="stage-brand">Group 17 · <span>Live demo</span></p>
-      <p class="stage-index" id="stage-index" aria-live="polite">1 / 5</p>
-    </div>
-
-    <div class="focus-bar" id="focus-bar">
-      <div class="focus-bar-inner">
-        <div class="focus-triggers">
-          <button type="button" class="focus-trigger" id="focus-team-btn" data-drawer="team" aria-expanded="false" aria-controls="focus-drawer">
-            <span class="focus-kicker">Team</span>
-            <span class="focus-value" id="focus-team-value">All</span>
-          </button>
-          <button type="button" class="focus-trigger" id="focus-driver-btn" data-drawer="driver" aria-expanded="false" aria-controls="focus-drawer">
-            <span class="focus-kicker">Driver</span>
-            <span class="focus-value" id="focus-driver-value">All</span>
-          </button>
+      <div class="focus-bar" id="focus-bar">
+        <div class="focus-bar-inner">
+          <div class="focus-triggers">
+            <button type="button" class="focus-trigger" id="focus-team-btn" data-drawer="team" aria-expanded="false" aria-controls="focus-drawer">
+              <span class="focus-kicker">Team</span>
+              <span class="focus-value" id="focus-team-value">All</span>
+            </button>
+            <button type="button" class="focus-trigger" id="focus-driver-btn" data-drawer="driver" aria-expanded="false" aria-controls="focus-drawer">
+              <span class="focus-kicker">Driver</span>
+              <span class="focus-value" id="focus-driver-value">All</span>
+            </button>
+          </div>
+          <div class="focus-drawer" id="focus-drawer" hidden></div>
         </div>
-        <div class="focus-drawer" id="focus-drawer" hidden></div>
       </div>
+      <p class="stage-index" id="stage-index" aria-live="polite">1 / 5</p>
     </div>
 
     <div class="carousel" id="carousel">
@@ -536,7 +706,7 @@
             <article class="chart-card" id="who">
               <h3>1. Who passes whom</h3>
               <p class="chart-why">
-                Each node is a driver; colour is team, size is net overtakes. Edges are pairs — thickness scales to what is on screen. Filter by season, grand prix, swap type, and minimum exchanges to see whether passes stay among a few pairings.
+                Nodes are drivers (team colour, size = net overtakes). Edges are pairs; thickness is relative to what is drawn. Season, GP, swap type, and min exchanges show whether passes stay among a few pairings.
               </p>
               <div class="filter-bar" aria-label="View 1 filters">
                 <div class="filter-row">
@@ -580,7 +750,7 @@
             <article class="chart-card" id="when">
               <h3>2. When the swaps happen</h3>
               <p class="chart-why">
-                Each square is one position swap in the chosen race or sprint. Compare the raw row to the true-pass row; bands mark VSC, safety car, and red flag. Ask whether a tall start or band cluster survives once pits and neutralized shuffles are removed.
+                Each square is one swap in the chosen session. Compare raw vs true-pass rows; bands mark VSC, safety car, and red flag. Does a tall start cluster survive once pits and neutralized shuffles come off?
               </p>
               <div class="filter-row lap-filters" aria-label="Lap chart session filters">
                 <span class="filter-label">Season</span>
@@ -609,7 +779,7 @@
             <article class="chart-card" id="places">
               <h3>3. Did they gain places?</h3>
               <p class="chart-why">
-                Season view is championship rank after each round; one race switches to laps and race position. Use this after the network: appearing in many pass pairs is not the same as climbing the order.
+                Season = championship rank after each round; one race = lap-by-lap position. After the network: many pass pairs ≠ climbing the order.
               </p>
               <p class="chart-why" id="bump-why"></p>
               <div class="filter-row bump-filters" aria-label="Bump season and session">
@@ -672,7 +842,7 @@
             <article class="chart-card" id="where">
               <h3>4. Where on the circuit</h3>
               <p class="chart-why">
-                One racing lap draws the circuit; each dot is a swap at the overtaking car’s location. Corner numbers separate “early in the lap count” from turn 1. Scroll to zoom, drag to pan; use the lap slider or All laps.
+                One racing lap draws the circuit; dots are swaps at the overtaking car’s location. Corner numbers separate early-lap pile-ups from turn 1. Scroll to zoom, drag to pan.
               </p>
               <p class="chart-why" id="track-title"></p>
               <div class="filter-row lap-filters" aria-label="Track map session">
@@ -706,7 +876,7 @@
             <article class="chart-card" id="mix-card">
               <h3>5. What share is a pass</h3>
               <p class="chart-why">
-                One race, one sprint, or a whole season. Each slice is an exclusive tag (shares add to 100%). Across 19,303 rows the large pieces are pit (~46.2%) and on-track (~43.3%). Click a slice to hold that tag on the network and map; changing session here moves the other four views onto that race.
+                One session or a whole season. Slices are exclusive tags (sum to 100%). Across 19,303 rows: pit ~46.2%, on-track ~43.3%. Click a slice to hold that tag; changing session here syncs the other views.
               </p>
               <div class="filter-row lap-filters" aria-label="Session mix filters">
                 <span class="filter-label">Season</span>
@@ -740,14 +910,14 @@
           </section>
         </div>
       </div>
-    </div>
 
-    <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Visualization slides">
-      <button type="button" role="tab" aria-label="Slide 1: Who passes whom" aria-current="true" data-goto="0"></button>
-      <button type="button" role="tab" aria-label="Slide 2: When the swaps happen" data-goto="1"></button>
-      <button type="button" role="tab" aria-label="Slide 3: Did they gain places?" data-goto="2"></button>
-      <button type="button" role="tab" aria-label="Slide 4: Where on the circuit" data-goto="3"></button>
-      <button type="button" role="tab" aria-label="Slide 5: What share is a pass" data-goto="4"></button>
+      <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Visualization slides">
+        <button type="button" role="tab" aria-label="Slide 1: Who passes whom" aria-current="true" data-goto="0"></button>
+        <button type="button" role="tab" aria-label="Slide 2: When the swaps happen" data-goto="1"></button>
+        <button type="button" role="tab" aria-label="Slide 3: Did they gain places?" data-goto="2"></button>
+        <button type="button" role="tab" aria-label="Slide 4: Where on the circuit" data-goto="3"></button>
+        <button type="button" role="tab" aria-label="Slide 5: What share is a pass" data-goto="4"></button>
+      </div>
     </div>
   </div>
 
@@ -768,6 +938,81 @@
   <script src="js/focus.js?v=2"></script>
   <script>
     (function () {
+      /* Presentation-only: ABC · Full Name labels + floating popover anchor. */
+      const drivers = (window.APP_DATA && window.APP_DATA.drivers) || {};
+      const drawer = document.getElementById("focus-drawer");
+      const teamBtn = document.getElementById("focus-team-btn");
+      const driverBtn = document.getElementById("focus-driver-btn");
+      const driverValue = document.getElementById("focus-driver-value");
+      let polishing = false;
+
+      function driverLabel(id) {
+        if (!id) return "All";
+        const name = drivers[id] && drivers[id].name;
+        return name ? id + " · " + name : id;
+      }
+
+      function polishDriverChips() {
+        if (!drawer || drawer.hidden) return;
+        drawer.querySelectorAll("button[data-kind='driver']").forEach((btn) => {
+          const id = btn.dataset.id || "";
+          const next = driverLabel(id);
+          if (btn.textContent !== next) btn.textContent = next;
+        });
+      }
+
+      function polishDriverValue() {
+        if (!driverValue) return;
+        const raw = (driverValue.textContent || "").trim();
+        if (!raw || raw === "All" || raw.indexOf("·") !== -1) return;
+        if (!drivers[raw]) return;
+        const next = driverLabel(raw);
+        if (driverValue.textContent !== next) driverValue.textContent = next;
+      }
+
+      function anchorPopover() {
+        if (!drawer) return;
+        if (drawer.hidden) {
+          drawer.removeAttribute("data-anchor");
+          return;
+        }
+        if (teamBtn && teamBtn.getAttribute("aria-expanded") === "true") {
+          drawer.setAttribute("data-anchor", "team");
+        } else if (driverBtn && driverBtn.getAttribute("aria-expanded") === "true") {
+          drawer.setAttribute("data-anchor", "driver");
+        } else {
+          drawer.removeAttribute("data-anchor");
+        }
+      }
+
+      function polish() {
+        if (polishing) return;
+        polishing = true;
+        try {
+          polishDriverChips();
+          polishDriverValue();
+          anchorPopover();
+        } finally {
+          polishing = false;
+        }
+      }
+
+      const bar = document.getElementById("focus-bar");
+      if (bar && window.MutationObserver) {
+        const obs = new MutationObserver(polish);
+        obs.observe(bar, {
+          childList: true,
+          subtree: true,
+          attributes: true,
+          characterData: true,
+          attributeFilter: ["hidden", "aria-expanded", "class"],
+        });
+      }
+      polish();
+    })();
+  </script>
+  <script>
+    (function () {
       const SLIDE_COUNT = 5;
       let index = 0;
       let entered = false;
@@ -783,7 +1028,28 @@
       const stageIndex = document.getElementById("stage-index");
       const viewport = document.getElementById("carousel-viewport");
 
+      function sizeChartHosts() {
+        document.querySelectorAll(".slide .network-chart, .slide .bump-chart, .slide .track-chart, .slide .lap-chart-scroll, .slide .mix-layout").forEach((el) => {
+          const card = el.closest(".chart-card");
+          if (!card) return;
+          const cardRect = card.getBoundingClientRect();
+          let used = 0;
+          Array.from(card.children).forEach((child) => {
+            if (child === el) return;
+            if (child.classList && child.classList.contains("lap-note")) return;
+            if (child.id === "mix-note") return;
+            const style = window.getComputedStyle(child);
+            if (style.display === "none") return;
+            used += child.getBoundingClientRect().height;
+            used += (parseFloat(style.marginTop) || 0) + (parseFloat(style.marginBottom) || 0);
+          });
+          const h = Math.max(160, Math.floor(cardRect.height - used - 4));
+          el.style.height = h + "px";
+        });
+      }
+
       function redrawCharts() {
+        sizeChartHosts();
         window.dispatchEvent(new Event("resize"));
         const network = document.getElementById("network");
         const snap = window.AppState && window.AppState.get();
@@ -906,6 +1172,10 @@
       });
 
       paint();
+      window.addEventListener("resize", () => {
+        if (!entered) return;
+        sizeChartHosts();
+      });
       window.addEventListener("load", () => {
         requestAnimationFrame(redrawCharts);
       });
