@@ -1,6 +1,6 @@
 # What counts as an overtake?
 
-STATS401 Final Project, Group 17. Chengzhi Sun, Tianyao Wang, Jietong Zhou.
+STATS401 Final Project, Group 15. Chengzhi Sun, Tianyao Wang, Jietong Zhou.
 
 The project asks what the OpenF1 overtakes feed actually counts across the 2023, 2024, and 2025 Formula 1 seasons. A row in the feed can be a pass on track, a pit stop, a retirement, a reshuffle behind a safety car, or a booking entry made after the chequered flag. Five D3 views let a reader change the definition and watch which conclusions survive.
 
