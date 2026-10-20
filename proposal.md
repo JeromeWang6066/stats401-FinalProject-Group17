@@ -1,5 +1,5 @@
 # STATS401 Final Group Project Proposal
-## Group 17: What Counts as an Overtake?
+## Group 15: What Counts as an Overtake?
 
 Chengzhi Sun, Tianyao Wang, Jietong Zhou
 
